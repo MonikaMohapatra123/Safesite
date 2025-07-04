@@ -1,0 +1,177 @@
+
+
+body {
+  margin: 0;
+  /* padding-top: 50px;  */
+}
+
+.NavBar {
+  position: fixed; /* Always visible */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: var(--primary-color); /* Default: transparent */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 10px 20px;
+  color: white;
+}
+
+.NavBar-scrolled {
+  background-color:white; /* Solid when scrolled */
+  color: black;
+}
+
+
+
+
+.NavBar-scrolled .NavBar-actions a,
+.NavBar-scrolled .NavBar-lists a,
+.NavBar-scrolled .NavBar-item {
+  color: black;
+}
+
+.NavBar-scrolled .NavBar-button {
+  border: 2px solid white;
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.NavBar-scrolled .NavBar-button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+.NavBar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.NavBar-logo img {
+  height: 40px; 
+  margin-right: 8px; 
+}
+
+.NavBar-company {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.NavBar-lists {
+  display: flex;
+  gap: 20px; 
+}
+
+.NavBar-lists span {
+  cursor: pointer;
+}
+
+.NavBar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.NavBar-actions a {
+  color: white;
+  text-decoration: none;
+}
+
+.NavBar-lists a {
+  text-decoration: none;
+  color: white;
+}
+
+.NavBar-button {
+  padding: 8px 16px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 20px 0px 20px 0px;
+  cursor: pointer;
+}
+
+.NavBar-button:hover {
+  background-color: white;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
+.NavBar-item {
+  position: relative;
+  color: white; 
+}
+
+.NavBar-item:hover {
+  color: #8a8383;
+}
+
+.NavBar-item-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.NavBar-dropdown {
+  position: absolute;
+  top: 40px;
+  left: 12%;
+  background: white;
+  color: black;  
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 0; 
+  padding: 30px 0;
+  z-index: 1000;
+}
+
+.NavBar-dropdown-sections {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 40px; 
+  padding: 0 20px;
+}
+
+.NavBar-dropdown-section {
+  flex: 1;
+  min-width: 180px;
+}
+
+.NavBar-dropdown-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
+}
+
+.NavBar-dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.NavBar-dropdown-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: black !important;
+  padding: 6px 10px;
+  transition: background 0.2s;
+}
+
+.NavBar-dropdown-link:hover {
+  background: #f2f2f2;
+}
+
+.NavBar-dropdown-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+

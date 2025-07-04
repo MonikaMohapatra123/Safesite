@@ -1,0 +1,24 @@
+
+.spinner{
+    display: flex;
+    background-color: black;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 9px;
+    
+}
+.spinner>div{
+    margin: 0;
+    padding: 0;
+    
+}
+.spinner img{
+     width:20px;
+    height: 15px;
+     margin-top: 5px;
+     margin-left: 15px;
+}
+.spinner :nth-child(2){
+    margin-top: 6px;
+   
+}

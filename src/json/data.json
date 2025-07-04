@@ -1,0 +1,228 @@
+{
+  "0": {
+    "page": "navbar",
+    "logo": "./axiomos-logo.png",
+    "company": "Safesite",
+    "menu": [
+      {
+        "name": "Features",
+        "sections": [
+          {
+            "title": "Safety Tools",
+            "links": [
+              {
+                "name": "Inspections",
+                "link": "/features/inspections",
+                "icon": "logo.png"
+              },
+              {
+                "name": "Checklists",
+                "link": "/features/checklists",
+                "icon": "logo.png"
+              }
+            ]
+          },
+          {
+            "title": "Reporting",
+            "links": [
+              {
+                "name": "Dashboards",
+                "link": "/features/dashboards",
+                "icon": "logo.png"
+              },
+              {
+                "name": "Exports",
+                "link": "/features/exports",
+                "icon": "logo.png"
+              }
+            ]
+          },
+          {
+            "title": "Collaboration",
+            "links": [
+              {
+                "name": "Team Management",
+                "link": "/features/team-management",
+                "icon": "logo.png"
+              },
+              {
+                "name": "Permissions",
+                "link": "/features/permissions",
+                "icon": "logo.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Templates",
+        "sections": [
+          {
+            "title": "All Templates",
+            "links": [
+              {
+                "name": "Safety Checklist",
+                "link": "/templates/safety-checklist",
+                "icon": "logo.png"
+              },
+              {
+                "name": "Incident Report",
+                "link": "/templates/incident-report",
+                "icon": "logo.png"
+              },
+              {
+                "name": "Job Hazard Analysis",
+                "link": "/templates/job-hazard-analysis",
+                "icon": "logo.png"
+              },
+              {
+                "name": "Emergency Plan",
+                "link": "/templates/emergency-plan",
+                "icon": "logo.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Industries",
+        "sections": [
+          {
+            "title": "Industries",
+            "links": [
+              {
+                "name": "Construction",
+                "link": "/industries/construction"
+              },
+              {
+                "name": "Energy",
+                "link": "/industries/energy"
+              },
+              {
+                "name": "Manufacturing",
+                "link": "/industries/manufacturing"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Resources",
+        "sections": [
+          {
+            "title": "Resources",
+            "links": [
+              {
+                "name": "Blog",
+                "link": "/resources/blog"
+              },
+              {
+                "name": "Case Studies",
+                "link": "/resources/case-studies"
+              },
+              {
+                "name": "Pricing",
+                "link": "/resources/pricing"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Insurance",
+        "link": "/insurance"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Login",
+        "link": "/login"
+      },
+      {
+        "name": "Get Started Free",
+        "type": "button",
+        "link": "/get-started"
+      }
+    ]
+  },
+  "1": {
+    "page": "home",
+    "id": "1",
+    "HeroHeading": "Go <span class='hero-highlight'>Beyond</span> Safety <br /> Compliance",
+    "HeroDescription": "Start managing your best safety program ever — in just 8 minutes.",
+    "HeroButtons": [
+      {
+        "type": "primary",
+        "text": "Get Started Free"
+      },
+      {
+        "type": "secondary",
+        "text": "▶ Watch Video"
+      }
+    ],
+    "HeroRatingStars": "⭐⭐⭐⭐⭐",
+    "HeroRatingText": "4.9 App Store | 4.7 Capterra",
+    "HeroVideo": "/video-1.mp4",
+    "HeroModalVideo": "/video-1.mp4"
+  },
+  "2": {
+  "page": "CompanySafetyCard",
+  "id": "2",
+  "Title": "Company Safety Cards",
+  "cards": [
+    {
+      "id": 1,
+      "title": "Inspections & Audits",
+      "icon": "fa-solid fa-clipboard-list",
+      "imageSrc": "https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif",
+      "rightHeading": "Run your field safety inspections on any device",
+      "checklist": [
+        "Schedule and track inspections",
+        "Create safety tasks and raise hazards",
+        "Customize your own or choose from our library of compliance checklists"
+      ],
+      "buttonLabel": "Learn more"
+    },
+    {
+      "id": 2,
+      "title": "Safety Meetings",
+      "icon": "fa-solid fa-users",
+      "imageSrc": "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif",
+      "rightHeading": "Schedule and track your safety meetings and toolbox talks",
+      "checklist": [
+        "Track attendance and topics covered",
+        "Identify training needs with our powerful analytics",
+        "Choose from 100s of templates, forms, and topics"
+      ],
+      "buttonLabel": "Learn more"
+    },
+    {
+      "id": 3,
+      "title": "Incident Reporting",
+      "icon": "fa-regular fa-file-alt",
+      "imageSrc": "https://media.giphy.com/media/111ebonMs90YLu/giphy.gif",
+      "rightHeading": "Report incidents easily",
+      "checklist": [
+        "Quickly report and manage workplace incidents",
+        "Prevent future occurrences",
+        "Stay compliant with industry standards"
+      ],
+      "buttonLabel": "Learn more"
+    },
+    {
+      "id": 4,
+      "title": "Hazard Management",
+      "icon": "fa-solid fa-exclamation-triangle",
+      "imageSrc": "https://media.giphy.com/media/3oEduSbSGpGaRX2Vri/giphy.gif",
+      "rightHeading": "Manage hazards effectively",
+      "checklist": [
+        "Identify, assess, and control hazards",
+        "Mitigate risks before they cause harm",
+        "Maintain a safe work environment"
+      ],
+      "buttonLabel": "Learn more"
+    }
+  ]
+}
+
+}
