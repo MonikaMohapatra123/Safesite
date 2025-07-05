@@ -223,6 +223,35 @@
       "buttonLabel": "Learn more"
     }
   ]
-}
+},
+ "3": {
+    "1": {
+      "id": 1,
+      "image": "safesite-1.png",
+      "quote": "In one day, Safesite uploaded my jobsite inspection and monthly equipment inspection forms.",
+      "name": "Tyler Jones",
+      "title": "DIRECTOR OF SAFETY",
+      "stats": "50%",
+      "description": "Inspection times cut"
+    },
+    "2": {
+      "id": 2,
+      "image": "safesite-2.png",
+      "quote": "Our team works faster now.",
+      "name": "Anna Smith",
+      "title": "PROJECT MANAGER",
+      "stats": "60%",
+      "description": "Time saved"
+    },
+    "3": {
+      "id": 3,
+      "image": "safesite-3.png",
+      "quote": "Costs have dropped significantly.",
+      "name": "Mike Brown",
+      "title": "CEO",
+      "stats": "70%",
+      "description": "Costs reduced"
+    }
+ }
 
 }
