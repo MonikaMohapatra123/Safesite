@@ -1,4 +1,4 @@
-.safetyhq-section {
+/* .safetyhq-section {
   padding: 40px 20px;
  
 }
@@ -52,5 +52,78 @@
 
   .safetyhq-content {
     max-width: 100%;
+  }
+} */
+
+
+
+
+/* ✅ Section container with consistent max-width */
+.safetyhq-section {
+  padding: 40px 20px;
+  max-width: 1200px;   /* keep consistent with other components */
+  margin: 0 auto;      /* center the section */
+  box-sizing: border-box;
+}
+
+/* ✅ Flex layout for image and content side by side */
+.safetyhq-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ✅ Responsive image: max width with auto scaling */
+.safetyhq-image img {
+  width: 100%;             /* makes image responsive */
+  max-width: 450px;        /* desktop size */
+  height: auto;
+  margin-right: 40px;
+  display: block;
+}
+
+/* ✅ Content area with safe max width */
+.safetyhq-content {
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+.safetyhq-content h4 {
+  color: #0073e6;
+  margin-bottom: 8px;
+}
+
+.safetyhq-content h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.safetyhq-content p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.safetyhq-link {
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ✅ Mobile styles */
+@media (max-width: 768px) {
+  .safetyhq-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .safetyhq-image img {
+    margin: 0 0 20px 0;  /* space below image */
+    max-width: 100%;     /* prevents overflow */
+  }
+
+  .safetyhq-content {
+    max-width: 100%;
+    padding: 0 10px;     /* optional: side padding for content */
   }
 }
