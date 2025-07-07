@@ -1,12 +1,115 @@
 
+// import React, { useState, useEffect } from 'react';
+// import './AllCompanyTestimonials.css';
+
+// export default function AllCompanyTestimonials({ data }) {
+//   // Convert object to array
+//   const testimonials = Object.values(data);
+//   const [currentIndex, setCurrentIndex] = useState(0);
+
+//   const goToPrevious = () => {
+//     setCurrentIndex(prev =>
+//       prev === 0 ? testimonials.length - 1 : prev - 1
+//     );
+//   };
+
+//   const goToNext = () => {
+//     setCurrentIndex(prev =>
+//       prev === testimonials.length - 1 ? 0 : prev + 1
+//     );
+//   };
+
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setCurrentIndex(prev =>
+//         prev === testimonials.length - 1 ? 0 : prev + 1
+//       );
+//     }, 5000);
+//     return () => clearInterval(interval);
+//   }, [testimonials.length]);
+
+//   const currentTestimonial = testimonials[currentIndex];
+
+//   return (
+//     <div className='testimonials'>
+//       <h2>Loved by Industry Leaders Worldwide</h2>
+
+//       <div className="carousel-wrapper">
+//         <div className="image-wrapper">
+//           <button className="nav-btn prev-btn" onClick={goToPrevious}>
+//             &#10094;
+//           </button>
+//           <img
+//             src={currentTestimonial.image}
+//             alt="testimonial"
+//             className="main-image"
+//           />
+//         </div>
+
+//         <div className="carousel-container">
+//           <div
+//             className="carousel-inner"
+//             style={{
+//               transform: `translateX(-${currentIndex * 100}%)`,
+//             }}
+//           >
+//             {testimonials.map(item => (
+//               <div className="testimonial-card" key={item.id}>
+//                 <div className="testimonial-left">
+//                   <div className="testimonial-text">
+//                     <span className="quote-icon">“</span>
+//                     <p className="quote">{item.quote}</p>
+//                     <p className="name">— {item.name}</p>
+//                     <p className="title">{item.title}</p>
+//                   </div>
+//                 </div>
+//                 <div className="testimonial-right">
+//                   <div className="stat-icon">⬇</div>
+//                   <div className="stat">{item.stats}</div>
+//                   <div className="description">{item.description}</div>
+//                   <hr className="stat-divider" />
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+
+//         <button className="nav-btn next-btn" onClick={goToNext}>
+//           &#10095;
+//         </button>
+//       </div>
+
+//       {/* ✅ Hover logo row */}
+//       <div className="hover-logos-row">
+//         {testimonials.map((item, index) => (
+//           <img
+//             key={item.id}
+//             src={
+//               currentIndex === index
+//                 ? item.hoverImageColor
+//                 : item.hoverImageDefault
+//             }
+//             alt={item.name}
+//             className="hover-logo-img"
+//           />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
 
 import React, { useState, useEffect } from 'react';
 import './AllCompanyTestimonials.css';
 
 export default function AllCompanyTestimonials({ data }) {
-  // data is an object, convert to array:
   const testimonials = Object.values(data);
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () => {
@@ -35,6 +138,7 @@ export default function AllCompanyTestimonials({ data }) {
   return (
     <div className='testimonials'>
       <h2>Loved by Industry Leaders Worldwide</h2>
+
       <div className="carousel-wrapper">
         <div className="image-wrapper">
           <button className="nav-btn prev-btn" onClick={goToPrevious}>
@@ -54,7 +158,7 @@ export default function AllCompanyTestimonials({ data }) {
               transform: `translateX(-${currentIndex * 100}%)`,
             }}
           >
-            {testimonials.map(item => (
+            {testimonials.map((item, index) => (
               <div className="testimonial-card" key={item.id}>
                 <div className="testimonial-left">
                   <div className="testimonial-text">
@@ -65,12 +169,20 @@ export default function AllCompanyTestimonials({ data }) {
                   </div>
                 </div>
                 <div className="testimonial-right">
-                  {/* <div className="stat-icon">⬇️</div> */}
                   <div className="stat-icon">⬇</div>
                   <div className="stat">{item.stats}</div>
                   <div className="description">{item.description}</div>
                   <hr className="stat-divider" />
                 </div>
+
+                {/* ✅ Mobile hover logo for this card */}
+                {currentIndex === index && (
+                  <img
+                    src={item.hoverImageColor}
+                    alt={item.name}
+                    className="mobile-hover-logo"
+                  />
+                )}
               </div>
             ))}
           </div>
@@ -80,6 +192,23 @@ export default function AllCompanyTestimonials({ data }) {
           &#10095;
         </button>
       </div>
+
+      {/* ✅ Desktop logo row */}
+      <div className="hover-logos-row">
+        {testimonials.map((item, index) => (
+          <img
+            key={item.id}
+            src={
+              currentIndex === index
+                ? item.hoverImageColor
+                : item.hoverImageDefault
+            }
+            alt={item.name}
+            className="hover-logo-img"
+          />
+        ))}
+      </div>
     </div>
   );
 }
+

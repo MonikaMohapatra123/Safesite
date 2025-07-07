@@ -1,0 +1,56 @@
+.safetyhq-section {
+  padding: 40px 20px;
+ 
+}
+
+.safetyhq-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.safetyhq-image img {
+  width: 450px;
+  margin-right: 40px;
+}
+
+.safetyhq-content {
+  max-width: 500px;
+}
+
+.safetyhq-content h4 {
+  color: #0073e6;
+  margin-bottom: 8px;
+}
+
+.safetyhq-content h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.safetyhq-content p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.safetyhq-link {
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .safetyhq-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .safetyhq-image img {
+    margin: 0 0 20px 0;
+  }
+
+  .safetyhq-content {
+    max-width: 100%;
+  }
+}

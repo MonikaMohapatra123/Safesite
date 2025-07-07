@@ -224,7 +224,8 @@
     }
   ]
 },
- "3": {
+ 
+  "3": {
     "1": {
       "id": 1,
       "image": "safesite-1.png",
@@ -232,7 +233,9 @@
       "name": "Tyler Jones",
       "title": "DIRECTOR OF SAFETY",
       "stats": "50%",
-      "description": "Inspection times cut"
+      "description": "Inspection times cut",
+      "hoverImageDefault": "Nocolor-1.png",
+      "hoverImageColor": "withcolor-1.png"
     },
     "2": {
       "id": 2,
@@ -241,7 +244,9 @@
       "name": "Anna Smith",
       "title": "PROJECT MANAGER",
       "stats": "60%",
-      "description": "Time saved"
+      "description": "Time saved",
+      "hoverImageDefault": "Nocolor-2.png",
+      "hoverImageColor": "withcolor-2.png"
     },
     "3": {
       "id": 3,
@@ -250,8 +255,10 @@
       "name": "Mike Brown",
       "title": "CEO",
       "stats": "70%",
-      "description": "Costs reduced"
+      "description": "Costs reduced",
+      "hoverImageDefault": "Nocolor-3.png",
+      "hoverImageColor": "withcolor-3.png"
     }
- }
+  }
 
 }

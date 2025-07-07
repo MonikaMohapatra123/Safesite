@@ -1,0 +1,64 @@
+/* src/components/FeatureSection.css */
+
+.feature-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  margin-top: -30px;
+}
+
+.feature-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.feature-tagline {
+  font-size: 0.9rem;
+  color: #0056b3;
+  font-weight: 600;
+}
+
+.feature-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.feature-description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #333;
+  max-width: 500px;
+}
+
+.feature-link {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.feature-image {
+  flex: 1;
+  text-align: center;
+}
+
+.feature-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .feature-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-content {
+    margin-bottom: 2rem;
+  }
+}
