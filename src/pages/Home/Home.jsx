@@ -1,6 +1,4 @@
 
-
-
 import React from 'react';
 import getstoredata from '../../json/data.json';
 import"./Home.css";
@@ -10,6 +8,9 @@ import AllCompanySafetyCard from '../../component/AllCompanySafetyCard/AllCompan
 import AllCompanyTestimonials from '../../component/AllCompanyTestimonials/AllCompanyTestimonials';
 import AllCompanyManagement from '../../component/AllCompanyManagement/AllCompanyManagement';
 import CompanySafetyHQSection from '../../component/Company SafetyHQSection/Company SafetyHQSection';
+import SafetyTopicsCards from '../../component/SafetyTopicsCards/SafetyTopicsCards';
+import SafetyGoals from '../../component/SafetyGoals/SafetyGoals';
+
 
 const Home = () => {
   console.log('✅ Full store data:', getstoredata); // {1: {...}, 2: {...}, 3: {...}}
@@ -17,6 +18,9 @@ const Home = () => {
   const heroSectionData = getstoredata["1"];
   const companySafetyCardData = getstoredata["2"];
   const testimonialsData = getstoredata["3"]; // Object!
+  const safetyTopicsCardsData = getstoredata["4"];
+  const safetyGoalsData = getstoredata["5"];
+
 
   return (
     <div className='home'>
@@ -59,9 +63,21 @@ const Home = () => {
                 linkText="See Pricing & Plans"
                 linkUrl="#"
         />
+        
+      <SafetyTopicsCards data={safetyTopicsCardsData} />
+      <SafetyGoals data={safetyGoalsData} />
+
+      
     </div>
   );
 };
 
 export default Home;
+
+
+
+
+
+
+
 

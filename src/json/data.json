@@ -259,6 +259,72 @@
       "hoverImageDefault": "Nocolor-3.png",
       "hoverImageColor": "withcolor-3.png"
     }
+  },
+  
+  "4": {
+    "page": "SafetyTopicsCards",
+    "id": "4",
+    "sectionTitle": "Explore Safety Topics",
+    "viewAllLink": {
+      "text": "View All Topics →",
+      "url": "/all-topics"
+    },
+    "topics": [
+      {
+        "id": 1,
+        "image": "safesite-2.png",
+        "category": "DIVERSITY, EQUITY, AND INCLUSION",
+        "readTime": "7 min read",
+        "title": "A Guide to Sourcing Inclusive PPE for Diverse Teams",
+        "link": "/topic1"
+      },
+      {
+        "id": 2,
+        "image": "safesite-1.png",
+        "category": "CAREER GROWTH",
+        "readTime": "8 min read",
+        "title": "Everything You Need to Pass the ASP® Safety Certification Exam",
+        "link": "/topic2"
+      },
+      {
+        "id": 3,
+        "image": "safesite-3.png",
+        "category": "DIVERSITY, EQUITY, AND INCLUSION",
+        "readTime": "6 min read",
+        "title": "4 Free Toolbox Talks for Building Cultural Competency",
+        "link": "/topic3"
+      }
+    ]
+  },
+  
+  "5": {
+    "page": "SafetyGoals",
+    "heading": "Surpass Your Safety Goals",
+    "description": "Do more to keep your employees safe with Safesite, the most recommended safety management solution.",
+    "buttonText": "Sign Up For Free",
+    "stats": [
+      {
+        "icon": "⬆️",
+        "value": "8 hrs",
+        "text": "per week saved after using our platform"
+      },
+      {
+        "icon": "⬇️",
+        "value": "57 %",
+        "text": "Proven reduction in workplace incidents"
+      }
+    ],
+    "badges": [
+      "badge-1.png",
+      "badge-2.png",
+      "badge-3.png",
+      "badge-4.png",
+      "badge-5.png"
+    ]
   }
-
 }
+
+
+
+
+

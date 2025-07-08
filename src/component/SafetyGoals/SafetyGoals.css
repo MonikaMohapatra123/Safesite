@@ -1,0 +1,102 @@
+.safety-goals-container {
+ 
+    background: linear-gradient(to top, hsl(220, 13%, 95%) 100%, #e41ca8 0%);
+  text-align: center;
+  padding: 80px 20px;
+  font-family: Arial, sans-serif;
+ clip-path: polygon(0 0, 100% 15%, 150% 100%, 0% 100%);
+ margin-top: 320px;
+ 
+}
+
+.content {
+  display: flex;        
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;      
+  gap: -10px;            
+  text-align: left;
+   
+  
+}
+
+.text-block {
+  max-width: 400px;
+}
+
+.text-block h2 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.text-block p {
+  color: #555;
+  margin: 10px 0 20px;
+}
+
+.signup-btn {
+  background: #ff5630;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px 0px 8px 0px;
+  cursor: pointer;
+}
+
+
+
+.stats {
+  display: flex;
+  align-items: center;  
+  gap: 40px;             
+}
+
+.stats .vertical-line {
+  border: none;
+  background-color: #ddd;  
+  width: 1px;             
+  height: 70px;           
+}
+
+
+.stat-item {
+  text-align: center;
+}
+
+.icon-text {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.stat-item h3 {
+  font-size: 32px;
+  color: #002b4c;
+  margin: 0;
+}
+
+.stat-item p {
+  color: #333;
+}
+
+.stat-item span {
+  color: #0083ca;
+}
+
+hr {
+  margin: 50px auto;
+  border: none;
+  border-top: 1px solid #ddd;
+  width: 80%;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.badges img {
+  height: 60px;
+} 
+

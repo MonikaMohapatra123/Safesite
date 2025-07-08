@@ -1,0 +1,115 @@
+/* Footer.css */
+
+.footer {
+  background-color: #0A4A7A;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 20px;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.footer-link {
+  color: #9BD4F0;
+  cursor: pointer;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.logo-box {
+  /* background: white; */
+  color: #0A4A7A;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.logo-text {
+  margin-left: 8px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.footer-tagline {
+  margin-bottom: 20px;
+}
+
+.app-buttons img {
+  height: 40px;
+  margin-right: 8px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.language-button {
+  background-color: #003355;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 16px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+
+.footer-bottom p {
+  margin: 4px 0;
+}
+
+.footer-legal {
+  margin-top: 4px;
+}
+
+.footer-legal a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  margin: 0 4px;
+}
