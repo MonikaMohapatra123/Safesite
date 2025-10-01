@@ -1,7 +1,7 @@
 {
   "0": {
     "page": "navbar",
-    "logo": "./axiomos-logo.png",
+    "logo": "axiomos-logo.png",
     "company": "Safesite",
     "menu": [
       {
@@ -13,12 +13,12 @@
               {
                 "name": "Inspections",
                 "link": "/features/inspections",
-                "icon": "logo.png"
+                "icon": "/logo.png"
               },
               {
                 "name": "Checklists",
                 "link": "/features/checklists",
-                "icon": "logo.png"
+                "icon": "/logo.png"
               }
             ]
           },
@@ -28,12 +28,12 @@
               {
                 "name": "Dashboards",
                 "link": "/features/dashboards",
-                "icon": "logo.png"
+                "icon": "/logo.png"
               },
               {
                 "name": "Exports",
                 "link": "/features/exports",
-                "icon": "logo.png"
+                "icon": "/logo.png"
               }
             ]
           },
@@ -43,12 +43,12 @@
               {
                 "name": "Team Management",
                 "link": "/features/team-management",
-                "icon": "logo.png"
+                "icon": "/logo.png"
               },
               {
                 "name": "Permissions",
                 "link": "/features/permissions",
-                "icon": "logo.png"
+                "icon": "/logo.png"
               }
             ]
           }
@@ -63,22 +63,22 @@
               {
                 "name": "Safety Checklist",
                 "link": "/templates/safety-checklist",
-                "icon": "logo.png"
+                "icon": "/logo.png"
               },
               {
                 "name": "Incident Report",
                 "link": "/templates/incident-report",
-                "icon": "logo.png"
+                "icon": "/logo.png"
               },
               {
                 "name": "Job Hazard Analysis",
                 "link": "/templates/job-hazard-analysis",
-                "icon": "logo.png"
+                "icon": "/logo.png"
               },
               {
                 "name": "Emergency Plan",
                 "link": "/templates/emergency-plan",
-                "icon": "logo.png"
+                "icon": "/logo.png"
               }
             ]
           }
@@ -321,7 +321,275 @@
       "badge-4.png",
       "badge-5.png"
     ]
+  },
+ 
+  "6": {
+  "page": "FeaturesInspection",
+  "1": {
+    "HeroHeading": "Go <span class='hero-highlight'>Beyond</span> Safety <br /> Compliance",
+    "HeroDescription": "Start managing your best safety program ever — in just 8 minutes.",
+    "HeroButtons": [
+      { "type": "primary", "text": "Get Started Free" },
+      { "type": "secondary", "text": "🔍 View Image" }
+    ],
+    "HeroImage": "/safesite-1.png",
+    "HeroModalImage": "/inspection-modal.png"
+  },
+  "2": {
+    "Heading": "Inspection Features",
+    "Items": [
+      {
+        "title": "Run inspections everywhere",
+        "description": "Complete inspections on-the-go, even in areas with no service. Choose from templates in our library, build your own, or we’ll upload your existing forms (Premium only)."
+      },
+      {
+        "title": "Complete your inspections in half the time",
+        "description": "Complete safety audits and inspections in record time. Record observations and assign corrective actions as you go."
+      },
+      {
+        "title": "Schedule and track inspections",
+        "description": "Assign inspections to team members’ to-do lists. Track inspection completion at an org, group, project, or personnel level via our analytics dashboard."
+      }
+    ],
+    "Button": { "text": "Sign up", "type": "primary" },
+    "Video": "/video-1.mp4"
+  },
+  "3": {
+    "Heading": "Related Features",
+    "Items": [
+      { "title": "Multilingual App (En, Sp, Fr, Pt)", "icon": "FaGlobe", "link": "/multilingual-app" },
+      { "title": "Leading Indicator Analytics", "icon": "FaChartBar", "link": "/leading-indicator-analytics" },
+      { "title": "Hazard Management", "icon": "FaExclamationTriangle", "link": "/hazard-management" },
+      { "title": "Incident Reporting", "icon": "FaShieldAlt", "link": "/incident-reporting" },
+      { "title": "Safety Meetings", "icon": "FaUsers", "link": "/safety-meetings" },
+      { "title": "Safety Observations", "icon": "FaEye", "link": "/safety-observations" }
+    ]
   }
+},
+"7": {
+  "page": "FeaturesChecklists",
+  "1": {
+    "HeroHeading": "Simplify <span class='hero-highlight'>Checklists</span> Management <br /> Effortlessly",
+    "HeroDescription": "Start creating and managing your checklists — in just a few clicks.",
+    "HeroButtons": [
+      { "type": "primary", "text": "Get Started Free" },
+      { "type": "secondary", "text": "🔍 View Image" }
+    ],
+    "HeroImage": "/safesite-2.png",
+    "HeroModalImage": "/checklists-modal.png"
+  },
+  "2": {
+    "Heading": "Checklist Features",
+    "Items": [
+      {
+        "title": "Create checklists anywhere",
+        "description": "Build and manage checklists on-the-go. Choose templates from our library or create custom ones for your team."
+      },
+      {
+        "title": "Track completion in real-time",
+        "description": "Monitor checklist progress instantly. Receive notifications when tasks are completed or overdue."
+      },
+      {
+        "title": "Collaborate with your team",
+        "description": "Assign checklist tasks to team members and track completion at project, team, or individual level."
+      }
+    ],
+    "Button": { "text": "Sign up", "type": "primary" },
+    "Video": "/video-1.mp4"
+  },
+ "3": {
+  "Heading": "Powerful Safety Checklist Features",
+  "Items": [
+    { "icon": "FaGlobe", "title": "Access Anywhere", "link": "#" },
+    { "icon": "FaChartBar", "title": "Track Performance", "link": "#" },
+    { "icon": "FaExclamationTriangle", "title": "Instant Risk Alerts", "link": "#" },
+    { "icon": "FaShieldAlt", "title": "Enterprise-Grade Security", "link": "#" },
+    { "icon": "FaUsers", "title": "Team Collaboration", "link": "#" },
+    { "icon": "FaEye", "title": "Real-Time Monitoring", "link": "#" }
+  ]
+}
+
+}
+,
+"8": {
+  "page": "Dashboard",
+  "1": {
+    "HeroHeading": "Your <span class='hero-highlight'>Dashboard</span> at a Glance",
+    "HeroDescription": "Monitor key metrics, track progress, and stay updated — all from one central hub.",
+    "HeroButtons": [
+      { "type": "primary", "text": "Go to Dashboard" },
+      { "type": "secondary", "text": "📊 View Reports" }
+    ],
+    "HeroImage": "/safesite-3.png",
+    "HeroModalImage": "/dashboard-preview.png"
+  },
+  "2": {
+    "Heading": "Dashboard Features",
+    "Items": [
+      {
+        "title": "Real-Time Analytics",
+        "description": "Track live data and performance indicators across your projects."
+      },
+      {
+        "title": "Customizable Widgets",
+        "description": "Personalize your dashboard with widgets that matter most to you."
+      },
+      {
+        "title": "Seamless Integrations",
+        "description": "Connect with tools and services you already use for smooth workflows."
+      }
+    ],
+    "Button": { "text": "Customize Now", "type": "primary" },
+    "Video": "/video-1.mp4"
+  },
+  "3": {
+    "Heading": "Powerful Dashboard Tools",
+    "Items": [
+      { "icon": "FaChartLine", "title": "Performance Insights", "link": "#" },
+      { "icon": "FaCogs", "title": "Custom Settings", "link": "#" },
+      { "icon": "FaBell", "title": "Smart Notifications", "link": "#" },
+      { "icon": "FaUsersCog", "title": "Role-Based Access", "link": "#" },
+      { "icon": "FaCloud", "title": "Cloud Sync", "link": "#" },
+      { "icon": "FaLock", "title": "Secure Access", "link": "#" }
+    ]
+  }
+},
+"9": {
+  "page": "TeamManagement",
+  "1": {
+    "HeroHeading": "Manage Your <span class='hero-highlight'>Team</span> Efficiently",
+    "HeroDescription": "Organize, collaborate, and keep your team on track — all in one place.",
+    "HeroButtons": [
+      { "type": "primary", "text": "Manage Team" },
+      { "type": "secondary", "text": "👥 View Members" }
+    ],
+    "HeroImage": "/safesite-4.png",
+    "HeroModalImage": "/team-preview.png"
+  },
+  "2": {
+    "Heading": "Team Management Features",
+    "Items": [
+      {
+        "title": "Team Dashboard",
+        "description": "Get an overview of your team's performance and activities in real-time."
+      },
+      {
+        "title": "Task Assignments",
+        "description": "Assign tasks, set deadlines, and monitor progress effortlessly."
+      },
+      {
+        "title": "Collaboration Tools",
+        "description": "Communicate, share files, and collaborate seamlessly with your team."
+      }
+    ],
+    "Button": { "text": "Start Managing", "type": "primary" },
+    "Video": "/video-1.mp4"
+  },
+  "3": {
+    "Heading": "Advanced Team Tools",
+    "Items": [
+      { "icon": "FaUsers", "title": "Member Profiles", "link": "#" },
+      { "icon": "FaTasks", "title": "Task Tracking", "link": "#" },
+      { "icon": "FaComments", "title": "Team Chat", "link": "#" },
+      { "icon": "FaChartPie", "title": "Performance Reports", "link": "#" },
+      { "icon": "FaCalendarAlt", "title": "Scheduling", "link": "#" },
+      { "icon": "FaShieldAlt", "title": "Access Control", "link": "#" }
+    ]
+  }
+}
+,"10": {
+  "page": "Exports",
+  "1": {
+    "HeroHeading": "Simplify <span class='hero-highlight'>Exports</span> Management",
+    "HeroDescription": "Track, organize, and manage all your export activities efficiently from one dashboard.",
+    "HeroButtons": [
+      { "type": "primary", "text": "Manage Exports" },
+      { "type": "secondary", "text": "📦 View Shipments" }
+    ],
+    "HeroImage": "/safesite-3.png",
+    "HeroModalImage": "/exports-preview.png"
+  },
+  "2": {
+    "Heading": "Export Features",
+    "Items": [
+      {
+        "title": "Shipment Overview",
+        "description": "Get real-time insights into all your export shipments and their statuses."
+      },
+      {
+        "title": "Document Management",
+        "description": "Store and access all export-related documents securely in one place."
+      },
+      {
+        "title": "Compliance Tracking",
+        "description": "Ensure all shipments comply with regulations and customs requirements."
+      }
+    ],
+    "Button": { "text": "Start Exporting", "type": "primary" },
+    "Video": "/video-1.mp4"
+  },
+  "3": {
+    "Heading": "Advanced Export Tools",
+    "Items": [
+      { "icon": "FaTruck", "title": "Shipment Tracking", "link": "#" },
+      { "icon": "FaFileInvoice", "title": "Invoice Management", "link": "#" },
+      { "icon": "FaRegFileAlt", "title": "Export Documents", "link": "#" },
+      { "icon": "FaChartLine", "title": "Export Analytics", "link": "#" },
+      { "icon": "FaCalendarAlt", "title": "Schedule Shipments", "link": "#" },
+      { "icon": "FaShieldAlt", "title": "Access Control", "link": "#" }
+    ]
+  }
+}
+,
+"11": {
+  "page": "Permission",
+  "1": {
+    "HeroHeading": "Manage <span class='hero-highlight'>Permissions</span> Seamlessly",
+    "HeroDescription": "Control user access, assign roles, and monitor permissions across your platform easily.",
+    "HeroButtons": [
+      { "type": "primary", "text": "Manage Permissions" },
+      { "type": "secondary", "text": "👤 View Roles" }
+    ],
+    "HeroImage": "/safesite-4.png",
+    "HeroModalImage": "/permissions-preview.png"
+  },
+  "2": {
+    "Heading": "Permission Features",
+    "Items": [
+      {
+        "title": "Role Assignment",
+        "description": "Easily assign roles to users and manage their access levels."
+      },
+      {
+        "title": "Access Control",
+        "description": "Define who can access what within your system securely."
+      },
+      {
+        "title": "Audit Logs",
+        "description": "Track changes in permissions and user activities for compliance."
+      }
+    ],
+    "Button": { "text": "Set Permissions", "type": "primary" },
+    "Video": "/video-1.mp4"
+  },
+  "3": {
+    "Heading": "Advanced Permission Tools",
+    "Items": [
+      { "icon": "FaUserShield", "title": "User Roles", "link": "#" },
+      { "icon": "FaLock", "title": "Secure Access", "link": "#" },
+      { "icon": "FaKey", "title": "API Keys", "link": "#" },
+      { "icon": "FaClipboardCheck", "title": "Audit Reports", "link": "#" },
+      { "icon": "FaCogs", "title": "Permission Settings", "link": "#" },
+      { "icon": "FaBell", "title": "Alerts & Notifications", "link": "#" }
+    ]
+  }
+}
+
+
+
+
+
+
 }
 
 

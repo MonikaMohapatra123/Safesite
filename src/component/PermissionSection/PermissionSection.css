@@ -1,0 +1,138 @@
+.Permission-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 80px;
+  gap: 50px;
+  flex-wrap: wrap; /* helps on smaller screens */
+}
+
+.Permission-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.Permission-video {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;   /* circular video */
+  object-fit: cover;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+.Permission-right {
+  flex: 1;
+}
+
+.Permission-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.checkmark {
+  font-size: 20px;
+  color: green;
+  margin-right: 10px;
+}
+
+.Permission-item h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.Permission-item p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.signup-btn {
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.signup-btn:hover {
+  background: #e64a19;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .Permission-container {
+    padding: 30px 40px;
+    gap: 30px;
+  }
+
+  .Permission-video {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .Permission-container {
+    flex-direction: column;  /* stack video and text */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .Permission-left {
+    margin-bottom: 20px;
+  }
+
+  .Permission-video {
+    width: 220px;
+    height: 220px;
+  }
+
+  .Permission-item {
+    justify-content: center;
+    text-align: left; /* keep text aligned */
+  }
+
+  .signup-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .Permission-video {
+    width: 180px;
+    height: 180px;
+  }
+
+  .Permission-item h3 {
+    font-size: 16px;
+  }
+
+  .Permission-item p {
+    font-size: 13px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -50,7 +50,7 @@
   font-size: 20px;
 }
 
-.logo-box {
+.footer-logo-box {
   /* background: white; */
   color: #0A4A7A;
   font-weight: bold;
@@ -58,7 +58,7 @@
   border-radius: 4px;
 }
 
-.logo-text {
+.footer-logo-text {
   margin-left: 8px;
   font-weight: bold;
   font-size: 20px;
@@ -66,9 +66,10 @@
 
 .footer-tagline {
   margin-bottom: 20px;
+  color: white;
 }
 
-.app-buttons img {
+.footer-app-buttons img {
   height: 40px;
   margin-right: 8px;
 }
@@ -80,7 +81,7 @@
   font-size: 18px;
 }
 
-.language-button {
+.footer-language-button {
   background-color: #003355;
   color: white;
   border: none;
@@ -102,6 +103,7 @@
 
 .footer-bottom p {
   margin: 4px 0;
+  color: seashell;
 }
 
 .footer-legal {

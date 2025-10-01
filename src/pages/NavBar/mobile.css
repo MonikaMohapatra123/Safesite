@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: #1B4F82;
   
   z-index: 1100;
 }
@@ -245,25 +245,6 @@
 .MobileMenuIcon-rotate-up {
   transform: rotate(45deg);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* === Mobile Logo Container === */

@@ -11,17 +11,17 @@ const Footer = () => {
         {/* Logo and Tagline */}
         <div className="footer-column">
           <div className="footer-logo">
-            <div className="logo-box"><img src='axiomos-logo.png' alt='logo'/></div>
-            <span className="logo-text">Axiomos</span>
+            <div className="footer-logo-box"><img src='axiomos-logo.png' alt='logo'/></div>
+            <span className="footer-logo-text">Axiomos</span>
           </div>
           <p className="footer-tagline">
             An award-winning safety management solution for companies of all sizes and industries
           </p>
 
           {/* App store buttons */}
-          <div className="app-buttons">
+          <div className="footer-app-buttons">
             <img src="/appstore.png" alt="App Store" />
-            <img src="/googleplay.png" alt="Google Play" />
+            <img src="/gogglestore.png" alt="Google Play" />
           </div>
 
           {/* Social icons */}
@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
 
           {/* Language Selector */}
-          <button className="language-button">
+          <button className="footer-language-button">
             <span role="img" aria-label="flag">🇺🇸</span> English
           </button>
         </div>

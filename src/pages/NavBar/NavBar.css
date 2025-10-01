@@ -11,7 +11,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 999;
-  background-color: var(--primary-color); /* Default: transparent */
+  background-color:#1B4F82; /* Default: transparent */
   transition: background-color 0.3s ease; /* Smooth transition */
   display: flex;
   justify-content: space-between;
@@ -37,7 +37,7 @@ body {
 .NavBar-scrolled .NavBar-button {
   border: 2px solid white;
   color: white;
-  background-color: var(--primary-color);
+  background-color:#1B4F82;
 }
 
 .NavBar-scrolled .NavBar-button:hover {
@@ -97,7 +97,7 @@ body {
 
 .NavBar-button:hover {
   background-color: white;
-  color: var(--primary-color);
+  color:#1B4F82;
   transition: 0.3s;
 }
 
@@ -144,8 +144,8 @@ body {
   font-weight: bold;
   margin-bottom: 10px;
   font-size: 16px;
-  color: var(--primary-color);
-  border-bottom: 2px solid var(--primary-color);
+  color: #1B4F82;
+  border-bottom: 2px solid #1B4F82;
   padding-bottom: 5px;
 }
 

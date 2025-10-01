@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <div className='home'>
-      <NavBar />
+      {/* <NavBar /> */}
       <HeroSection data={heroSectionData} />
       <AllCompanySafetyCard data={companySafetyCardData} />
       <AllCompanyTestimonials data={testimonialsData} />
@@ -47,7 +47,7 @@ const Home = () => {
                 linkUrl="#"
         />
          <AllCompanyManagement
-       tagline="Easy-to-Use"
+        tagline="Easy-to-Use"
         title="The Most Intuitive Safety App"
         description="Field and safety professionals love that Safesite works on any device. Some pros get back 8 hours each week by streamlining time-consuming processes."
         linkText="All Features"
@@ -66,7 +66,7 @@ const Home = () => {
         
       <SafetyTopicsCards data={safetyTopicsCardsData} />
       <SafetyGoals data={safetyGoalsData} />
-
+       
       
     </div>
   );
