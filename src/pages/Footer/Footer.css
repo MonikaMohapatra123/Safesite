@@ -72,6 +72,8 @@
 .footer-app-buttons img {
   height: 40px;
   margin-right: 8px;
+  border-radius: 10px;
+  border: 1px solid white;
 }
 
 .social-icons {
