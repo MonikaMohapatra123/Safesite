@@ -5,7 +5,7 @@ import PermissionSection from '../../component/PermissionSection/PermissionSecti
 import CurvedSection from '../../component/CurvedSection/CurvedSection';
 const Permission = () => {
      const permissionheroData = getstoredata["11"]["1"];
-     const permissionsection = getstoredata["11"]["2"]
+     const permissionsection = getstoredata["11"]["2"];
   return (
     <div>
           <PermissionHeroSection data={permissionheroData}/>

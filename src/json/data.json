@@ -1,7 +1,7 @@
 {
   "0": {
     "page": "navbar",
-    "logo": "axiomos-logo.png",
+    "logo": "/axiomos-logo.png",
     "company": "Safesite",
     "menu": [
       {
@@ -584,10 +584,6 @@
     ]
   }
 }
-
-
-
-
 
 
 }

@@ -103,3 +103,79 @@
 .sg-badge-img:hover {
     transform: scale(1.1);
 }
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+    .sg-content {
+        gap: 20px;
+    }
+
+    .sg-stats {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .sg-vertical-line {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .sg-container {
+        padding: 60px 20px;
+        margin-top:320px;
+    }
+
+    .sg-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .sg-text-block {
+        max-width: 100%;
+    }
+
+    .sg-heading {
+        font-size: 24px;
+    }
+
+    .sg-description {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .sg-btn {
+        padding: 10px 20px;
+    }
+
+    .sg-stats {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .sg-heading {
+        font-size: 20px;
+    }
+
+    .sg-value {
+        font-size: 28px;
+    }
+
+    .sg-icon {
+        font-size: 36px;
+    }
+
+    .sg-badge-img {
+        height: 50px;
+    }
+
+    .sg-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
