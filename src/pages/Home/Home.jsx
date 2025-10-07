@@ -2,7 +2,7 @@
 import React from 'react';
 import getstoredata from '../../json/data.json';
 import"./Home.css";
-import NavBar from '../NavBar/NavBar';
+
 import HeroSection from '../../component/HeroSection/HeroSection';
 import AllCompanySafetyCard from '../../component/AllCompanySafetyCard/AllCompanySafetyCard';
 import AllCompanyTestimonials from '../../component/AllCompanyTestimonials/AllCompanyTestimonials';
@@ -10,6 +10,7 @@ import AllCompanyManagement from '../../component/AllCompanyManagement/AllCompan
 import CompanySafetyHQSection from '../../component/Company SafetyHQSection/Company SafetyHQSection';
 import SafetyTopicsCards from '../../component/SafetyTopicsCards/SafetyTopicsCards';
 import SafetyGoals from '../../component/SafetyGoals/SafetyGoals';
+// import CommonSafetyChecklist from '../../component/CommonSafetyChecklist/CommonSafetyChecklist';
 
 
 const Home = () => {
@@ -66,6 +67,7 @@ const Home = () => {
         
       <SafetyTopicsCards data={safetyTopicsCardsData} />
       <SafetyGoals data={safetyGoalsData} />
+      {/* <CommonSafetyChecklist/> */}
        
       
     </div>
