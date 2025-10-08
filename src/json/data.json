@@ -129,8 +129,8 @@
         ]
       },
       {
-        "name": "Insurance",
-        "link": "/insurance"
+        "name": "Contact Us",
+        "link": "/contact-us"
       }
     ],
     "actions": [
@@ -765,9 +765,28 @@
     ]
   }
 }
-
-
-
+,
+  "16": {
+    "page": "ContactPage",
+    "id": 1,
+    "HeroHeading": "Get in Touch with Us",
+    "HeroDescription": "We’re here to help you with any inquiries or support you need.",
+    "ContactDetails": [
+      { "type": "phone", "value": "+91 9876543210" },
+      { "type": "email", "value": "info@example.com" },
+      { "type": "address", "value": "123 Street, City, India" }
+    ],
+    "ButtonText": "Contact Now",
+    "Form": {
+      "heading": "Send Us a Message",
+      "fields": [
+        { "name": "name", "label": "Full Name", "type": "text", "placeholder": "Enter your name" },
+        { "name": "email", "label": "Email", "type": "email", "placeholder": "Enter your email" },
+        { "name": "message", "label": "Message", "type": "textarea", "placeholder": "Type your message here" }
+      ],
+      "submitText": "Send Message"
+    }
+  }
 
 
 }

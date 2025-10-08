@@ -13,6 +13,7 @@ import TemplatesSafetyChecklist from './pages/TemplatesSafetyChecklist/Templates
 import TemplatesIncidentReport from './pages/TemplatesIncidentReport/TemplatesIncidentReport';
 import TemplatesJobHazad from './pages/TemplatesJobHazad/TemplatesJobHazad';
 import TemplatesEmergencyPlan from './pages/TemplatesEmergencyPlan/TemplatesEmergencyPlan';
+import ContactUs from './pages/ContactUs/ContactUs';
 
 const App = () => {
   return (
@@ -30,8 +31,8 @@ const App = () => {
           <Route path="templates/incident-report" element={ <TemplatesIncidentReport/>}/>
           <Route path="templates/job-hazard-analysis" element={<TemplatesJobHazad/>}/>
           <Route path="templates/emergency-plan" element={ <TemplatesEmergencyPlan/>}/>
-         
-         
+          <Route path="contact-us" element={<ContactUs/>}/>
+       
          
        
       </Routes>
