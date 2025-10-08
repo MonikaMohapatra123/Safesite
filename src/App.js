@@ -9,6 +9,10 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import TeamManagement from './pages/TeamManagement/TeamManagement';
 import Exports from './pages/Exports/Exports';
 import Permission from './pages/Permission/Permission';
+import TemplatesSafetyChecklist from './pages/TemplatesSafetyChecklist/TemplatesSafetyChecklist';
+import TemplatesIncidentReport from './pages/TemplatesIncidentReport/TemplatesIncidentReport';
+import TemplatesJobHazad from './pages/TemplatesJobHazad/TemplatesJobHazad';
+import TemplatesEmergencyPlan from './pages/TemplatesEmergencyPlan/TemplatesEmergencyPlan';
 
 const App = () => {
   return (
@@ -22,10 +26,13 @@ const App = () => {
           <Route path="/features/team-management" element={<TeamManagement/>}/>
           <Route path="/features/exports" element={<Exports/>}/>
            <Route path="/features/permissions" element={<Permission/>}/>
-       
-      
-        
-       
+          <Route path="templates/safety-checklist" element={<TemplatesSafetyChecklist/>}/>
+          <Route path="templates/incident-report" element={ <TemplatesIncidentReport/>}/>
+          <Route path="templates/job-hazard-analysis" element={<TemplatesJobHazad/>}/>
+          <Route path="templates/emergency-plan" element={ <TemplatesEmergencyPlan/>}/>
+         
+         
+         
        
       </Routes>
       <Footer />

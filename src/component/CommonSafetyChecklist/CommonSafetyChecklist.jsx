@@ -29,7 +29,7 @@ const CommonSafetyChecklist = () => {
           {/* Left side - Single Image */}
           <div className="left-section">
             <img
-              src="safesite-1.png"
+              src="/safesite-1.png"
               alt="Safety Checklist"
               className="main-image"
             />
@@ -64,10 +64,10 @@ const CommonSafetyChecklist = () => {
 
         {/* Badges */}
         <div className="badge-row">
-          <img src="badge-4.png" alt="badge" />
-          <img src="badge-5.png" alt="badge" />
-          <img src="badge-1.png" alt="badge" />
-          <img src="badge-2.png" alt="badge" />
+          <img src="/badge-4.png" alt="badge" />
+          <img src="/badge-5.png" alt="badge" />
+          <img src="/badge-1.png" alt="badge" />
+          <img src="/badge-2.png" alt="badge" />
         </div>
       </div>
     </section>

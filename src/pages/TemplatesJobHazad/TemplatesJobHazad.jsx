@@ -4,9 +4,9 @@ import CommonSafetyChecklist from "../../component/CommonSafetyChecklist/CommonS
 import SafetyTemplateList from "../../component/SafetyTemplateList/SafetyTemplateList";
 import data from "../../json/data.json";
 
-const TemplatesSafetyChecklist = () => {
-  const heroData = data["12"]["1"];
-  const templateData = data["12"]["2"];
+const TemplatesJobHazad = () => {
+  const heroData = data["14"]["1"];
+  const templateData = data["14"]["2"];
 
   return (
     <div>
@@ -17,4 +17,4 @@ const TemplatesSafetyChecklist = () => {
   );
 };
 
-export default TemplatesSafetyChecklist;
+export default TemplatesJobHazad; 

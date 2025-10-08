@@ -11,7 +11,7 @@ const Footer = () => {
         {/* Logo and Tagline */}
         <div className="footer-column">
           <div className="footer-logo">
-            <div className="footer-logo-box"><img src='axiomos-logo.png' alt='logo'/></div>
+            <div className="footer-logo-box"><img src='/axiomos-logo.png' alt='logo'/></div>
             <span className="footer-logo-text">Axiomos</span>
           </div>
           <p className="footer-tagline">

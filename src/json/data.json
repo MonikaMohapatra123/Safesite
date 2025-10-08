@@ -583,7 +583,191 @@
       { "icon": "FaBell", "title": "Alerts & Notifications", "link": "#" }
     ]
   }
+},
+ "12": {
+  "page": "TemplateSafetyChecklist",
+  "1": {
+    "HeroIcon": "GiPlantSeed",
+    "HeroHeading": "Agriculture and farming",
+    "HeroDescription": "Find Safesite’s agricultural and farming safety templates and checklists here. Ideal for Safety Managers and Machinery Technicians."
+  },
+  "2": {
+    "title": "Safety Template Library",
+    "languages": ["English", "Hindi", "Spanish", "French"],
+    "categories": ["All", "Covid", "Construction", "Manufacturing", "Office"],
+    "templates": [
+      {
+        "id": 1,
+        "title": "COVID-19 Planning & Safety Checklist",
+        "category": "Covid",
+        "description": "Ensure your workplace meets pandemic safety standards."
+      },
+      {
+        "id": 2,
+        "title": "Construction Site Safety Checklist",
+        "category": "Construction",
+        "description": "Check safety compliance on construction sites."
+      },
+      {
+        "id": 3,
+        "title": "Manufacturing Safety Audit",
+        "category": "Manufacturing",
+        "description": "Evaluate machinery and worker safety procedures."
+      },
+      {
+        "id": 4,
+        "title": "Office Ergonomics Checklist",
+        "category": "Office",
+        "description": "Improve comfort and reduce workplace strain."
+      },
+      {
+        "id": 5,
+        "title": "Post-COVID Workplace Readiness",
+        "category": "Covid",
+        "description": "Assess readiness for returning to physical offices."
+      }
+    ]
+  }
+},
+"13": {
+  "page": "TemplateIncidentReport",
+  "1": {
+    "HeroIcon": "MdReportProblem",
+    "HeroHeading": "Incident Reporting",
+    "HeroDescription": "Access incident reporting templates to document accidents, injuries, and near-miss events effectively. Ideal for Safety Officers, Supervisors, and HR teams."
+  },
+  "2": {
+    "title": "Incident Report Template Library",
+    "languages": ["English", "Hindi", "Spanish", "French"],
+    "categories": ["All", "Accident", "Injury", "Property Damage", "Near Miss"],
+    "templates": [
+      {
+        "id": 1,
+        "title": "Accident Report Form",
+        "category": "Accident",
+        "description": "Record key details about workplace accidents and incidents."
+      },
+      {
+        "id": 2,
+        "title": "Injury Report Checklist",
+        "category": "Injury",
+        "description": "Document employee injuries and follow-up actions."
+      },
+      {
+        "id": 3,
+        "title": "Property Damage Report",
+        "category": "Property Damage",
+        "description": "Log incidents involving damage to company assets or property."
+      },
+      {
+        "id": 4,
+        "title": "Near Miss Reporting Form",
+        "category": "Near Miss",
+        "description": "Capture near-miss events to help prevent future incidents."
+      },
+      {
+        "id": 5,
+        "title": "General Incident Report",
+        "category": "Accident",
+        "description": "Comprehensive template for recording any type of workplace incident."
+      }
+    ]
+  }
+},
+"14": {
+  "page": "TemplateJobHazard",
+  "1": {
+    "HeroIcon": "MdWarningAmber",
+    "HeroHeading": "Job Hazard Analysis",
+    "HeroDescription": "Access job hazard analysis templates to identify, assess, and control workplace hazards. Ideal for Safety Officers, Site Managers, and Supervisors."
+  },
+  "2": {
+    "title": "Job Hazard Analysis Template Library",
+    "languages": ["English", "Hindi", "Spanish", "French"],
+    "categories": ["All", "General", "Construction", "Manufacturing", "Chemical", "Electrical"],
+    "templates": [
+      {
+        "id": 1,
+        "title": "General JHA Template",
+        "category": "General",
+        "description": "Standard template to analyze job tasks and identify potential hazards."
+      },
+      {
+        "id": 2,
+        "title": "Construction JHA Form",
+        "category": "Construction",
+        "description": "Identify and control construction-related hazards and risks."
+      },
+      {
+        "id": 3,
+        "title": "Manufacturing JHA Checklist",
+        "category": "Manufacturing",
+        "description": "Assess hazards associated with manufacturing tasks."
+      },
+      {
+        "id": 4,
+        "title": "Chemical Handling JHA",
+        "category": "Chemical",
+        "description": "Analyze hazards related to handling chemicals and hazardous substances."
+      },
+      {
+        "id": 5,
+        "title": "Electrical Safety JHA",
+        "category": "Electrical",
+        "description": "Document job steps and risks related to electrical work."
+      }
+    ]
+  }
 }
+,
+"15": {
+  "page": "TemplatesEmergencyPlan",
+  "1": {
+    "HeroIcon": "MdEmergency",
+    "HeroHeading": "Emergency Response Plan",
+    "HeroDescription": "Access emergency response plan templates to prepare for and respond to workplace emergencies. Ideal for Safety Officers, Emergency Coordinators, and HR teams."
+  },
+  "2": {
+    "title": "Emergency Response Plan Template Library",
+    "languages": ["English", "Hindi", "Spanish", "French"],
+    "categories": ["All", "Evacuation", "Fire", "Medical", "Chemical Spill", "Natural Disaster"],
+    "templates": [
+      {
+        "id": 1,
+        "title": "Emergency Evacuation Plan",
+        "category": "Evacuation",
+        "description": "Step-by-step plan to safely evacuate employees during an emergency."
+      },
+      {
+        "id": 2,
+        "title": "Fire Emergency Response Plan",
+        "category": "Fire",
+        "description": "Detailed procedure to follow in case of fire incidents."
+      },
+      {
+        "id": 3,
+        "title": "Medical Emergency Action Plan",
+        "category": "Medical",
+        "description": "Guidelines to handle medical emergencies and first aid procedures."
+      },
+      {
+        "id": 4,
+        "title": "Chemical Spill Response Plan",
+        "category": "Chemical Spill",
+        "description": "Instructions to contain and clean up hazardous chemical spills safely."
+      },
+      {
+        "id": 5,
+        "title": "Natural Disaster Preparedness Plan",
+        "category": "Natural Disaster",
+        "description": "Preparedness and response steps for earthquakes, floods, or storms."
+      }
+    ]
+  }
+}
+
+
+
 
 
 }

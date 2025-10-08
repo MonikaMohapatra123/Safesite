@@ -4,19 +4,28 @@ import "./CurvedSection.css";
 const CurvedSection = () => {
   return (
     <section className="cs-section">
-      {/* Top Curve */}
-      <svg
-        className="cs-top-curve"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 300"
-        preserveAspectRatio="none"
-      >
-        <path d="M0,220 Q720,-50 1440,220 L1440,300 L0,300 Z" fill="#f4f8fb" />
-      </svg>
+      {/* --- Top Curve (Copied from SafetyGoals) --- */}
+      <div className="cs-top-bg">
+        <svg
+          className="cs-top-curve"
+          viewBox="0 0 1440 220"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient id="cs-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#f4f8fb" />
+              <stop offset="100%" stopColor="#f7f9fb" />
+            </linearGradient>
+          </defs>
+          <rect width="100%" height="220" fill="url(#cs-grad)" />
+          <path d="M0,180 L720,20 L1440,180 L1440,220 L0,220 Z" fill="#fff" />
+        </svg>
+      </div>
 
-      {/* Row container */}
+      {/* --- Main Content --- */}
       <div className="cs-container cs-row">
-        {/* Left: Content */}
+        {/* Left Content */}
         <div className="cs-left">
           <h2>Surpass Your Safety Goals</h2>
           <p>
@@ -26,7 +35,7 @@ const CurvedSection = () => {
           <button className="cs-btn">Sign Up For Free</button>
         </div>
 
-        {/* Right: Stats */}
+        {/* Right Stats */}
         <div className="cs-right">
           <div className="cs-stat">
             <div className="cs-stat-icon">⬆</div>
