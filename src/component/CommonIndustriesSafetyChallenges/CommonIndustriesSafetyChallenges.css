@@ -1,0 +1,119 @@
+.safety-challenges {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  background: #f9fafb; /* subtle light background */
+}
+
+.safety-container {
+  display: flex;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.safety-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.safety-heading {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.3;
+  color: #222;
+}
+
+.challenge-item {
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.challenge-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.challenge-item h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.challenge-item p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.safety-image {
+  flex: 1;
+  text-align: center;
+  min-width: 280px;
+}
+
+.safety-image img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.safety-image img:hover {
+  transform: scale(1.03);
+}
+
+/* --------- MOBILE RESPONSIVE --------- */
+@media (max-width: 900px) {
+  .safety-container {
+    flex-direction: column-reverse; /* image below text on mobile */
+    gap: 40px;
+  }
+
+  .safety-heading {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .challenge-item {
+    padding: 15px 18px;
+  }
+
+  .challenge-item h4 {
+    font-size: 18px;
+  }
+
+  .challenge-item p {
+    font-size: 15px;
+  }
+
+  .safety-image {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .safety-heading {
+    font-size: 24px;
+  }
+
+  .challenge-item {
+    padding: 12px 15px;
+  }
+
+  .challenge-item h4 {
+    font-size: 16px;
+  }
+
+  .challenge-item p {
+    font-size: 14px;
+  }
+}

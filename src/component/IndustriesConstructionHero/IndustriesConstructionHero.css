@@ -1,0 +1,136 @@
+.construction-hero-section {
+  position: relative;
+  overflow: hidden;
+  background-color: #1b4f82;
+  color: #fff;
+  padding: 100px 20px;
+  clip-path: ellipse(94% 87% at 55% 0%);
+  transition: clip-path 0.3s ease;
+}
+
+.construction-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.construction-hero-left {
+  flex: 1 1 500px;
+  margin-top: -40px;
+}
+
+.construction-hero-heading {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.construction-hero-description {
+  font-size: 18px;
+}
+
+.construction-hero-right {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.construction-hero-image-wrapper {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.construction-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ✅ Modal */
+.construction-hero-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.construction-hero-modal-content {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+}
+
+.construction-hero-modal-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.construction-hero-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+/* ✅ Responsive for Mobile */
+@media (max-width: 768px) {
+  .construction-hero-section {
+    clip-path: none; /* remove curve on mobile */
+    padding: 60px 20px;
+    height: 700px;
+  }
+
+  .construction-hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .construction-hero-left {
+    margin-top: 0;
+  }
+
+  .construction-hero-heading {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .construction-hero-description {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .construction-hero-image-wrapper {
+    width: 200px;
+     margin-top: -590px;
+     border-radius:50%;
+     height: 200px;
+
+
+  }
+}

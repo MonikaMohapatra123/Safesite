@@ -787,6 +787,36 @@
       "submitText": "Send Message"
     }
   }
+,
+"17": {
+  "page": "industriesConstruction",
+  "1": {
+    "HeroHeading": "Build <span class='hero-highlight'>Safer</span> Construction Sites <br /> with Confidence",
+    "HeroDescription": "Empower your team with real-time tools to keep every job site safe and compliant.",
+   
+    "HeroImage": "/safesite-1.png",
+    "HeroModalImage": "/construction-modal.png"
+  },
+      "2": {
+      "HeroHeading": "Safety Management Challenges <br /> within the Agriculture Industry",
+      "HeroDescription": [
+        {
+          "title": "Paper Recordkeeping",
+          "desc": "Are you working with a dated, binder-based safety and log process? When CalOSHA asks for your maintenance, equipment, and safety logs, do you have a quick way to provide those?"
+        },
+        {
+          "title": "Lack of Preparedness",
+          "desc": "Is it difficult to stay ahead of inspections and audits? Do you feel prepared should equipment break down or an injury occurs?"
+        },
+        {
+          "title": "Immature Safety Program",
+          "desc": "How robust is your safety program? If you have a safety program in place, can you efficiently take ownership of it, or do you use a third-party to train your team?"
+        }
+      ],
+      "HeroImage": "/safesite-2.png",
+      "HeroModalImage": "/agriculture-modal.png"
+      }
+}
 
 
 }
