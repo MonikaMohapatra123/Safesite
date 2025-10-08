@@ -816,7 +816,64 @@
       "HeroImage": "/safesite-2.png",
       "HeroModalImage": "/agriculture-modal.png"
       }
+},
+"18": {
+  "page": "industriesEnergy",
+  "1": {
+    "HeroHeading": "Power <span class='hero-highlight'>Up</span> Safety in the Energy Sector <br /> with Smart Tools",
+    "HeroDescription": "Keep your workforce safe and compliant with real-time monitoring and reporting systems.",
+    "HeroImage": "/safesite-3.png",
+    "HeroModalImage": "/energy-modal.png"
+  },
+  "2": {
+    "HeroHeading": "Safety Management Challenges <br /> within the Energy Industry",
+    "HeroDescription": [
+      {
+        "title": "Complex Regulations",
+        "desc": "Energy operations involve strict compliance with multiple standards. Manual tracking can lead to costly oversights."
+      },
+      {
+        "title": "High-Risk Environments",
+        "desc": "Workers face high-voltage systems, confined spaces, and hazardous materials daily — preparedness is crucial."
+      },
+      {
+        "title": "Inefficient Reporting",
+        "desc": "Paper-based systems make it difficult to report incidents or track safety metrics in real-time."
+      }
+    ],
+    "HeroImage": "/energy-challenges.png",
+    "HeroModalImage": "/energy-modal-2.png"
+  }
+},
+"19": {
+  "page": "industriesManufacturing",
+  "1": {
+    "HeroHeading": "Create a <span class='hero-highlight'>Safer</span> Manufacturing Floor <br /> with Automation and Insight",
+    "HeroDescription": "Empower teams with real-time alerts, inspections, and compliance management.",
+    "HeroImage": "/safesite-4.png",
+    "HeroModalImage": "/manufacturing-modal.png"
+  },
+  "2": {
+    "HeroHeading": "Safety Management Challenges <br /> within the Manufacturing Industry",
+    "HeroDescription": [
+      {
+        "title": "Workplace Hazards",
+        "desc": "Machinery, chemicals, and moving parts increase injury risks without proper monitoring."
+      },
+      {
+        "title": "Training Gaps",
+        "desc": "Inconsistent or outdated training leads to preventable safety incidents and poor compliance."
+      },
+      {
+        "title": "Manual Tracking",
+        "desc": "Paper-based or spreadsheet tracking can delay reporting, audits, and corrective actions."
+      }
+    ],
+    "HeroImage": "/manufacturing-challenges.png",
+    "HeroModalImage": "/manufacturing-modal-2.png"
+  }
 }
+
 
 
 }

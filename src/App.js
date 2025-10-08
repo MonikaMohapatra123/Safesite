@@ -15,6 +15,8 @@ import TemplatesJobHazad from './pages/TemplatesJobHazad/TemplatesJobHazad';
 import TemplatesEmergencyPlan from './pages/TemplatesEmergencyPlan/TemplatesEmergencyPlan';
 import ContactUs from './pages/ContactUs/ContactUs';
 import { IndustriesConstruction } from './pages/IndustriesConstruction/IndustriesConstruction';
+import { IndustriesEnergy } from './pages/IndustriesEnergy/IndustriesEnergy';
+import IndustriesManufacturing from './pages/IndustriesManufacturing/IndustriesManufacturing';
 
 const App = () => {
   return (
@@ -33,7 +35,10 @@ const App = () => {
           <Route path="templates/job-hazard-analysis" element={<TemplatesJobHazad/>}/>
           <Route path="templates/emergency-plan" element={ <TemplatesEmergencyPlan/>}/>
           <Route path="contact-us" element={<ContactUs/>}/>
-                 <Route path="industries/construction" element={<IndustriesConstruction/>}/>
+         <Route path="industries/construction" element={<IndustriesConstruction/>}/>
+         <Route path="industries/energy" element={ <IndustriesEnergy/>}/>
+          <Route path="industries/manufacturing" element={<IndustriesManufacturing/>}/>
+
          
        
       </Routes>
