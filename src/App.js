@@ -17,6 +17,9 @@ import ContactUs from './pages/ContactUs/ContactUs';
 import { IndustriesConstruction } from './pages/IndustriesConstruction/IndustriesConstruction';
 import { IndustriesEnergy } from './pages/IndustriesEnergy/IndustriesEnergy';
 import IndustriesManufacturing from './pages/IndustriesManufacturing/IndustriesManufacturing';
+import ResourceBlog from './pages/ResourceBlog/ResourceBlog';
+import ResourceCaseStudies from './pages/ResourceCaseStudies/ResourceCaseStudies';
+import ResourcePricing from './pages/ResourcePricing/ResourcePricing';
 
 const App = () => {
   return (
@@ -38,8 +41,12 @@ const App = () => {
          <Route path="industries/construction" element={<IndustriesConstruction/>}/>
          <Route path="industries/energy" element={ <IndustriesEnergy/>}/>
           <Route path="industries/manufacturing" element={<IndustriesManufacturing/>}/>
+          <Route path="resources/blog" element={ <ResourceBlog/>}/>
+           <Route path="resources/case-studies" element={ <ResourceCaseStudies/>}/>
+            <Route path="resources/pricing" element={ <ResourcePricing/>}/>
+          
 
-         
+       
        
       </Routes>
       <Footer />

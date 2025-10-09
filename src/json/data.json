@@ -228,36 +228,36 @@
   "3": {
     "1": {
       "id": 1,
-      "image": "safesite-1.png",
+      "image": "/safesite-1.png",
       "quote": "In one day, Safesite uploaded my jobsite inspection and monthly equipment inspection forms.",
       "name": "Tyler Jones",
       "title": "DIRECTOR OF SAFETY",
       "stats": "50%",
       "description": "Inspection times cut",
-      "hoverImageDefault": "Nocolor-1.png",
-      "hoverImageColor": "withcolor-1.png"
+      "hoverImageDefault": "/Nocolor-1.png",
+      "hoverImageColor": "/withcolor-1.png"
     },
     "2": {
       "id": 2,
-      "image": "safesite-2.png",
+      "image": "/safesite-2.png",
       "quote": "Our team works faster now.",
       "name": "Anna Smith",
       "title": "PROJECT MANAGER",
       "stats": "60%",
       "description": "Time saved",
-      "hoverImageDefault": "Nocolor-2.png",
-      "hoverImageColor": "withcolor-2.png"
+      "hoverImageDefault": "/Nocolor-2.png",
+      "hoverImageColor": "/withcolor-2.png"
     },
     "3": {
       "id": 3,
-      "image": "safesite-3.png",
+      "image": "/safesite-3.png",
       "quote": "Costs have dropped significantly.",
       "name": "Mike Brown",
       "title": "CEO",
       "stats": "70%",
       "description": "Costs reduced",
-      "hoverImageDefault": "Nocolor-3.png",
-      "hoverImageColor": "withcolor-3.png"
+      "hoverImageDefault": "/Nocolor-3.png",
+      "hoverImageColor": "/withcolor-3.png"
     }
   },
   
@@ -315,11 +315,11 @@
       }
     ],
     "badges": [
-      "badge-1.png",
-      "badge-2.png",
-      "badge-3.png",
-      "badge-4.png",
-      "badge-5.png"
+      "/badge-1.png",
+      "/badge-2.png",
+      "/badge-3.png",
+      "/badge-4.png",
+      "/badge-5.png"
     ]
   },
  
@@ -795,7 +795,7 @@
     "HeroDescription": "Empower your team with real-time tools to keep every job site safe and compliant.",
    
     "HeroImage": "/safesite-1.png",
-    "HeroModalImage": "/construction-modal.png"
+    "HeroModalImage": "/safesite-4.png"
   },
       "2": {
       "HeroHeading": "Safety Management Challenges <br /> within the Agriculture Industry",
@@ -814,8 +814,33 @@
         }
       ],
       "HeroImage": "/safesite-2.png",
-      "HeroModalImage": "/agriculture-modal.png"
-      }
+      "HeroModalImage": "/safesite-2.png"
+      },
+      "3": {
+  "heading": "Surpass Your Safety Goals",
+  "description": "Do more to keep your employees safe with Safesite, the most recommended safety management solution.",
+  "buttonText": "Sign Up For Free",
+  "stats": [
+    {
+      "icon": "⬆️",
+      "value": "8 hrs",
+      "text": "per week saved after using our platform"
+    },
+    {
+      "icon": "⬇️",
+      "value": "57 %",
+      "text": "Proven reduction in workplace incidents"
+    }
+  ],
+  "badges": [
+    "/badge-1.png",
+    "/badge-2.png",
+    "/badge-3.png",
+    "/badge-4.png",
+    "/badge-5.png"
+  ]
+}
+
 },
 "18": {
   "page": "industriesEnergy",
@@ -823,7 +848,7 @@
     "HeroHeading": "Power <span class='hero-highlight'>Up</span> Safety in the Energy Sector <br /> with Smart Tools",
     "HeroDescription": "Keep your workforce safe and compliant with real-time monitoring and reporting systems.",
     "HeroImage": "/safesite-3.png",
-    "HeroModalImage": "/energy-modal.png"
+    "HeroModalImage": "/safesite-2.png"
   },
   "2": {
     "HeroHeading": "Safety Management Challenges <br /> within the Energy Industry",
@@ -841,9 +866,34 @@
         "desc": "Paper-based systems make it difficult to report incidents or track safety metrics in real-time."
       }
     ],
-    "HeroImage": "/energy-challenges.png",
-    "HeroModalImage": "/energy-modal-2.png"
-  }
+    "HeroImage": "/safesite-2.png",
+    "HeroModalImage": "/safesite-1.png"
+  },
+  "3": {
+  "heading": "Surpass Your Safety Goals",
+  "description": "Do more to keep your employees safe with Safesite, the most recommended safety management solution.",
+  "buttonText": "Sign Up For Free",
+  "stats": [
+    {
+      "icon": "⬆️",
+      "value": "8 hrs",
+      "text": "per week saved after using our platform"
+    },
+    {
+      "icon": "⬇️",
+      "value": "57 %",
+      "text": "Proven reduction in workplace incidents"
+    }
+  ],
+  "badges": [
+    "/badge-1.png",
+    "/badge-2.png",
+    "/badge-3.png",
+    "/badge-4.png",
+    "/badge-5.png"
+  ]
+}
+
 },
 "19": {
   "page": "industriesManufacturing",
@@ -851,7 +901,7 @@
     "HeroHeading": "Create a <span class='hero-highlight'>Safer</span> Manufacturing Floor <br /> with Automation and Insight",
     "HeroDescription": "Empower teams with real-time alerts, inspections, and compliance management.",
     "HeroImage": "/safesite-4.png",
-    "HeroModalImage": "/manufacturing-modal.png"
+    "HeroModalImage": "/safesite-2.png"
   },
   "2": {
     "HeroHeading": "Safety Management Challenges <br /> within the Manufacturing Industry",
@@ -869,8 +919,104 @@
         "desc": "Paper-based or spreadsheet tracking can delay reporting, audits, and corrective actions."
       }
     ],
-    "HeroImage": "/manufacturing-challenges.png",
-    "HeroModalImage": "/manufacturing-modal-2.png"
+    "HeroImage": "/safesite-1.png",
+    "HeroModalImage": "/safesite-4.png"
+  },
+  "3": {
+  "heading": "Surpass Your Safety Goals",
+  "description": "Do more to keep your employees safe with Safesite, the most recommended safety management solution.",
+  "buttonText": "Sign Up For Free",
+  "stats": [
+    {
+      "icon": "⬆️",
+      "value": "8 hrs",
+      "text": "per week saved after using our platform"
+    },
+    {
+      "icon": "⬇️",
+      "value": "57 %",
+      "text": "Proven reduction in workplace incidents"
+    }
+  ],
+  "badges": [
+    "/badge-1.png",
+    "/badge-2.png",
+    "/badge-3.png",
+    "/badge-4.png",
+    "/badge-5.png"
+  ]
+}
+
+},
+ "20": {
+    "page": "ResourceBlog",
+    "1": {
+      "image": "/safesite-2.png",
+      "tag": "SAFETY",
+      "readTime": "11",
+      "title": "A Safety Guide to Electrical Hazards",
+      "description": "How many electrical hazards can you count around you right now? Unless you are off-grid, there’s at least a handful of electrical outlets and electrical tools nearby you right now….",
+      "author": "TEAM SAFESITE",
+      "date": "JULY 29, 2022"
+    }
+  }
+,"21": {
+  "page": "ResourceCasestudies",
+  "1": {
+    "image": "/safesite-4.png",
+    "tag": "CASE STUDY",
+    "readTime": "8",
+    "title": "How a Construction Company Reduced Incidents by 60%",
+    "description": "Discover how a leading construction firm improved site safety and cut down incidents with a proactive safety management approach.",
+    "author": "TEAM SAFESITE",
+    "date": "MARCH 15, 2023"
+  },
+  "2": {
+  "id": "4",
+  "sectionTitle": "Explore Safety Topics",
+  "viewAllLink": {
+    "text": "View All Topics →",
+    "url": "/all-topics"
+  },
+  "topics": [
+    {
+      "id": 1,
+      "image": "/safesite-2.png",
+      "category": "DIVERSITY, EQUITY, AND INCLUSION",
+      "readTime": "7 min read",
+      "title": "A Guide to Sourcing Inclusive PPE for Diverse Teams",
+      "link": "/topic1"
+    },
+    {
+      "id": 2,
+      "image": "/safesite-1.png",
+      "category": "CAREER GROWTH",
+      "readTime": "8 min read",
+      "title": "Everything You Need to Pass the ASP® Safety Certification Exam",
+      "link": "/topic2"
+    },
+    {
+      "id": 3,
+      "image": "/safesite-3.png",
+      "category": "DIVERSITY, EQUITY, AND INCLUSION",
+      "readTime": "6 min read",
+      "title": "4 Free Toolbox Talks for Building Cultural Competency",
+      "link": "/topic3"
+    }
+  ]
+}
+
+},
+"22": {
+  "page": "ResourcePricing",
+  "1": {
+    "image": "/safesite-2.png",
+    "tag": "Pricing",
+    "readTime": "8",
+    "title": "How a Construction Company Reduced Incidents by 60%",
+    "description": "Discover how a leading construction firm improved site safety and cut down incidents with a proactive safety management approach.",
+    "author": "TEAM SAFESITE",
+    "date": "MARCH 15, 2023"
   }
 }
 

@@ -2,7 +2,6 @@
 import React from 'react';
 import getstoredata from '../../json/data.json';
 import"./Home.css";
-
 import HeroSection from '../../component/HeroSection/HeroSection';
 import AllCompanySafetyCard from '../../component/AllCompanySafetyCard/AllCompanySafetyCard';
 import AllCompanyTestimonials from '../../component/AllCompanyTestimonials/AllCompanyTestimonials';
