@@ -20,6 +20,7 @@ import IndustriesManufacturing from './pages/IndustriesManufacturing/IndustriesM
 import ResourceBlog from './pages/ResourceBlog/ResourceBlog';
 import ResourceCaseStudies from './pages/ResourceCaseStudies/ResourceCaseStudies';
 import ResourcePricing from './pages/ResourcePricing/ResourcePricing';
+import AboutUs from './pages/AboutUs/AboutUs';
 
 const App = () => {
   return (
@@ -44,9 +45,9 @@ const App = () => {
           <Route path="resources/blog" element={ <ResourceBlog/>}/>
            <Route path="resources/case-studies" element={ <ResourceCaseStudies/>}/>
             <Route path="resources/pricing" element={ <ResourcePricing/>}/>
-          
+           <Route path="why-us" element={<AboutUs/>}/>
 
-       
+   
        
       </Routes>
       <Footer />

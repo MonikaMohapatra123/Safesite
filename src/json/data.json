@@ -5,6 +5,10 @@
     "company": "Safesite",
     "menu": [
       {
+        "name": "WhySafesite",
+        "link": "/why-us"
+      },
+      {
         "name": "Features",
         "sections": [
           {
@@ -1004,7 +1008,42 @@
       "link": "/topic3"
     }
   ]
+},"3": {
+  "1": {
+    "id": 1,
+    "image": "/safesite-1.png",
+    "quote": "In one day, Safesite uploaded my jobsite inspection and monthly equipment inspection forms.",
+    "name": "Tyler Jones",
+    "title": "DIRECTOR OF SAFETY",
+    "stats": "50%",
+    "description": "Inspection times cut",
+    "hoverImageDefault": "/Nocolor-1.png",
+    "hoverImageColor": "/withcolor-1.png"
+  },
+  "2": {
+    "id": 2,
+    "image": "/safesite-2.png",
+    "quote": "Our team works faster now.",
+    "name": "Anna Smith",
+    "title": "PROJECT MANAGER",
+    "stats": "60%",
+    "description": "Time saved",
+    "hoverImageDefault": "/Nocolor-2.png",
+    "hoverImageColor": "/withcolor-2.png"
+  },
+  "3": {
+    "id": 3,
+    "image": "/safesite-3.png",
+    "quote": "Costs have dropped significantly.",
+    "name": "Mike Brown",
+    "title": "CEO",
+    "stats": "70%",
+    "description": "Costs reduced",
+    "hoverImageDefault": "/Nocolor-3.png",
+    "hoverImageColor": "/withcolor-3.png"
+  }
 }
+
 
 },
 "22": {
@@ -1018,7 +1057,68 @@
     "author": "TEAM SAFESITE",
     "date": "MARCH 15, 2023"
   }
+},
+
+  "24": {
+  "page": "Aboutpage",
+  "1": {
+    "heading": "Our Mission: <span class='highlight'>Empower</span> everyone to be a safety champion",
+    "description1": "In 2014, our three founders lost a mutual friend in a workplace accident. The incident sparked an interest in streamlining workplace safety.",
+    "description2": "Today, thousands of companies worldwide trust Safesite, a powerful, easy-to-use safety management solution proven to cut incident rates in half.",
+    "quote": "With Safesite, we were able to achieve an 84% reduction in recordable incident rate and a 100% reduction in lost time incident rate.",
+    "name": "Derek Smith",
+    "title": "JR Cruz New York, NY",
+    "image": "/safesite-5.png",
+    "backgroundImage": "/banner-watermark.svg"
+  },
+  "2": {
+    "heading": "Our Values",
+    "subHeading": "We’re driven by a vision of a safer future",
+    "topImage": "/safesite-6.png",
+    "bottomImage": "/safesite-5.png",
+    "values": [
+      {
+        "number": "01.",
+        "title": "Home Safe",
+        "description": "There is a reason we call out the importance of safety and what we do first in this list: because it’s the most important. Our vision directly supports improving safety for everyone. Solutions that save lives are always prioritized over those that don’t, because there is no more important objective than saving a life."
+      },
+      {
+        "number": "02.",
+        "title": "Tenacity",
+        "description": "We know that change does not develop or solidify in a week. It’s more challenging to do what’s right than what’s easy, but we push hard to get it done anyway. We don’t wait around for the world to change itself; we take on the burden of driving change and we stay the course."
+      },
+      {
+        "number": "03.",
+        "title": "Aim Higher",
+        "description": "We don’t settle for what’s just acceptable. The only option is excellence, and we’re always finding ways to raise the bar, because our customers deserve nothing less. We work to create a better future for ourselves and the customers we serve."
+      },
+      {
+        "number": "04.",
+        "title": "Comradery",
+        "description": "To push change, we need collectively as one group. Everyone contributes. Everyone plays their part. The Safesite culture thrives when we support each other as a team. The greater the foundation we build, the stronger we are together."
+      },
+      {
+        "number": "05.",
+        "title": "Simplicity",
+        "description": "We understand the clear benefits of keeping things simple. At its highest level, technology is at its most powerful when the end experience is simple. We work tirelessly to ensure we’re not complicating safety, but instead making it easier to practice."
+      },
+      {
+        "number": "06.",
+        "title": "Agility",
+        "description": "Considering where the safety industry is heading, developing new products, and adapting quickly are essential. We stay nimble to address industry changes and customer needs with flexibility and speed, so both we and our customers can navigate rapid technological and sociological change."
+      }
+    ]
+  },
+  "3": {
+  "heading": "Come work with us!",
+  "description": "Join our team of passionate people.",
+  "buttonText": "See Open Jobs",
+  "image": "/safesite-2.png"
 }
+
+}
+
+
 
 
 

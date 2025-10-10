@@ -1,11 +1,37 @@
 
-// import React, { useState } from 'react';
+// import React, { useState, useEffect } from 'react';
 // import './AllCompanySafetyCard.css';
 
 // const AllCompanySafetyCard = ({ data }) => {
 //   const cardsData = data?.cards || [];
-
 //   const [activeCardId, setActiveCardId] = useState(cardsData[0]?.id || null);
+//   const [isMobile, setIsMobile] = useState(false);
+
+//   // Check if mobile
+//   useEffect(() => {
+//     const checkMobile = () => {
+//       setIsMobile(window.innerWidth <= 768); // adjust breakpoint if needed
+//     };
+
+//     checkMobile();
+//     window.addEventListener('resize', checkMobile);
+//     return () => window.removeEventListener('resize', checkMobile);
+//   }, []);
+
+//   // Auto-slide for mobile
+//   useEffect(() => {
+//     if (!isMobile || cardsData.length <= 1) return;
+
+//     const interval = setInterval(() => {
+//       setActiveCardId(prevId => {
+//         const currentIndex = cardsData.findIndex(card => card.id === prevId);
+//         const nextIndex = (currentIndex + 1) % cardsData.length;
+//         return cardsData[nextIndex].id;
+//       });
+//     }, 3000); // Slide every 3 seconds
+
+//     return () => clearInterval(interval);
+//   }, [isMobile, cardsData]);
 
 //   if (!data || !data.cards || cardsData.length === 0) {
 //     return <div>No safety cards available.</div>;
@@ -20,21 +46,24 @@
 //   return (
 //     <div className="acsc-wrapper">
 //       <h2>{data.Title}</h2>
-//       <div className="acsc-buttons">
-//         {cardsData.map((card) => (
-//           <button
-//             key={card.id}
-//             className={`acsc-tab-button ${activeCardId === card.id ? 'acsc-tab-button--active' : ''}`}
-//             onClick={() => handleClick(card.id)}
-//           >
-//             {/* ✅ Use <i> tag for Font Awesome */}
-//             <span className="acsc-tab-icon">
-//               <i className={card.icon}></i>
-//             </span>
-//             <span className="acsc-tab-text">{card.title}</span>
-//           </button>
-//         ))}
-//       </div>
+
+//       {/* ✅ Show buttons only if NOT mobile */}
+//       {!isMobile && (
+//         <div className="acsc-buttons">
+//           {cardsData.map((card) => (
+//             <button
+//               key={card.id}
+//               className={`acsc-tab-button ${activeCardId === card.id ? 'acsc-tab-button--active' : ''}`}
+//               onClick={() => handleClick(card.id)}
+//             >
+//               <span className="acsc-tab-icon">
+//                 <i className={card.icon}></i>
+//               </span>
+//               <span className="acsc-tab-text">{card.title}</span>
+//             </button>
+//           ))}
+//         </div>
+//       )}
 
 //       {activeCard && (
 //         <div className="acsc-card">
@@ -71,26 +100,20 @@
 // };
 
 // export default AllCompanySafetyCard;
-
-
-
-
-
-
-
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import './AllCompanySafetyCard.css';
 
 const AllCompanySafetyCard = ({ data }) => {
-  const cardsData = data?.cards || [];
+  // ✅ Memoize cardsData to avoid ESLint warnings
+  const cardsData = useMemo(() => data?.cards || [], [data]);
   const [activeCardId, setActiveCardId] = useState(cardsData[0]?.id || null);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Check if mobile
+  // ✅ Check if mobile screen
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768); // adjust breakpoint if needed
+      setIsMobile(window.innerWidth <= 768);
     };
 
     checkMobile();
@@ -98,22 +121,22 @@ const AllCompanySafetyCard = ({ data }) => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Auto-slide for mobile
+  // ✅ Auto-slide for mobile view
   useEffect(() => {
     if (!isMobile || cardsData.length <= 1) return;
 
     const interval = setInterval(() => {
-      setActiveCardId(prevId => {
-        const currentIndex = cardsData.findIndex(card => card.id === prevId);
+      setActiveCardId((prevId) => {
+        const currentIndex = cardsData.findIndex((card) => card.id === prevId);
         const nextIndex = (currentIndex + 1) % cardsData.length;
         return cardsData[nextIndex].id;
       });
-    }, 3000); // Slide every 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [isMobile, cardsData]);
 
-  if (!data || !data.cards || cardsData.length === 0) {
+  if (!data || !cardsData || cardsData.length === 0) {
     return <div>No safety cards available.</div>;
   }
 
@@ -150,7 +173,11 @@ const AllCompanySafetyCard = ({ data }) => {
           <div className="acsc-card-content">
             <div className="acsc-card-left">
               <div className="acsc-image-wrapper">
-                <img src={activeCard.imageSrc} alt={activeCard.title} className="acsc-gif" />
+                <img
+                  src={activeCard.imageSrc}
+                  alt={activeCard.title}
+                  className="acsc-gif"
+                />
                 <div className="acsc-circle-mask"></div>
               </div>
             </div>
@@ -168,7 +195,11 @@ const AllCompanySafetyCard = ({ data }) => {
                 </ul>
                 <div className="acsc-card-buttons">
                   <button className="acsc-right-button">{activeCard.buttonLabel}</button>
-                  <a href="#" className="acsc-link-button">All Features →</a>
+
+                  {/* ✅ Replaced invalid href="#" with React Router Link */}
+                  <Link to="/features" className="acsc-link-button">
+                    All Features →
+                  </Link>
                 </div>
               </div>
             </div>
@@ -180,4 +211,5 @@ const AllCompanySafetyCard = ({ data }) => {
 };
 
 export default AllCompanySafetyCard;
+
 

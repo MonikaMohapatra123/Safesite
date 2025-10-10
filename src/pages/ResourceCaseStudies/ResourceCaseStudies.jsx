@@ -7,7 +7,7 @@ import CurvedSection from '../../component/CurvedSection/CurvedSection';
 import SafetyTopicsCards from '../../component/SafetyTopicsCards/SafetyTopicsCards';
 const ResourceCaseStudies = () => {
      const resourceblog = data["21"]["1"];
-     const testimonialsData = data["3"]; // Object!
+     const testimonialsData = data["21"]["3"]; // Object!
      const safetytopiccards=data["21"]["2"];
   return (
     <div>
