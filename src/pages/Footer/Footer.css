@@ -1,119 +1,223 @@
-/* Footer.css */
-
 .footer {
-  background-color: #0A4A7A;
-  color: white;
-  font-size: 14px;
+  background: radial-gradient(circle at top right, #144b8a 0%, #093b6f 80%);
+  color: #ffffff;
+  font-family: "Inter", "Open Sans", sans-serif;
+  padding-top: 60px;
+  padding-bottom: 20px;
 }
 
+/* Main Container */
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 40px;
+  padding: 0 20px;
 }
 
-.footer-column {
-  flex: 1 1 200px;
-  margin: 20px;
-  min-width: 200px;
+/* Columns */
+.footer-col {
+  flex: 1 1 240px;
+  min-width: 240px;
 }
 
-.footer-column h4 {
-  font-weight: bold;
-  margin-bottom: 12px;
+.footer-col h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 14px;
 }
 
-.footer-column ul {
+.footer-col ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer-column ul li {
-  margin-bottom: 8px;
-  line-height: 1.5;
-  text-align: left;
+.footer-col ul li {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 6px;
+  color: #d0e3f2;
+  cursor: default;
 }
 
 .footer-link {
-  color: #9BD4F0;
+  color: #9bd4f0;
+  font-weight: 600;
   cursor: pointer;
+  margin-top: 8px;
+}
+
+/* Brand Section */
+.footer-brand {
+  max-width: 320px;
 }
 
 .footer-logo {
   display: flex;
   align-items: center;
+  gap: 10px;
   margin-bottom: 16px;
-  font-size: 20px;
 }
 
-.footer-logo-box {
-  /* background: white; */
-  color: #0A4A7A;
-  font-weight: bold;
-  padding: 4px 8px;
-  border-radius: 4px;
+.footer-logo img {
+  height: 42px;
 }
 
-.footer-logo-text {
-  margin-left: 8px;
-  font-weight: bold;
-  font-size: 20px;
+.footer-logo span {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
 }
 
-.footer-tagline {
-  margin-bottom: 20px;
-  color: white;
+.footer-desc {
+  color: #d0e3f2;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 22px;
 }
 
-.footer-app-buttons img {
-  height: 40px;
+/* App Store Buttons */
+.footer-store-buttons img {
+  height: 38px;
   margin-right: 8px;
-  border-radius: 10px;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
   border: 1px solid white;
 }
 
-.social-icons {
+.footer-store-buttons img:hover {
+  transform: scale(1.05);
+}
+
+/* Social Icons */
+.footer-socials {
   display: flex;
-  gap: 12px;
-  margin: 20px 0;
+  gap: 14px;
+  margin: 22px 0 18px;
   font-size: 18px;
 }
 
-.footer-language-button {
-  background-color: #003355;
+.footer-socials svg {
   color: white;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.footer-socials svg:hover {
+  opacity: 0.7;
+}
+
+/* Language Button */
+.footer-lang-btn {
+  background-color: #06335c;
   border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
   cursor: pointer;
 }
 
+/* Bottom Bar */
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 16px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 60px;
+  text-align: center;
+  padding-top: 16px;
+  font-size: 13px;
+  color: #d0e3f2;
 }
 
 .footer-bottom p {
   margin: 4px 0;
-  color: seashell;
 }
 
 .footer-legal {
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .footer-legal a {
-  color: rgba(255, 255, 255, 0.7);
+  color: #9bd4f0;
   text-decoration: none;
-  margin: 0 4px;
+  margin: 0 6px;
+}
+
+.footer-legal a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------- */
+/* ✅ Responsive Design  */
+/* --------------------- */
+@media (max-width: 1024px) {
+  .footer-container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-col {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .footer-brand {
+    max-width: 100%;
+  }
+
+  .footer-logo {
+    justify-content: flex-start;
+  }
+
+  .footer-desc {
+    font-size: 14px;
+  }
+
+  .footer-store-buttons img {
+    height: 34px;
+  }
+
+  .footer-socials {
+    margin-top: 16px;
+  }
+
+  .footer-lang-btn {
+    margin-top: 10px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding-top: 40px;
+  }
+
+  .footer-logo span {
+    font-size: 20px;
+  }
+
+  .footer-col h4 {
+    font-size: 14px;
+  }
+
+  .footer-col ul li {
+    font-size: 13px;
+  }
+
+  .footer-lang-btn {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
 }

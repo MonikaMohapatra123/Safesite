@@ -1,14 +1,14 @@
 .safety-topics {
   text-align: center;
   padding: 40px;
-  height: 30vh;
   margin-top: -40px;
+ 
 }
 
 .explore-link {
   display: inline-block;
   margin-top: 10px;
-  color: #007bff;             /* blue color */
+  color: #007bff;
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
@@ -16,57 +16,54 @@
 }
 
 .explore-link:hover {
-  color: #0056b3;             /* darker blue on hover */
+  color: #0056b3;
   text-decoration: underline;
 }
 
 .topics-grid {
-  display: flex;                
-  flex-wrap: wrap;              
-  justify-content: center;      
-  gap: 30px;                    
-  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 80px;
 }
 
 .topic-card {
-  position: relative;           
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: 250px;                 
+  width: 300px;               /* ⬅ increased width */
   text-decoration: none;
   color: inherit;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
 }
 
 .topic-card img {
   width: 100%;
-  height: 160px;
+  height: 220px;              /* ⬅ increased height of image */
   object-fit: cover;
   display: block;
-  transition: opacity 0.3s ease;
-}
-
-.topic-card:hover img {
-  opacity: 0;                   
+  transition: opacity 0.5s ease;
 }
 
 .topic-info {
-  flex: 1;
+  flex: 0 0 auto;
   background: #fff;
-  padding: 16px;
+  padding: 12px;              /* ⬅ reduced padding for smaller height */
   text-align: left;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 .topic-meta {
-  font-size: 11px;
+  font-size: 12px;
   color: #007bff;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  transition: color 0.4s ease;
 }
 
 .topic-meta span {
@@ -74,19 +71,26 @@
 }
 
 .topic-info h3 {
-  margin: 8px 0 0;
-  font-size: 15px;
+  margin: 6px 0 0;
+  font-size: 16px;            /* slightly bigger text */
   line-height: 1.4;
   color: #333;
   font-weight: 500;
+  transition: color 0.4s ease;
 }
 
+/* ✨ Smooth hover effect with slight image visibility */
 .topic-card:hover {
   background: hsl(211, 84%, 64%);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.topic-card:hover img {
+  opacity: 0.2;              /* image still visible */
 }
 
 .topic-card:hover .topic-info {
-  background: transparent;
+  background: hsl(211, 84%, 64%);
 }
 
 .topic-card:hover .topic-meta,

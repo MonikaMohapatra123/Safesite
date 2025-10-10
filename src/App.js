@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.css';
 import { Routes, Route } from 'react-router-dom'; // only Routes and Route
 import Home from './pages/Home/Home';
 import NavBar from './pages/NavBar/NavBar';

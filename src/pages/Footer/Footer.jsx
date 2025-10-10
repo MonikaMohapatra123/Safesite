@@ -1,58 +1,54 @@
-
-// Footer.jsx
-import React from 'react';
-import './Footer.css';
-import { FaFacebookF, FaTwitter, FaYoutube, FaLinkedinIn } from 'react-icons/fa';
+import React from "react";
+import "./Footer.css";
+import { FaFacebookF, FaYoutube, FaLinkedinIn } from "react-icons/fa";
+import { TbBrandX } from "react-icons/tb";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Logo and Tagline */}
-        <div className="footer-column">
+        {/* Column 1 - Logo + Description */}
+        <div className="footer-col footer-brand">
           <div className="footer-logo">
-            <div className="footer-logo-box"><img src='/axiomos-logo.png' alt='logo'/></div>
-            <span className="footer-logo-text">Axiomos</span>
+            <img src="/axiomos-logo.png" alt="Axiomos Logo" />
+            <span>Axiomos</span>
           </div>
-          <p className="footer-tagline">
-            An award-winning safety management solution for companies of all sizes and industries
+          <p className="footer-desc">
+            An award-winning safety management solution
+            <br />
+            for companies of all sizes and industries
           </p>
 
-          {/* App store buttons */}
-          <div className="footer-app-buttons">
+          <div className="footer-store-buttons">
             <img src="/appstore.png" alt="App Store" />
             <img src="/gogglestore.png" alt="Google Play" />
           </div>
 
-          {/* Social icons */}
-          <div className="social-icons">
+          <div className="footer-socials">
             <FaFacebookF />
-            <FaTwitter />
+            <TbBrandX />
             <FaYoutube />
             <FaLinkedinIn />
           </div>
 
-          {/* Language Selector */}
-          <button className="footer-language-button">
-            <span role="img" aria-label="flag">🇺🇸</span> English
-          </button>
+          <button className="footer-lang-btn">🇺🇸 English</button>
         </div>
 
-        {/* Popular Resources */}
-        <div className="footer-column">
+        {/* Column 2 */}
+        <div className="footer-col">
           <h4>Popular Resources</h4>
           <ul>
             <li>How Employee Engagement Unlocks Safety Program Performance</li>
             <li>What is Behavior Based Safety (BBS)?</li>
-            {/* <li>10 Things Safety Pros Must Know About the Ex Mod</li>
+            <li>10 Things Safety Pros Must Know About the Ex Mod</li>
             <li>The Ultimate Guide to Safety Reporting & KPIs</li>
-            <li>Safesite's Step-by-Step Guide to Safety Program Digitization</li> */}
+            <li>Safesite’s Step-by-Step Guide to Safety Program Digitization</li>
             <li className="footer-link">View Blog →</li>
           </ul>
         </div>
 
-        {/* Key Features */}
-        <div className="footer-column">
+        {/* Column 3 */}
+        <div className="footer-col">
           <h4>Key Features</h4>
           <ul>
             <li>Inspections, Checklists, & Audits</li>
@@ -64,8 +60,8 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Company */}
-        <div className="footer-column">
+        {/* Column 4 */}
+        <div className="footer-col">
           <h4>Company</h4>
           <ul>
             <li>About Safesite</li>
@@ -78,10 +74,11 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Bottom Bar */}
       <div className="footer-bottom">
         <p>©2025 Safesite. All rights reserved.</p>
         <div className="footer-legal">
-          <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+          <a>Privacy Policy</a> | <a>Terms of Use</a>
         </div>
       </div>
     </footer>

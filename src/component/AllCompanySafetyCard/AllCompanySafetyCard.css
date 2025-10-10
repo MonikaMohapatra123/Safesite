@@ -1,4 +1,3 @@
-/* 
 * {
   box-sizing: border-box;
 }
@@ -6,276 +5,12 @@
 body {
   margin: 0;
   overflow-x: hidden;
+  font-family: Arial, sans-serif;
 }
 
 .acsc-wrapper {
   padding: 40px 20px;
-  font-family: Arial, sans-serif;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.acsc-wrapper h2 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 29px;
-  text-align: center;
-}
-
-.acsc-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 40px;
-}
-
-.acsc-tab-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: #555;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.acsc-tab-button--active {
-  background: #fff;
-  padding: 10px 20px;
-}
-
-.acsc-tab-icon {
-  font-size: 28px;
-  margin-bottom: 6px;
-}
-
-.acsc-tab-text {
-  font-size: 14px;
-}
-
-.acsc-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  width: 65%;
-  max-width: 100%;
-  margin: 30px auto;
-  height: auto;
-  margin-top: -40px;
-}
-
-.acsc-card-content {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 40px;
-  margin-top: 60px;
-}
-
-.acsc-card-left {
-  flex: 1 1 500px;
-}
-
-.acsc-image-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.acsc-gif {
-  width: 100%;
-  border-radius: 8px;
-  position: relative;
-  z-index: 2;
-}
-
-.acsc-circle-mask {
-  position: absolute;
-  right: -40px;
-  top: 40px;
-  width: 250px;
-  height: 250px;
-  background: #f2f2f2;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.acsc-card-right {
-  flex: 1 1 400px;
-}
-
-.acsc-card-right-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.acsc-card-right-content h4 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #222;
-  margin: 0;
-}
-
-.acsc-card-checklist {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.acsc-card-checklist li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-  font-size: 16px;
-  color: #555;
-}
-
-.acsc-check-icon {
-  color: #007bff;
-  margin-right: 10px;
-  font-weight: bold;
-}
-
-.acsc-card-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-}
-
-.acsc-right-button {
-  padding: 12px 28px;
-  background-color: #ff5c35;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-weight: 500;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.acsc-link-button {
-  color: #007bff;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-@media (max-width: 1024px) {
-  .acsc-card {
-    width: 80%;
-  }
-
-  .acsc-card-content {
-    gap: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .acsc-card {
-    width: 95%;
-    padding: 30px 20px;
-  }
-
-  .acsc-card-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin-top: 30px;
-    text-align: center;
-    height: auto;
-  }
-
-  .acsc-circle-mask {
-    display: none;
-  }
-
-  .acsc-card-right-content h4 {
-    font-size: 22px;
-  }
-
-  .acsc-card-checklist li {
-    font-size: 15px;
-  }
-
-  .acsc-card-buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .acsc-right-button {
-    width: 100%;
-    max-width: 250px;
-  }
-
-  .acsc-link-button {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 480px) {
- 
-  .acsc-card-right{
-    margin-top: -230px;
-   
-  }
-  .acsc-wrapper h2 {
-    font-size: 24px;
-  }
-
-  .acsc-tab-text {
-    font-size: 13px;
-  }
-
-  .acsc-tab-button {
-    padding: 12px 16px;
-  }
-
-  .acsc-card-right-content h4 {
-    font-size: 20px;
-  }
-
-  .acsc-card {
-    padding: 25px 15px;
-  }
-
-  .acsc-card-buttons {
-    width: 100%;
-  }
-
-  .acsc-right-button {
-    width: 100%;
-  }
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  overflow-x: hidden;
-}
-
-.acsc-wrapper {
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -292,6 +27,7 @@ body {
   justify-content: center;
   gap: 30px;
   margin-bottom: 40px;
+  
 }
 
 .acsc-tab-button {
@@ -304,6 +40,8 @@ body {
   flex-direction: column;
   align-items: center;
   transition: all 0.3s ease;
+   padding-left: 60px;
+   padding-right: 60px;
 }
 
 .acsc-tab-button--active {
@@ -322,10 +60,10 @@ body {
 
 .acsc-card {
   background: #fff;
-  border-radius: 8px;
+  
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  width: 65%;
+  padding: 50px;
+  width: 80%; /* updated from 65% */
   max-width: 100%;
   margin: 30px auto;
   margin-top: -40px;
@@ -430,16 +168,17 @@ body {
   font-size: 16px;
 }
 
-/* ✅ Hide tab buttons on small screens (fallback) */
+/* Hide tab buttons on small screens */
 @media (max-width: 768px) {
   .acsc-buttons {
     display: none;
   }
 }
 
+/* Medium screens */
 @media (max-width: 1024px) {
   .acsc-card {
-    width: 80%;
+    width: 90%;
   }
 
   .acsc-card-content {
@@ -447,6 +186,7 @@ body {
   }
 }
 
+/* Mobile screens */
 @media (max-width: 768px) {
   .acsc-card {
     width: 95%;
@@ -459,7 +199,6 @@ body {
     gap: 30px;
     margin-top: 30px;
     text-align: center;
-    height: auto;
   }
 
   .acsc-circle-mask {
@@ -489,6 +228,7 @@ body {
   }
 }
 
+/* Small mobile screens */
 @media (max-width: 480px) {
   .acsc-card-right {
     margin-top: -230px;

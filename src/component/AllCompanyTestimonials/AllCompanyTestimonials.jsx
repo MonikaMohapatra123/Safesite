@@ -87,21 +87,23 @@ export default function AllCompanyTestimonials({ data }) {
         </button>
       </div>
 
-      {/* ✅ Desktop logo row */}
-      <div className="hover-logos-row">
-        {testimonials.map((item, index) => (
-          <img
-            key={item.id}
-            src={
-              currentIndex === index
-                ? item.hoverImageColor
-                : item.hoverImageDefault
-            }
-            alt={item.name}
-            className="hover-logo-img"
-          />
-        ))}
-      </div>
+     <div className="hover-logos-row">
+  {testimonials.map((item, index) => (
+    <img
+      key={item.id}
+      src={
+        currentIndex === index
+          ? item.hoverImageColor
+          : item.hoverImageDefault
+      }
+      alt={item.name}
+      className="hover-logo-img"
+      style={{ cursor: "pointer" }} // optional for better indication
+      onClick={() => setCurrentIndex(index)}
+    />
+  ))}
+</div>
+
     </div>
   );
 }
