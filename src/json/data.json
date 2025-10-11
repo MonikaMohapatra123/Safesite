@@ -1118,6 +1118,17 @@
   "image": "/safesite-2.png"
 }
 
+},
+ "25": {
+  "page": "Aboutpage",
+  "1": {
+    "heading": "Our Mission: <span class='highlight'>Empower</span> everyone to be a safety champion",
+    "description1": "In 2014, our three founders lost a mutual friend in a workplace accident. The incident sparked an interest in streamlining workplace safety.",
+    "description2": "Today, thousands of companies worldwide trust Safesite, a powerful, easy-to-use safety management solution proven to cut incident rates in half.",
+   
+    "image": "/safesite-5.png",
+    "backgroundImage": "/banner-watermark.svg"
+  }
 }
 
 

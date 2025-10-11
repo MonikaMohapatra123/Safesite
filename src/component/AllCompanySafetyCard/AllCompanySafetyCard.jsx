@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import './AllCompanySafetyCard.css';
+import FeatureLinkButton from '../FeatureLinkButton/FeatureLinkButton';
 
 const AllCompanySafetyCard = ({ data }) => {
   const cardsData = useMemo(() => data?.cards || [], [data]);
@@ -86,11 +87,7 @@ const AllCompanySafetyCard = ({ data }) => {
                 <div className="acsc-card-buttons">
                   <button className="acsc-right-button">{activeCard.buttonLabel}</button>
 
-                  {/* Updated "All Features" button */}
-                  <Link to="/features" className="acsc-link-button">
-                    <span className="acsc-link-text">All Features</span>
-                    <span className="acsc-link-icon"></span>
-                  </Link>
+                <FeatureLinkButton to="/features" text="All Features"/>
                 </div>
               </div>
             </div>

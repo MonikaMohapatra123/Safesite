@@ -90,14 +90,7 @@
   margin-top: 5px;
 }
 
-/* --- Divider --- */
-.sg-divider {
-  margin: 50px auto;
-  border-top: 1px solid #ddd;
-  width: 80%;
-}
 
-/* --- Badges --- */
 .sg-badges {
   display: flex;
   justify-content: center;
@@ -163,10 +156,17 @@
   }
 }
 
+.sg-divider {
+  width:90%;       /* adjust width as needed */
+  height: 1px;       /* thickness of the line */
+  background-color: #ddd;  /* color of the line */
+  margin: 0 auto 20px;     /* center and spacing */
+  margin-top: 40px;
+}
 
 /* --- Bottom Highlights --- */
 .sg-bottom-highlights {
-  border-top: 1px solid #ddd;
+  /* border-top: 1px solid #ddd; */
   margin-top: 50px;
   padding-top: 25px;
   display: flex;

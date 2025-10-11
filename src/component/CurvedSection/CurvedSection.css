@@ -65,9 +65,10 @@
   border: none;
   padding: 14px 28px;
   font-size: 16px;
-  border-radius: 6px;
+  border-radius: 0px 10px 0px 10px;
   cursor: pointer;
   transition: background 0.3s;
+  
 }
 .cs-btn:hover {
   background: #e13c1d;

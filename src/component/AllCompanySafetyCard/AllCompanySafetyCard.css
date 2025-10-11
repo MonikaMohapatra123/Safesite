@@ -8,10 +8,11 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* Main wrapper – now 80% width centered */
 .acsc-wrapper {
-  padding: 40px 20px;
-  max-width: 1300px;
+  width: 89%;
   margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .acsc-wrapper h2 {
@@ -21,13 +22,14 @@ body {
   margin-bottom: 80px;
 }
 
+/* Buttons container */
 .acsc-buttons {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 30px;
   margin-bottom: 40px;
-  
+  width: 100%;
 }
 
 .acsc-tab-button {
@@ -40,13 +42,18 @@ body {
   flex-direction: column;
   align-items: center;
   transition: all 0.3s ease;
-   padding-left: 60px;
-   padding-right: 60px;
+  padding-left: 70px;
+  padding-right: 70px;
+
+  /* Prevent text wrap */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .acsc-tab-button--active {
   background: #fff;
-  padding: 10px 43px;
+  padding: 10px 95px;
   color: hsl(211, 94%, 25%);
 }
 
@@ -57,14 +64,15 @@ body {
 
 .acsc-tab-text {
   font-size: 14px;
+  white-space: nowrap;
 }
 
+/* White card area */
 .acsc-card {
   background: #fff;
-  
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   padding: 50px;
-  width: 80%; /* updated from 65% */
+  width: 100%; /* ✅ full width inside 80% wrapper */
   max-width: 100%;
   margin: 30px auto;
   margin-top: -40px;
@@ -161,7 +169,13 @@ body {
   font-weight: 500;
   font-size: 16px;
   cursor: pointer;
+
+  /* Prevent text wrap */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
 .acsc-link-button {
   display: inline-flex;
   align-items: center;
@@ -174,10 +188,14 @@ body {
   border-radius: 6px;
   transition: all 0.3s ease;
   margin: 3px;
+
+  /* Prevent text wrap */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .acsc-link-button:hover {
-  
   color: hsl(211, 84%, 70%);
 }
 
@@ -187,21 +205,15 @@ body {
   font-weight: bold;
 }
 
-/* Change arrow on hover */
-.acsc-link-button:hover .acsc-link-icon {
-  content: ">"; /* for pseudo-element alternative */
-  transform: none; /* remove slide if you want static > */
-}
-
-/* If using span, use this trick with data attribute */
+/* Arrow hover animation */
 .acsc-link-icon::after {
   content: "→";
   transition: all 0.5s ease;
 }
 
 .acsc-link-button:hover .acsc-link-icon::after {
-  content: ">"; /* changes to > on hover */
-   transform: rotate(90deg) translateX(2px); 
+  content: ">";
+  transform: rotate(90deg) translateX(2px);
 }
 
 /* Hide tab buttons on small screens */
@@ -214,7 +226,7 @@ body {
 /* Medium screens */
 @media (max-width: 1024px) {
   .acsc-card {
-    width: 90%;
+    width: 100%;
   }
 
   .acsc-card-content {
@@ -224,8 +236,12 @@ body {
 
 /* Mobile screens */
 @media (max-width: 768px) {
-  .acsc-card {
+  .acsc-wrapper {
     width: 95%;
+  }
+
+  .acsc-card {
+    width: 100%;
     padding: 30px 20px;
   }
 

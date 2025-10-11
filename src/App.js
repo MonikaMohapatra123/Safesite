@@ -23,6 +23,7 @@ import ResourceBlog from './pages/ResourceBlog/ResourceBlog';
 import ResourceCaseStudies from './pages/ResourceCaseStudies/ResourceCaseStudies';
 import ResourcePricing from './pages/ResourcePricing/ResourcePricing';
 import AboutUs from './pages/AboutUs/AboutUs';
+import Features from './pages/Features/Features';
 
 const App = () => {
   return (
@@ -48,8 +49,9 @@ const App = () => {
            <Route path="resources/case-studies" element={ <ResourceCaseStudies/>}/>
             <Route path="resources/pricing" element={ <ResourcePricing/>}/>
            <Route path="why-us" element={<AboutUs/>}/>
+                <Route path="features" element={<Features/>}/>
 
-   
+ 
        
       </Routes>
       <Footer />

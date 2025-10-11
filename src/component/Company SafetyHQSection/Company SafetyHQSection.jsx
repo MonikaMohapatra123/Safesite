@@ -1,5 +1,6 @@
 import React from 'react';
 import './Company SafetyHQSection.css';
+import FeatureLinkButton from '../FeatureLinkButton/FeatureLinkButton'; 
 
 const CompanySafetyHQSection = ({
   image,
@@ -7,7 +8,7 @@ const CompanySafetyHQSection = ({
   subtitle,
   description,
   linkText,
-  linkUrl
+  linkHref
 }) => {
   return (
     <section className="safetyhq-section">
@@ -19,9 +20,10 @@ const CompanySafetyHQSection = ({
           <h4>{subtitle}</h4>
           <h2>{title}</h2>
           <p>{description}</p>
-          <a href={linkUrl} className="safetyhq-link">
-            {linkText} →
-          </a>
+          {/* ✅ Conditionally render button if linkText and linkHref exist */}
+          {linkText && linkHref && (
+            <FeatureLinkButton to={linkHref} text={linkText} />
+          )}
         </div>
       </div>
     </section>

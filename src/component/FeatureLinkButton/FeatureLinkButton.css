@@ -1,0 +1,36 @@
+.acsc-link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #06478b;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  margin: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.acsc-link-button:hover {
+  color: hsl(211, 84%, 70%);
+}
+
+.acsc-link-icon {
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.acsc-link-icon::after {
+  content: "→";
+  transition: all 0.5s ease;
+}
+
+.acsc-link-button:hover .acsc-link-icon::after {
+  content: ">";
+  transform: rotate(90deg) translateX(2px);
+}

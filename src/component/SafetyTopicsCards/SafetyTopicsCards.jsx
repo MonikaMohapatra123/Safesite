@@ -7,15 +7,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './SafetyTopicsCards.css'; // optional: style your cards
+import FeatureLinkButton from '../FeatureLinkButton/FeatureLinkButton';
 
 export default function SafetyTopicsCards({ data }) {
   return (
     <section className="safety-topics">
       <h2>{data.sectionTitle}</h2>
 
-      <Link to={data.viewAllLink.url} className="explore-link">
+      {/* <Link to={data.viewAllLink.url} className="explore-link">
         {data.viewAllLink.text}
-      </Link>
+      </Link> */}
+      <FeatureLinkButton to='/all-topics' text='All Topics' />
 
       <div className="topics-grid">
         {data.topics.map((topic) => (

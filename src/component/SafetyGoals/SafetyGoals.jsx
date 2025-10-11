@@ -62,9 +62,10 @@ const SafetyGoals = ({ data }) => {
     />
   ))}
 </div>
-
+ <div className="sg-divider"></div> 
 {/* ✅ Bottom Highlights Section */}
 <div className="sg-bottom-highlights">
+ 
   <div className="sg-highlight-item">
     <span className="sg-check">✔</span>
     <span>#1 FREE SAFETY MANAGEMENT APP</span>

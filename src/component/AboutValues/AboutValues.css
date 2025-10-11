@@ -26,13 +26,13 @@
 .values-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;       /* ✅ centers image vertically */
+  align-items: center;
   gap: 40px;
   margin-bottom: 60px;
 }
 
 .values-row.reverse {
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 /* IMAGE styling */
@@ -40,11 +40,11 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;       /* ✅ centers image vertically */
+  align-items: center;
 }
 
 .value-image img {
-  width: 550px;
+  width: 750px;
   max-width: 100%;
   border-radius: 8px;
   display: block;
@@ -57,27 +57,32 @@
   flex-direction: column;
   gap: 30px;
   max-width: 600px;
-  justify-content: center;   /* ✅ keeps the text block centered */
+  justify-content: center;
 }
 
 /* SINGLE item */
 .value-item {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.value-title-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .value-number {
   font-weight: 600;
   font-size: 1.8rem;
   color: #d0d7de;
-  min-width: 60px;
 }
 
 .value-item h3 {
   font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin: 0;
 }
 
 .value-item p {
@@ -85,23 +90,16 @@
   line-height: 1.6;
   color: #333;
 }
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .values-row,
-  .values-row.reverse {
+  .values-row {
     flex-direction: column;
     text-align: center;
   }
 
-  .value-item {
+  /* 🔸 Second row: image should go on top and text below */
+  .values-row.reverse {
     flex-direction: column;
-    align-items: center;
-  }
-
-  .value-number {
-    font-size: 1.5rem;
-    min-width: auto;
   }
 
   .value-image img {
@@ -113,5 +111,26 @@
   .value-text-group {
     max-width: 100%;
     align-items: center;
+    text-align: center;
+  }
+
+  .value-item {
+    align-items: center;
+  }
+
+  .value-title-line {
+    justify-content: center;
+  }
+
+  .value-number {
+    font-size: 1.5rem;
+  }
+
+  .value-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .value-item p {
+    font-size: 0.95rem;
   }
 }

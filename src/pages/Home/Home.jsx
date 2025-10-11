@@ -38,14 +38,13 @@ const Home = () => {
         imageSrc="safesite-1.png"
         imageAlt="Safety Management App Preview" />
          <CompanySafetyHQSection
-          
-             image="safesite-2.png"
-                subtitle="All-in-One"
-                title="Your Digital Safety HQ"
-                description="Manage and monitor every aspect of your safety program in one place. Set expectations, monitor performance, and track results in less time."
-                linkText="See Pricing & Plans"
-                linkUrl="#"
-        />
+  image="safesite-2.png"
+  subtitle="All-in-One"
+  title="Your Digital Safety HQ"
+  description="Manage and monitor every aspect of your safety program in one place. Set expectations, monitor performance, and track results in less time."
+  linkText="See Pricing & Plans"
+  linkHref="/pricing"
+/>
          <AllCompanyManagement
         tagline="Easy-to-Use"
         title="The Most Intuitive Safety App"
@@ -54,15 +53,14 @@ const Home = () => {
         linkHref="/features"
         imageSrc="safesite-3.png"
         imageAlt="Safety Management App Preview" />
-         <CompanySafetyHQSection
-          
-             image="safesite-4.png"
-                subtitle="All-in-One"
-                title="Your Digital Safety HQ"
-                description="Manage and monitor every aspect of your safety program in one place. Set expectations, monitor performance, and track results in less time."
-                linkText="See Pricing & Plans"
-                linkUrl="#"
-        />
+      <CompanySafetyHQSection
+  image="safesite-4.png"
+  subtitle="All-in-One"
+  title="Your Digital Safety HQ"
+  description="Manage and monitor every aspect of your safety program in one place. Set expectations, monitor performance, and track results in less time."
+  linkText="See Pricing & Plans"
+  linkHref="/pricing"
+/>
         
       <SafetyTopicsCards data={safetyTopicsCardsData} />
       <SafetyGoals data={safetyGoalsData} />

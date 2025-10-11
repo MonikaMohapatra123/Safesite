@@ -1,37 +1,34 @@
-
-// src/components/FeatureSection.jsx
+// src/components/FeatureSection.jsx (AllCompanyManagement.jsx)
 import React from 'react';
+import FeatureLinkButton from '../FeatureLinkButton/FeatureLinkButton';  // ✅ Import your button component
 import './AllCompanyManagement.css';
-
 
 const AllCompanyManagement = ({ 
   tagline, 
   title, 
   description, 
   linkText, 
+  linkHref,    // still receiving these props
   imageSrc, 
-  imageAlt, 
-  linkHref 
+  imageAlt 
 }) => {
   return (
-  
-   
-     <section className="feature-section">
+    <section className="feature-section">
       <div className="feature-content">
         <p className="feature-tagline">{tagline}</p>
         <h2 className="feature-title">{title}</h2>
         <p className="feature-description">{description}</p>
-        <a href={linkHref} className="feature-link">
-          {linkText} →
-        </a>
+
+        {/* ✅ Use reusable Link Button here */}
+        {linkText && linkHref && (
+          <FeatureLinkButton to={linkHref} text={linkText} />
+        )}
       </div>
+
       <div className="feature-image">
         <img src={imageSrc} alt={imageAlt} />
       </div>
     </section>
-   
-
-  
   );
 };
 

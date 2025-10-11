@@ -8,11 +8,13 @@ const AboutValues = ({ data }) => {
 
   return (
     <section className="our-values-section">
+      {/* Header Section */}
       <div className="values-header">
         <h2>{heading}</h2>
         <p>{subHeading}</p>
       </div>
 
+      {/* Row 1 — Image Left / Text Right */}
       <div className="values-row">
         <div className="value-image">
           <img src={topImage} alt="Values Top" />
@@ -20,25 +22,26 @@ const AboutValues = ({ data }) => {
         <div className="value-text-group">
           {values.slice(0, 3).map((item) => (
             <div key={item.number} className="value-item">
-              <span className="value-number">{item.number}</span>
-              <div>
+              <div className="value-title-line">
+                <span className="value-number">{item.number}</span>
                 <h3>{item.title}</h3>
-                <p>{item.description}</p>
               </div>
+              <p>{item.description}</p>
             </div>
           ))}
         </div>
       </div>
 
+      {/* Row 2 — Text Left / Image Right */}
       <div className="values-row reverse">
         <div className="value-text-group">
           {values.slice(3, 6).map((item) => (
             <div key={item.number} className="value-item">
-              <span className="value-number">{item.number}</span>
-              <div>
+              <div className="value-title-line">
+                <span className="value-number">{item.number}</span>
                 <h3>{item.title}</h3>
-                <p>{item.description}</p>
               </div>
+              <p>{item.description}</p>
             </div>
           ))}
         </div>

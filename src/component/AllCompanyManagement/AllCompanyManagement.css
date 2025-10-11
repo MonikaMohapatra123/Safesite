@@ -1,14 +1,15 @@
-/* src/components/FeatureSection.css */
+/* src/components/AllCompanyManagement.css */
 
 .feature-section {
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 4rem 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  width: 85%; /* Main width 80-90% */
+  max-width: 1400px; /* Prevent too wide on large screens */
+  margin: -30px auto 0 auto; /* Center horizontally */
   flex-wrap: wrap;
-  margin-top: -30px;
+  box-sizing: border-box;
 }
 
 .feature-content {
@@ -56,6 +57,7 @@
   .feature-section {
     flex-direction: column;
     text-align: center;
+    width: 90%; /* Slightly larger on mobile */
   }
 
   .feature-content {
