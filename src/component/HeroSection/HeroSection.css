@@ -66,6 +66,7 @@
 .hero-btn-primary {
   background-color: #ff5a5f;
   color: #fff;
+  border-radius: 0px 10px 0px 10px;
 }
 
 .hero-btn-secondary {
@@ -220,29 +221,105 @@
     right: 20px;
   }
 }
-
-@media (max-width: 487px) {
-  .hero-section {
-    clip-path: none;
-    padding: 120px 10px;
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
   }
 
   .hero-left {
-    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  .hero-right {
+    display: flex;
+    justify-content: flex-end;  /* 👈 move video to right */
+    width: 100%;
   }
 
   .hero-video-wrapper {
-    width: 250px;
-    height: 250px;
-    margin-top: 0;
+    width: 300px;
+    height: 300px;
+    margin-right: 20px; /* 👈 optional spacing */
+  }
+
+  .hero-heading {
+    font-size: 32px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .hero-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .hero-video-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-video-content video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+    background-color: black;
   }
 
   .hero-video-close {
-    top: 10px;
-    right: 10px;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    font-size: 28px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
   }
+   .hero-rating {
+    display: flex;
+    flex-direction: column;     /* stack stars and text */
+    justify-content: center;    /* center vertically */
+    align-items: center;        /* center horizontally */
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .hero-stars i {
+    font-size: 20px;            /* make stars look nice on mobile */
+  }
+
+  .hero-rating small {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
 }
+.hero-btn-icon {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.hero-stars i {
+  color: #f5b301; /* gold color */
+  margin-right: 2px;
+}
+
+.hero-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.hero-video-close {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+

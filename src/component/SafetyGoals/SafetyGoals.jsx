@@ -48,19 +48,37 @@ const SafetyGoals = ({ data }) => {
       </div>
 
       {/* Divider */}
-      <div className="sg-divider"></div>
+   {/* Divider */}
+{/* <div className="sg-divider"></div> */}
 
-      {/* Badges */}
-      <div className="sg-badges">
-        {data.badges.map((badge, index) => (
-          <img
-            key={index}
-            className="sg-badge-img"
-            src={badge}
-            alt={`Badge ${index + 1}`}
-          />
-        ))}
-      </div>
+{/* Badges */}
+<div className="sg-badges">
+  {data.badges.map((badge, index) => (
+    <img
+      key={index}
+      className="sg-badge-img"
+      src={badge}
+      alt={`Badge ${index + 1}`}
+    />
+  ))}
+</div>
+
+{/* ✅ Bottom Highlights Section */}
+<div className="sg-bottom-highlights">
+  <div className="sg-highlight-item">
+    <span className="sg-check">✔</span>
+    <span>#1 FREE SAFETY MANAGEMENT APP</span>
+  </div>
+  <div className="sg-highlight-item">
+    <span className="sg-check">✔</span>
+    <span>NO CREDIT CARD NEEDED</span>
+  </div>
+  <div className="sg-highlight-item">
+    <span className="sg-check">✔</span>
+    <span>21,000+ HAZARDS CLOSED YEARLY</span>
+  </div>
+</div>
+
     </section>
   );
 };

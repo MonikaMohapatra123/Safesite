@@ -1,26 +1,21 @@
-
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import './AllCompanySafetyCard.css';
 
 const AllCompanySafetyCard = ({ data }) => {
-  // ✅ Memoize cardsData to avoid ESLint warnings
   const cardsData = useMemo(() => data?.cards || [], [data]);
   const [activeCardId, setActiveCardId] = useState(cardsData[0]?.id || null);
   const [isMobile, setIsMobile] = useState(false);
 
-  // ✅ Check if mobile screen
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // ✅ Auto-slide for mobile view
   useEffect(() => {
     if (!isMobile || cardsData.length <= 1) return;
 
@@ -39,17 +34,13 @@ const AllCompanySafetyCard = ({ data }) => {
     return <div>No safety cards available.</div>;
   }
 
-  const handleClick = (id) => {
-    setActiveCardId(id);
-  };
-
+  const handleClick = (id) => setActiveCardId(id);
   const activeCard = cardsData.find((card) => card.id === activeCardId);
 
   return (
     <div className="acsc-wrapper">
       <h2>{data.Title}</h2>
 
-      {/* ✅ Show buttons only if NOT mobile */}
       {!isMobile && (
         <div className="acsc-buttons">
           {cardsData.map((card) => (
@@ -95,9 +86,10 @@ const AllCompanySafetyCard = ({ data }) => {
                 <div className="acsc-card-buttons">
                   <button className="acsc-right-button">{activeCard.buttonLabel}</button>
 
-                  {/* ✅ Replaced invalid href="#" with React Router Link */}
+                  {/* Updated "All Features" button */}
                   <Link to="/features" className="acsc-link-button">
-                    All Features →
+                    <span className="acsc-link-text">All Features</span>
+                    <span className="acsc-link-icon"></span>
                   </Link>
                 </div>
               </div>
@@ -110,5 +102,3 @@ const AllCompanySafetyCard = ({ data }) => {
 };
 
 export default AllCompanySafetyCard;
-
-

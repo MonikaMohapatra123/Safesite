@@ -46,7 +46,8 @@ body {
 
 .acsc-tab-button--active {
   background: #fff;
-  padding: 10px 20px;
+  padding: 10px 43px;
+  color: hsl(211, 94%, 25%);
 }
 
 .acsc-tab-icon {
@@ -156,16 +157,51 @@ body {
   background-color: #ff5c35;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 0px 10px 0px 10px;
   font-weight: 500;
   font-size: 16px;
   cursor: pointer;
 }
-
 .acsc-link-button {
-  color: #007bff;
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
   font-size: 16px;
+  font-weight: 500;
+  color: #06478b;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  margin: 3px;
+}
+
+.acsc-link-button:hover {
+  
+  color: hsl(211, 84%, 70%);
+}
+
+.acsc-link-icon {
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+/* Change arrow on hover */
+.acsc-link-button:hover .acsc-link-icon {
+  content: ">"; /* for pseudo-element alternative */
+  transform: none; /* remove slide if you want static > */
+}
+
+/* If using span, use this trick with data attribute */
+.acsc-link-icon::after {
+  content: "→";
+  transition: all 0.5s ease;
+}
+
+.acsc-link-button:hover .acsc-link-icon::after {
+  content: ">"; /* changes to > on hover */
+   transform: rotate(90deg) translateX(2px); 
 }
 
 /* Hide tab buttons on small screens */

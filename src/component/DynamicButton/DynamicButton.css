@@ -1,0 +1,14 @@
+.hero-btn-primary {
+  background-color: #ff5a5f;
+  color: #fff;
+  border-radius: 0px 10px 0px 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn-primary:hover {
+  background-color: #e04f54; /* slightly darker on hover */
+}

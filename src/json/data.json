@@ -150,25 +150,27 @@
     ]
   },
   "1": {
-    "page": "home",
-    "id": "1",
-    "HeroHeading": "Go <span class='hero-highlight'>Beyond</span> Safety <br /> Compliance",
-    "HeroDescription": "Start managing your best safety program ever — in just 8 minutes.",
-    "HeroButtons": [
-      {
-        "type": "primary",
-        "text": "Get Started Free"
-      },
-      {
-        "type": "secondary",
-        "text": "▶ Watch Video"
-      }
-    ],
-    "HeroRatingStars": "⭐⭐⭐⭐⭐",
-    "HeroRatingText": "4.9 App Store | 4.7 Capterra",
-    "HeroVideo": "/video-1.mp4",
-    "HeroModalVideo": "/video-1.mp4"
-  },
+  "page": "home",
+  "id": "1",
+  "HeroHeading": "Go <span class='hero-highlight'>Beyond</span> Safety <br /> Compliance",
+  "HeroDescription": "Start managing your best safety program ever — in just 8 minutes.",
+  "HeroButtons": [
+    {
+      "type": "primary",
+      "text": "Get Started Free"
+    },
+    {
+      "type": "secondary",
+      "text": "Watch Video"
+    }
+  ],
+  "HeroRatingText": "4.9 App Store | 4.7 Capterra",
+  "HeroVideo": "/video-1.mp4",
+  "HeroModalVideo": "/video-1.mp4"
+}
+
+  
+  ,
   "2": {
   "page": "CompanySafetyCard",
   "id": "2",
