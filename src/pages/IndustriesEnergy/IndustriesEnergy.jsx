@@ -5,6 +5,7 @@ import IndustriesConstructionHero from '../../component/IndustriesConstructionHe
 
 import CommonIndustriesSafetyChallenges from '../../component/CommonIndustriesSafetyChallenges/CommonIndustriesSafetyChallenges';
 import SafetyGoals from '../../component/SafetyGoals/SafetyGoals';
+import RiskManagementSolutions from '../../component/RiskManagementSolutions/RiskManagementSolutions';
 export const IndustriesEnergy = () => {
       const featureInspectionData = getstoredata["18"]["1"]; 
       const commonsafetychecklist =getstoredata["18"]["2"];
@@ -14,6 +15,7 @@ export const IndustriesEnergy = () => {
        <IndustriesConstructionHero data={featureInspectionData}/> 
       <CommonIndustriesSafetyChallenges data={commonsafetychecklist}/>
       <SafetyGoals data={safetyGoalsData} />
+      <RiskManagementSolutions/>
 
     </div>
   )

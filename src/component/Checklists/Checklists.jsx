@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FeatureLinkButton from '../../component/FeatureLinkButton/FeatureLinkButton';
 import './Checklists.css';
 
 const Checklists = ({ data }) => {
@@ -29,15 +30,24 @@ const Checklists = ({ data }) => {
           ></h1>
           <p className="checklists-description">{data.HeroDescription}</p>
           <div className="checklists-buttons">
-            {data.HeroButtons.map((btn, index) => (
-              <button
-                key={index}
-                className={`checklists-btn checklists-btn-${btn.type}`}
-                onClick={btn.type === 'secondary' ? handleViewImage : undefined}
-              >
-                {btn.text}
-              </button>
-            ))}
+            {data.HeroButtons.map((btn, index) => {
+              if (btn.type === 'secondary') {
+                // Replace with FeatureLinkButton
+                return (
+                   <FeatureLinkButton to="/features" text="All Features" color="white" />
+                );
+              } else {
+                // Keep primary as normal button
+                return (
+                  <button
+                    key={index}
+                    className={`checklists-btn checklists-btn-${btn.type}`}
+                  >
+                    {btn.text}
+                  </button>
+                );
+              }
+            })}
           </div>
         </div>
 

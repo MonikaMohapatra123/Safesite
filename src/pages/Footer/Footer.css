@@ -43,13 +43,6 @@
   cursor: default;
 }
 
-.footer-link {
-  color: #9bd4f0;
-  font-weight: 600;
-  cursor: pointer;
-  margin-top: 8px;
-}
-
 /* Brand Section */
 .footer-brand {
   max-width: 320px;
@@ -147,6 +140,19 @@
 
 .footer-legal a:hover {
   text-decoration: underline;
+}
+
+/* Footer Links Hover Effect */
+.footer-col ul li.footer-link {
+  cursor: pointer;
+  color: #d0e3f2; /* existing color */
+  transition: all 0.3s ease;
+  text-decoration: none; /* ensure no underline by default */
+}
+
+.footer-col ul li.footer-link:hover {
+  text-decoration: underline; /* show underline on hover */
+  color: #ffffff; /* optional: change color on hover */
 }
 
 /* --------------------- */

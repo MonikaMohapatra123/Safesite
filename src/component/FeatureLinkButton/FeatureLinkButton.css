@@ -5,7 +5,7 @@
   padding: 8px 16px;
   font-size: 16px;
   font-weight: 500;
-  color: #06478b;
+  /* color: #06478b;  <-- remove this */
   text-decoration: none;
   border-radius: 6px;
   transition: all 0.3s ease;

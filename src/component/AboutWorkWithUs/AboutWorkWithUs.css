@@ -4,39 +4,44 @@
   overflow: hidden;
   font-family: "Inter", sans-serif;
   text-align: center;
-  padding: 0 20px 40px; /* reduced bottom space */
-  margin-top: 100px; /* lowered from 180px */
+  padding: 0 20px 40px; /* keep bottom padding, horizontal padding okay for content */
+  margin-top: 100px;
 }
 
-/* --- Top Curve (Same as CurvedSection) --- */
+/* --- Top Curve Full Width --- */
 .work-top-bg {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* full viewport width */
   overflow: hidden;
   background: linear-gradient(180deg, #f5f8fa 0%, #f0f4f8 100%);
+  z-index: 0;
 }
 
 .work-top-curve {
   width: 100%;
-  height: 90px; /* reduced height */
+  height: 90px;
   display: block;
 }
 
 /* --- Main Content --- */
 .work-container {
   position: relative;
-  z-index: 1;
+  z-index: 1; /* above the curve */
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px; /* reduced gap */
+  gap: 40px;
   max-width: 900px;
   margin: 0 auto;
-  padding: 40px 20px; /* reduced padding */
+  padding: 60px 20px 40px; /* extra top padding to avoid overlap with curve */
+  flex-wrap: wrap;
 }
 
 /* --- Left Image --- */
 .team-image {
-  width: 160px; /* smaller image */
+  width: 160px;
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
@@ -44,25 +49,30 @@
 }
 
 /* --- Right Text --- */
+.work-right {
+  max-width: 500px;
+}
+
 .work-right h2 {
-  font-size: 1.3rem; /* smaller text */
+  font-size: 1.5rem;
   font-weight: 700;
   color: #1a1a1a;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .work-right p {
   color: #555;
-  font-size: 0.9rem;
-  margin-bottom: 12px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
 }
 
 .work-btn {
   background: #ff523a;
   color: #fff;
   border: none;
-  padding: 8px 18px; /* smaller button */
-  font-size: 0.85rem;
+  padding: 10px 20px;
+  font-size: 0.95rem;
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -74,7 +84,7 @@
 
 /* --- Divider --- */
 .divider {
-  margin: 40px auto 0; /* less margin */
+  margin: 40px auto 0;
   width: 80%;
   border: none;
   border-top: 1px solid #ccc;
@@ -84,9 +94,9 @@
 @media (max-width: 768px) {
   .work-container {
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    padding: 80px 20px 40px; /* extra top padding for curve */
     text-align: center;
-    padding: 30px 10px;
   }
 
   .team-image {
@@ -95,15 +105,15 @@
   }
 
   .work-right h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .work-right p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .work-btn {
-    padding: 8px 16px;
-    font-size: 0.8rem;
+    padding: 8px 18px;
+    font-size: 0.85rem;
   }
 }

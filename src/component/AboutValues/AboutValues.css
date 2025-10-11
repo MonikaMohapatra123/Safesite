@@ -1,3 +1,4 @@
+/* MAIN SECTION */
 .our-values-section {
   max-width: 1100px;
   margin: 0 auto;
@@ -6,23 +7,27 @@
   color: #263238;
 }
 
+/* HEADER */
 .values-header {
-  text-align: center;
+  text-align: center;       /* Center heading and subheading */
   margin-bottom: 50px;
 }
 
 .values-header h2 {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 12px;      /* Space between heading and subheading */
 }
 
 .values-header p {
   color: #6c757d;
   font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 auto;           /* Center text if wrapped */
+  max-width: 700px;         /* Optional: prevent very long lines */
 }
 
-/* ROW layout */
+/* ROW LAYOUT */
 .values-row {
   display: flex;
   justify-content: space-between;
@@ -32,35 +37,34 @@
 }
 
 .values-row.reverse {
-  flex-direction: row;
+  flex-direction: row;       /* Image right, text left */
 }
 
-/* IMAGE styling */
+/* IMAGE STYLING */
 .value-image {
-  flex: 1;
+  flex: 1;                   /* 50% of row */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .value-image img {
-  width: 750px;
+  width: 100%;               /* Fill its half of the row */
   max-width: 100%;
   border-radius: 8px;
   display: block;
 }
 
-/* TEXT group */
+/* TEXT GROUP */
 .value-text-group {
-  flex: 1.5;
+  flex: 1;                   /* 50% of row */
   display: flex;
   flex-direction: column;
   gap: 30px;
-  max-width: 600px;
   justify-content: center;
 }
 
-/* SINGLE item */
+/* SINGLE ITEM */
 .value-item {
   display: flex;
   flex-direction: column;
@@ -90,26 +94,22 @@
   line-height: 1.6;
   color: #333;
 }
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .values-row {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  /* 🔸 Second row: image should go on top and text below */
+/* RESPONSIVE - MOBILE */
+@media (max-width: 768px) {
+  .values-row,
   .values-row.reverse {
-    flex-direction: column;
+    flex-direction: column;  /* Stack image and text vertically */
+    text-align: center;
   }
 
   .value-image img {
     width: 100%;
-    max-width: 100%;
     margin-bottom: 20px;
   }
 
   .value-text-group {
-    max-width: 100%;
+    width: 100%;
     align-items: center;
     text-align: center;
   }
@@ -132,5 +132,14 @@
 
   .value-item p {
     font-size: 0.95rem;
+  }
+
+  .values-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .values-header p {
+    font-size: 0.95rem;
+    max-width: 90%;
   }
 }

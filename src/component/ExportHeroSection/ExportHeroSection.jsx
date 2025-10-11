@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ExportHeroSection.css';
+import FeatureLinkButton from '../../component/FeatureLinkButton/FeatureLinkButton'; // import FeatureLinkButton
 
 const ExportHeroSection = ({ data }) => {
   console.log('✅ FeaturesExportHeroSection data:', data);
@@ -29,15 +30,29 @@ const ExportHeroSection = ({ data }) => {
           ></h1>
           <p className="features-ExportHeroSection-description">{data.HeroDescription}</p>
           <div className="features-ExportHeroSection-buttons">
-            {data.HeroButtons.map((btn, index) => (
-              <button
-                key={index}
-                className={`features-ExportHeroSection-btn features-ExportHeroSection-btn-${btn.type}`}
-                onClick={btn.type === 'secondary' ? handleViewImage : undefined}
-              >
-                {btn.text}
-              </button>
-            ))}
+            {data.HeroButtons.map((btn, index) => {
+              if (btn.type === 'secondary') {
+                // Render FeatureLinkButton for secondary
+                return (
+                  <FeatureLinkButton
+                    key={index}
+                    to="/features"
+                    text="All Features"
+                    color="white"
+                  />
+                );
+              }
+
+              return (
+                <button
+                  key={index}
+                  className={`features-ExportHeroSection-btn features-ExportHeroSection-btn-${btn.type}`}
+                  onClick={btn.type === 'secondary' ? handleViewImage : undefined}
+                >
+                  {btn.text}
+                </button>
+              );
+            })}
           </div>
         </div>
 

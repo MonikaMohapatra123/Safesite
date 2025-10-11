@@ -1,6 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import './AllCompanyTestimonials.css';
+import DynamicButton from '../DynamicButton/DynamicButton'; // update path as per your folder structure
+
 
 export default function AllCompanyTestimonials({ data }) {
   const testimonials = Object.values(data);
@@ -103,6 +105,10 @@ export default function AllCompanyTestimonials({ data }) {
     />
   ))}
 </div>
+<div className="button-center">
+  <DynamicButton label="View All CaseStudies" route="/case-studies" />
+</div>
+
 
     </div>
   );

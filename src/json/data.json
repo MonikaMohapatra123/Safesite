@@ -954,18 +954,88 @@
 }
 
 },
- "20": {
-    "page": "ResourceBlog",
-    "1": {
-      "image": "/safesite-2.png",
-      "tag": "SAFETY",
-      "readTime": "11",
-      "title": "A Safety Guide to Electrical Hazards",
-      "description": "How many electrical hazards can you count around you right now? Unless you are off-grid, there’s at least a handful of electrical outlets and electrical tools nearby you right now….",
-      "author": "TEAM SAFESITE",
-      "date": "JULY 29, 2022"
-    }
+"20": {
+  "page": "ResourceBlog",
+  "1": {
+    "image": "/safesite-2.png",
+    "tag": "SAFETY",
+    "readTime": "11",
+    "title": "A Safety Guide to Electrical Hazards",
+    "description": "How many electrical hazards can you count around you right now? Unless you are off-grid, there’s at least a handful of electrical outlets and electrical tools nearby you right now….",
+    "author": "TEAM SAFESITE",
+    "date": "JULY 29, 2022"
+  },
+  "2": {
+    "posts": [
+      {
+        "image": "/safesite-1.png",
+        "category": "TOOLS & EQUIPMENT",
+        "readTime": "8 min read",
+        "title": "Welding Hazards and Welding Safety—An Overview",
+        "description": "The statistics regarding the dangers of welding are daunting to read. More than 560,000 workers are injured each year from welding accidents, according to the Bureau of Labor Statistics. For..."
+      },
+      {
+        "image": "/safesite-3.png",
+        "category": "CHECKLISTS",
+        "readTime": "8 min read",
+        "title": "Ladder Inspections and Checklists for Ladder Safety",
+        "description": "Falls from ladders are completely preventable, yet they still occur thousands of times throughout the year. Ladder citations were number 3 in the list of top OSHA violations for 2021...."
+      }
+    ]
+  },  "3": {
+      "blogList": [
+        {
+          "id": 1,
+          "category": "SAFETY",
+          "readTime": "8 min read",
+          "title": "Managing Chemical Hazards in the Workplace",
+          "description": "The risk of chemical exposure is a part of daily life, both at home and at work. But even though we encounter chemicals all d...",
+          "image": "/safesite-2.png"
+        },
+        {
+          "id": 2,
+          "category": "SAFETY",
+          "readTime": "9 min read",
+          "title": "Chemical Hazards in the Workplace: An Overview",
+          "description": "How many hazardous chemicals do your teams encounter each work day? The figure is almost certainly higher than you...",
+          "image": "/safesite-4.png"
+        },
+        {
+          "id": 3,
+          "category": "EXCAVATION",
+          "readTime": "7 min read",
+          "title": "Protective Systems for Trench Safety",
+          "description": "With an average of 19 trench fatalities per year, protective systems are essential for trench safety. These fatalities and accident...",
+          "image": "/safesite-3.png"
+        },
+        {
+          "id": 4,
+          "category": "PPE",
+          "readTime": "7 min read",
+          "title": "Hearing Protection in the Workplace",
+          "description": "According to the CDC, tens of millions of workers are potentially exposed every year to damaging noise. Hearing loss is a...",
+          "image": "/safesite-5.png"
+        },
+        {
+          "id": 5,
+          "category": "SAFETY",
+          "readTime": "10 min read",
+          "title": "A Safety Guide to Industrial Robotics Hazards",
+          "description": "Industrial robotics offer automation that can enhance safety, but the robotics themselves can introduce their own hazards...",
+          "image": "/safesite-6.png"
+        },
+        {
+          "id": 6,
+          "category": "PPE",
+          "readTime": "6 min read",
+          "title": "A Guide to Head Protection in the Workplace",
+          "description": "The purpose of head protection is to safeguard workers from falling debris, low-hanging objects, electrical hazards, or ever...",
+          "image": "/safesite-7.png"
+        }
+      ]
   }
+}
+
 ,"21": {
   "page": "ResourceCasestudies",
   "1": {

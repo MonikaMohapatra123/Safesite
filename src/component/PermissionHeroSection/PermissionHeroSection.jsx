@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './PermissionHeroSection.css';
+import FeatureLinkButton from '../../component/FeatureLinkButton/FeatureLinkButton'; // import FeatureLinkButton
 
 const PermissionHeroSection = ({ data }) => {
   console.log('✅ FeaturesPermissionHeroSection data:', data);
@@ -29,15 +30,29 @@ const PermissionHeroSection = ({ data }) => {
           ></h1>
           <p className="features-PermissionHeroSection-description">{data.HeroDescription}</p>
           <div className="features-PermissionHeroSection-buttons">
-            {data.HeroButtons.map((btn, index) => (
-              <button
-                key={index}
-                className={`features-PermissionHeroSection-btn features-PermissionHeroSection-btn-${btn.type}`}
-                onClick={btn.type === 'secondary' ? handleViewImage : undefined}
-              >
-                {btn.text}
-              </button>
-            ))}
+            {data.HeroButtons.map((btn, index) => {
+              if (btn.type === 'secondary') {
+                // Render FeatureLinkButton for secondary
+                return (
+                  <FeatureLinkButton
+                    key={index}
+                    to="/features"
+                    text="All Features"
+                    color="white"
+                  />
+                );
+              }
+
+              return (
+                <button
+                  key={index}
+                  className={`features-PermissionHeroSection-btn features-PermissionHeroSection-btn-${btn.type}`}
+                  onClick={btn.type === 'secondary' ? handleViewImage : undefined}
+                >
+                  {btn.text}
+                </button>
+              );
+            })}
           </div>
         </div>
 
@@ -74,4 +89,5 @@ const PermissionHeroSection = ({ data }) => {
     </section>
   );
 };
- export default PermissionHeroSection;
+
+export default PermissionHeroSection;

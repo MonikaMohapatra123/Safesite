@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './HeroDashboard.css';
+import FeatureLinkButton from '../../component/FeatureLinkButton/FeatureLinkButton'; // import your button
 
 const HeroDashboard = ({ data }) => {
   console.log('✅ HeroDashboard data:', data);
@@ -29,15 +30,29 @@ const HeroDashboard = ({ data }) => {
           ></h1>
           <p className="hero-dashboard-description">{data.HeroDescription}</p>
           <div className="hero-dashboard-buttons">
-            {data.HeroButtons.map((btn, index) => (
-              <button
-                key={index}
-                className={`hero-dashboard-btn hero-dashboard-btn-${btn.type}`}
-                onClick={btn.type === 'secondary' ? handleViewImage : undefined}
-              >
-                {btn.text}
-              </button>
-            ))}
+            {data.HeroButtons.map((btn, index) => {
+              if (btn.type === 'secondary') {
+                // Render FeatureLinkButton for secondary
+                return (
+                  <FeatureLinkButton
+                    key={index}
+                    to="/features"
+                    text="All Features"
+                    color="white"
+                  />
+                );
+              }
+
+              return (
+                <button
+                  key={index}
+                  className={`hero-dashboard-btn hero-dashboard-btn-${btn.type}`}
+                  onClick={btn.type === 'secondary' ? handleViewImage : undefined}
+                >
+                  {btn.text}
+                </button>
+              );
+            })}
           </div>
         </div>
 

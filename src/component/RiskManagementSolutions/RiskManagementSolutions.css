@@ -1,0 +1,130 @@
+.rms-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 60px 20px;
+}
+
+.rms-box {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  padding: 50px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.rms-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center; /* Heading centered */
+  color: #1a1a1a;
+  margin-bottom: 40px;
+}
+
+.rms-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+  justify-content: center; /* Center image + text horizontally */
+}
+
+.rms-image-wrapper {
+  position: relative;
+  flex: 1 1 300px;
+  max-width: 350px;
+}
+
+.rms-image-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f4f8fb;
+  border-radius: 50% 50% 0 0 / 40% 40% 0 0;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+
+.rms-image {
+  width: 100%;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.rms-label {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: #ff4d30;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  z-index: 3;
+}
+
+.rms-text {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: left; /* Keep checkmark text left-aligned on desktop */
+}
+
+.rms-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.rms-icon {
+  color: #00c36d;
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.rms-item h4 {
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.rms-item p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .rms-content {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rms-content {
+    flex-direction: column;
+    align-items: center; /* Center content vertically */
+    text-align: center;
+  }
+
+  .rms-image-wrapper {
+    margin: 0 auto;
+  }
+
+  .rms-text {
+    align-items: center; /* Center text on mobile */
+    text-align: center;
+  }
+
+  .rms-item {
+    justify-content: center; /* Center each checkmark item */
+  }
+}

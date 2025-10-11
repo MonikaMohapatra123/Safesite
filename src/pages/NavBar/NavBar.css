@@ -153,6 +153,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  flex-wrap: nowrap;
 }
 
 .NavBar-dropdown-link {

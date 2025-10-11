@@ -1,7 +1,7 @@
 .hero-btn-primary {
-  background-color: #ff5a5f;
+  background-color:orangered;
   color: #fff;
-  border-radius: 0px 10px 0px 10px;
+  border-radius:  10px 0px 10px 0px;
   padding: 10px 20px;
   border: none;
   cursor: pointer;

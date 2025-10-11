@@ -2,6 +2,8 @@ import React from "react";
 import "./Footer.css";
 import { FaFacebookF, FaYoutube, FaLinkedinIn } from "react-icons/fa";
 import { TbBrandX } from "react-icons/tb";
+import FeatureLinkButton from "../../component/FeatureLinkButton/FeatureLinkButton";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -43,7 +45,7 @@ const Footer = () => {
             <li>10 Things Safety Pros Must Know About the Ex Mod</li>
             <li>The Ultimate Guide to Safety Reporting & KPIs</li>
             <li>Safesite’s Step-by-Step Guide to Safety Program Digitization</li>
-            <li className="footer-link">View Blog →</li>
+           <Link to="/blog"><li className="footer-link">View Blog →</li></Link> 
           </ul>
         </div>
 
@@ -56,7 +58,7 @@ const Footer = () => {
             <li>Incident Reporting</li>
             <li>Hazard Management</li>
             <li>Leading Indicator Analytics</li>
-            <li className="footer-link">View all Features →</li>
+       <Link to="/features"> <li className="footer-link">View all Features →</li></Link>    
           </ul>
         </div>
 

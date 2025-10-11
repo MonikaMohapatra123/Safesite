@@ -251,3 +251,8 @@
     text-align: center;
   }
 }
+.button-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px; /* adjust spacing as needed */
+}
