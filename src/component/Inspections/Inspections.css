@@ -126,7 +126,8 @@
   .features-inspections-container {
     flex-direction: column;
     text-align: center;
-    gap: 30px;
+    gap: 0px;
+    margin-top: 50px;
   }
 
   .features-inspections-left {
@@ -134,8 +135,8 @@
   }
 
   .features-inspections-image-wrapper {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
   }
 

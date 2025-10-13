@@ -126,7 +126,8 @@
   .checklists-container {
     flex-direction: column;
     text-align: center;
-    gap: 30px;
+    gap: 0px;
+    margin-top: 40px;
   }
 
   .checklists-left {

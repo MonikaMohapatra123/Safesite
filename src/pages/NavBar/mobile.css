@@ -6,7 +6,6 @@
   left: 0;
   width: 100%;
   background-color: #1B4F82;
-  
   z-index: 1100;
 }
 
@@ -18,6 +17,7 @@
   background-color: var(--white);
   z-index: 1100;
   position: relative;
+ 
 }
 
 .MobileLogoImage {
@@ -158,6 +158,7 @@
   width: 70%;
   height: 1px;
   background-color: #cecece;
+  
 }
 
 .MobileNavBarItem:last-child::after,

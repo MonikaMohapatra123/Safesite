@@ -126,7 +126,7 @@
   .features-PermissionHeroSection-container {
     flex-direction: column;
     text-align: center;
-    gap: 30px;
+    margin-top: 50px;
   }
 
   .features-PermissionHeroSection-left {
@@ -134,8 +134,8 @@
   }
 
   .features-PermissionHeroSection-image-wrapper {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
   }
 

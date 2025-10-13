@@ -1,106 +1,53 @@
-/* .safetyhq-section {
-  padding: 40px 20px;
- 
-}
-
-.safetyhq-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.safetyhq-image img {
-  width: 450px;
-  margin-right: 40px;
-}
-
-.safetyhq-content {
-  max-width: 500px;
-}
-
-.safetyhq-content h4 {
-  color: #0073e6;
-  margin-bottom: 8px;
-}
-
-.safetyhq-content h2 {
-  font-size: 28px;
-  margin-bottom: 12px;
-}
-
-.safetyhq-content p {
-  font-size: 16px;
-  margin-bottom: 16px;
-}
-
-.safetyhq-link {
-  color: #0073e6;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-@media (max-width: 768px) {
-  .safetyhq-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .safetyhq-image img {
-    margin: 0 0 20px 0;
-  }
-
-  .safetyhq-content {
-    max-width: 100%;
-  }
-} */
-
-
-
-
-/* ✅ Section container with consistent max-width */
+/* ✅ Section container */
 .safetyhq-section {
-  padding: 40px 20px;
-  max-width: 1200px;   /* keep consistent with other components */
-  margin: 0 auto;      /* center the section */
+  width: 85%;              /* Take 85% of viewport width */
+  margin: 0 auto;          /* Center horizontally */
+  padding: 40px 0;         /* Top and bottom space only */
   box-sizing: border-box;
 }
 
-/* ✅ Flex layout for image and content side by side */
+/* ✅ Flex layout for image and content */
 .safetyhq-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;  /* Adds space between image & text */
   flex-wrap: wrap;
+  gap: 20px;                       /* Ensures consistent spacing */
 }
 
-/* ✅ Responsive image: max width with auto scaling */
+/* ✅ Image styling */
 .safetyhq-image img {
-  width: 100%;             /* makes image responsive */
-  max-width: 450px;        /* desktop size */
+  width: 100%;
+  max-width: 450px;
   height: auto;
-  margin-right: 40px;
   display: block;
+  border-radius: 8px;              /* Optional – smoother look */
 }
 
-/* ✅ Content area with safe max width */
+/* ✅ Text content area */
 .safetyhq-content {
+  flex: 1;                         /* Let text take remaining space */
+  min-width: 300px;                /* Prevent text from shrinking too much */
   max-width: 500px;
-  box-sizing: border-box;
 }
 
 .safetyhq-content h4 {
   color: #0073e6;
   margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .safetyhq-content h2 {
   font-size: 28px;
   margin-bottom: 12px;
+  color: #1a1a1a;
 }
 
 .safetyhq-content p {
   font-size: 16px;
+  line-height: 1.6;
+  color: #444;
   margin-bottom: 16px;
 }
 
@@ -110,20 +57,30 @@
   font-weight: bold;
 }
 
-/* ✅ Mobile styles */
+/* ✅ Mobile Responsive */
 @media (max-width: 768px) {
+  .safetyhq-section {
+    width: 90%;                  /* Slightly wider for small screens */
+    padding: 30px 0;
+  }
+
   .safetyhq-container {
     flex-direction: column;
     text-align: center;
+    gap: 24px;
   }
 
   .safetyhq-image img {
-    margin: 0 0 20px 0;  /* space below image */
-    max-width: 100%;     /* prevents overflow */
+    margin: 0 auto;
+    max-width: 100%;
   }
 
   .safetyhq-content {
     max-width: 100%;
-    padding: 0 10px;     /* optional: side padding for content */
+    padding: 0 10px;
+  }
+
+  .safetyhq-content h2 {
+    font-size: 24px;
   }
 }

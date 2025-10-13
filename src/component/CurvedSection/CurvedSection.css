@@ -65,7 +65,7 @@
   border: none;
   padding: 14px 28px;
   font-size: 16px;
-  border-radius: 0px 10px 0px 10px;
+  border-radius:  0px 20px 0px 20px;
   cursor: pointer;
   transition: background 0.3s;
   
@@ -139,14 +139,14 @@
   .cs-row {
     flex-direction: column;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 0px;
   }
   .cs-left {
     text-align: center;
   }
   .cs-right {
     flex-direction: column;
-    gap: 25px;
+    gap: 5px;
   }
   .cs-divider {
     display: none;
@@ -172,7 +172,7 @@
 /* Small mobile */
 @media (max-width: 480px) {
   .cs-section {
-    padding-bottom: 60px;
+    padding-bottom: 30px;
   }
   .cs-left h2 {
     font-size: 24px;
@@ -187,7 +187,8 @@
     font-size: 13px;
   }
   .cs-btn {
-    padding: 10px 20px;
+    padding: 20px 10px;
     font-size: 14px;
+    margin-top: 30px;
   }
 }

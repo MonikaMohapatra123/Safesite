@@ -121,10 +121,14 @@
 }
 
 @media (max-width: 768px) {
+  .sg-container{
+    padding-bottom: 40px;
+  }
   .sg-content {
     flex-direction: column;
     align-items: center;
     text-align: center;
+   
   }
   .sg-heading {
     font-size: 26px;
