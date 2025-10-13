@@ -3,6 +3,7 @@ import "./Footer.css";
 import { FaFacebookF, FaYoutube, FaLinkedinIn } from "react-icons/fa";
 import { TbBrandX } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import Flag from "react-flagkit"; // <-- import flag library
 
 const Footer = () => {
   return (
@@ -40,7 +41,10 @@ const Footer = () => {
             </a>
           </div>
 
-          <button className="footer-lang-btn">🇺🇸 English</button>
+          {/* Language Button with Indian Flag */}
+          <button className="footer-lang-btn">
+            <Flag country="IN" /> India
+          </button>
         </div>
 
         {/* Column 2 */}

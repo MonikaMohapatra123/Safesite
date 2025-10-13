@@ -103,7 +103,6 @@
   opacity: 0.7;
 }
 
-/* Language Button */
 .footer-lang-btn {
   background-color: #06335c;
   border: none;
@@ -112,7 +111,16 @@
   border-radius: 6px;
   font-size: 14px;
   cursor: pointer;
+  display: flex;             /* use flex to align items */
+  align-items: center;       /* vertically center flag and text */
+  gap: 6px;                  /* small gap between flag and text */
 }
+.footer-lang-btn:hover{
+  border: 1px solid white;
+  border-radius: 6px;
+}
+
+
 
 /* Bottom Bar */
 .footer-bottom {
