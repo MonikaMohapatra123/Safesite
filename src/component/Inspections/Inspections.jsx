@@ -11,9 +11,9 @@ const Inspections = ({ data }) => {
     return <div>No inspection feature data found.</div>;
   }
 
-  const handleViewImage = () => {
-    setShowImageModal(true);
-  };
+  // const handleViewImage = () => {
+  //   setShowImageModal(true);
+  // };
 
   const handleCloseImage = () => {
     setShowImageModal(false);

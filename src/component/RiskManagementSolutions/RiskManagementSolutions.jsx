@@ -1,6 +1,6 @@
 import React from "react";
 import "./RiskManagementSolutions.css";
-import { FaCheckCircle } from "react-icons/fa";
+// import { FaCheckCircle } from "react-icons/fa";
 
 
 const RiskManagementSolutions = () => {

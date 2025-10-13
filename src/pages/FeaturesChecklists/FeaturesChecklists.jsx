@@ -8,7 +8,7 @@ import CurvedSection from '../../component/CurvedSection/CurvedSection';
 const FeaturesChecklists = () => {
   const featurechecklistData = getstoredata["7"]["1"];
   const checklistData = getstoredata["7"]["2"]; 
-  const checklistFeaturesData = getstoredata ["7"]["3"]; // ✅ ID 3 for ChecklistFeatures
+  const checklistFeaturesData = getstoredata["7"]["3"]; // ✅ ID 3 for ChecklistFeatures
 
   return (
     <div>

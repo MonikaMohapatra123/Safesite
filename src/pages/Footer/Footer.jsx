@@ -2,7 +2,6 @@ import React from "react";
 import "./Footer.css";
 import { FaFacebookF, FaYoutube, FaLinkedinIn } from "react-icons/fa";
 import { TbBrandX } from "react-icons/tb";
-import FeatureLinkButton from "../../component/FeatureLinkButton/FeatureLinkButton";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -27,10 +26,18 @@ const Footer = () => {
           </div>
 
           <div className="footer-socials">
-            <FaFacebookF />
-            <TbBrandX />
-            <FaYoutube />
-            <FaLinkedinIn />
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <FaFacebookF />
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+              <TbBrandX />
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+              <FaYoutube />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+              <FaLinkedinIn />
+            </a>
           </div>
 
           <button className="footer-lang-btn">🇺🇸 English</button>
@@ -45,7 +52,9 @@ const Footer = () => {
             <li>10 Things Safety Pros Must Know About the Ex Mod</li>
             <li>The Ultimate Guide to Safety Reporting & KPIs</li>
             <li>Safesite’s Step-by-Step Guide to Safety Program Digitization</li>
-           <Link to="/blog"><li className="footer-link">View Blog →</li></Link> 
+            <Link to="/blog">
+              <li className="footer-link">View Blog →</li>
+            </Link>
           </ul>
         </div>
 
@@ -58,7 +67,9 @@ const Footer = () => {
             <li>Incident Reporting</li>
             <li>Hazard Management</li>
             <li>Leading Indicator Analytics</li>
-       <Link to="/features"> <li className="footer-link">View all Features →</li></Link>    
+            <Link to="/features">
+              <li className="footer-link">View all Features →</li>
+            </Link>
           </ul>
         </div>
 
@@ -80,7 +91,8 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>©2025 Safesite. All rights reserved.</p>
         <div className="footer-legal">
-          <a>Privacy Policy</a> | <a>Terms of Use</a>
+          <Link to="/privacy-policy">Privacy Policy</Link> |{" "}
+          <Link to="/terms-of-use">Terms of Use</Link>
         </div>
       </div>
     </footer>

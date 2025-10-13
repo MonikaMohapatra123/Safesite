@@ -11,9 +11,6 @@ const Checklists = ({ data }) => {
     return <div>No checklist feature data found.</div>;
   }
 
-  const handleViewImage = () => {
-    setShowImageModal(true);
-  };
 
   const handleCloseImage = () => {
     setShowImageModal(false);
