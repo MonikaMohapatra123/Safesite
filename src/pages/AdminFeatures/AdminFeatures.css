@@ -1,69 +1,162 @@
-/* AdminFeatures.css */
-
-/* Overall container */
 .admin-features-container {
-  padding: 30px;
-  max-width: 900px;
-  margin: 0 auto;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
 }
 
-/* Heading */
-.admin-features-container h2 {
+.page-title {
   text-align: center;
-  color: #333;
   margin-bottom: 25px;
   font-size: 28px;
   font-weight: 600;
+  color: #222;
 }
 
-/* Links container */
-.admin-feature-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 30px;
+.feature-form.card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
 }
 
-/* Individual link */
-.admin-feature-link {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
   font-weight: 500;
-  transition: all 0.3s ease;
+  display: block;
+  margin-bottom: 6px;
 }
 
-.admin-feature-link:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: border-color 0.3s;
 }
 
-/* Feature page container */
-.admin-feature-page {
-  background-color: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
-  min-height: 300px; /* adjust as needed */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2196f3;
+  outline: none;
 }
 
-/* Optional: Responsive adjustments */
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.add-btn,
+.remove-btn,
+.submit-btn,
+.edit-btn,
+.delete-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.add-btn {
+  background-color: #4caf50;
+  color: white;
+}
+.add-btn:hover {
+  background-color: #45a049;
+}
+
+.remove-btn {
+  background-color: #f44336;
+  color: white;
+}
+.remove-btn:hover {
+  background-color: #e53935;
+}
+
+.submit-btn {
+  background-color: #2196f3;
+  color: white;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 15px;
+}
+.submit-btn:hover {
+  background-color: #1976d2;
+}
+
+.existing-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.feature-card.card {
+  background: #fff;
+  padding: 18px 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.feature-card h4 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+
+.feature-page {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.feature-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn {
+  background-color: #ff9800;
+  color: white;
+}
+.edit-btn:hover {
+  background-color: #fb8c00;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+.delete-btn:hover {
+  background-color: #e53935;
+}
+
+/* Responsive */
 @media (max-width: 600px) {
-  .admin-feature-links {
+  .button-row {
     flex-direction: column;
-    align-items: center;
   }
-  
-  .admin-feature-link {
-    width: 80%;
-    text-align: center;
+  .features-grid {
+    grid-template-columns: 1fr;
   }
 }

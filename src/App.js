@@ -79,13 +79,14 @@
 
 
 
-
-
+// src/App.js
 import React from 'react';
 import './index.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import ScrollToTop from './component/ScrollToTop/ScrollToTop';
+
+// Pages
 import Home from './pages/Home/Home';
 import NavBar from './pages/NavBar/NavBar';
 import Footer from './pages/Footer/Footer';
@@ -108,9 +109,15 @@ import ResourceCaseStudies from './pages/ResourceCaseStudies/ResourceCaseStudies
 import ResourcePricing from './pages/ResourcePricing/ResourcePricing';
 import AboutUs from './pages/AboutUs/AboutUs';
 import Features from './pages/Features/Features';
+
+// Admin Pages
 import Admin from './pages/Admin/Admin';
-import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import AdminFeatures from './pages/AdminFeatures/AdminFeatures';
+// import other admin module pages here if needed
+// import AdminTemplates from './pages/AdminTemplates/AdminTemplates';
+
+import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
+import Login from './pages/Login/Login';
 
 const App = () => {
   const location = useLocation();
@@ -124,15 +131,23 @@ const App = () => {
       {!hideLayout && <NavBar />}
 
       <Routes>
-        <Route path='/admin' element={
+        {/* Admin Nested Routes */}
+        <Route path="/admin" element={
           <PrivateRoute>
             <Admin />
           </PrivateRoute>
-        } />
-        <Route path='/admin/Features' element={<PrivateRoute><AdminFeatures/></PrivateRoute>} />
-        
-        {/* <Route path='/login' element={<Login />} /> */}
+        }>
+          <Route path="features" element={<PrivateRoute><AdminFeatures /></PrivateRoute>} />
+          {/* Add other admin modules here */}
+          {/* <Route path="templates" element={<AdminTemplates />} /> */}
+          {/* <Route path="resources" element={<AdminResources />} /> */}
+          {/* <Route path="industries" element={<AdminIndustries />} /> */}
+        </Route>
 
+        {/* Login */}
+        <Route path="/login" element={<Login />} />
+
+        {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/features/inspections" element={<FeaturesInspections />} />
         <Route path="/features/checklists" element={<FeaturesChecklists />} />
@@ -162,4 +177,3 @@ const App = () => {
 };
 
 export default App;
-
