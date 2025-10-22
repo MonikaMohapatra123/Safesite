@@ -12,7 +12,8 @@ const Login = () => {
 
     // Simple fake login logic
     if (username === 'admin' && password === 'admin') {
-      rage.setItem('isLoggedIn', 'true'); // store login status
+      // Store login status in localStorage
+      localStorage.setItem('isLoggedIn', 'true');
       navigate('/admin'); // redirect to admin panel
     } else {
       alert('Invalid credentials! Use username: admin, password: admin');
@@ -43,7 +44,9 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit" style={{ width: '100%', padding: '10px' }}>Login</button>
+        <button type="submit" style={{ width: '100%', padding: '10px' }}>
+          Login
+        </button>
       </form>
     </div>
   );
