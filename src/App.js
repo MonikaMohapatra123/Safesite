@@ -118,6 +118,8 @@ import AdminFeatures from './pages/AdminFeatures/AdminFeatures';
 
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import Login from './pages/Login/Login';
+import AdminIndustry from './pages/AdminIndustry/AdminIndustry';
+import AdminBlog from './pages/AdminBlog/AdminBlog';
 
 const App = () => {
   const location = useLocation();
@@ -138,10 +140,18 @@ const App = () => {
           </PrivateRoute>
         }>
           <Route path="features" element={<PrivateRoute><AdminFeatures /></PrivateRoute>} />
-          {/* Add other admin modules here */}
-          {/* <Route path="templates" element={<AdminTemplates />} /> */}
-          {/* <Route path="resources" element={<AdminResources />} /> */}
-          {/* <Route path="industries" element={<AdminIndustries />} /> */}
+         <Route
+                  path="industries"
+                  element={
+                    <PrivateRoute>
+                      <AdminIndustry />
+                    </PrivateRoute>
+                  }
+                />
+           <Route path="blogs" element={<PrivateRoute><AdminBlog /></PrivateRoute>} />
+
+
+       
         </Route>
 
         {/* Login */}

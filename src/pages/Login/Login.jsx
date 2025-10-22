@@ -12,7 +12,7 @@ const Login = () => {
 
     // Simple fake login logic
     if (username === 'admin' && password === 'admin') {
-      localStorage.setItem('isLoggedIn', 'true'); // store login status
+      rage.setItem('isLoggedIn', 'true'); // store login status
       navigate('/admin'); // redirect to admin panel
     } else {
       alert('Invalid credentials! Use username: admin, password: admin');

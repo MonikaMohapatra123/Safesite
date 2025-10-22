@@ -5,10 +5,11 @@ import './Admin.css';
 
 const Admin = () => {
   const modules = [
-    { title: "Templates", path: "templates" },
+ 
     { title: "Features", path: "features" },
-    { title: "Resources", path: "resources" },
-    { title: "Industries", path: "industries" }
+    { title: "Industries", path: "industries" },
+     { title: "Blog", path: "blogs" },
+     {title:"Case Studies",path:"case-studies"}
   ];
 
   const location = useLocation();
