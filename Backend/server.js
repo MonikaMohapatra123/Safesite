@@ -1,4 +1,4 @@
-
+// Database Connection: Local MongoDB
 // import express from "express";
 // import mongoose from "mongoose";
 // import cors from "cors";
@@ -16,13 +16,13 @@
 
 // app.use(express.json());
 
-// mongoose.connect("mongodb+srv://monalishajspur_db_user:gudi123@cluster0.pr7cy1h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+// // ✅ Connect to local MongoDB
+// mongoose.connect("mongodb://127.0.0.1:27017/safesite", {
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true
 // })
-
-// .then(() => console.log("MongoDB connected"))
-// .catch(err => console.log(err));
+// .then(() => console.log("✅ Local MongoDB connected"))
+// .catch(err => console.log("❌ MongoDB connection error:", err));
 
 // // ✅ Routes
 // app.use("/api/features", featureRoutes);
@@ -32,7 +32,7 @@
 
 // // ✅ Test route
 // app.get("/test", (req, res) => {
-//   res.send("Server is working!");
+//   res.send("Server is working with local MongoDB!");
 // });
 
 // // ✅ Start server
@@ -41,40 +41,41 @@
 
 
 
+
+// Database Connection: MongoDB Atlas
 import express from "express";
-import mongoose from "mongoose";
+import mongoose, { Connection } from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-
 import featureRoutes from "./routes/featureRoutes.js";
 import industryRoutes from "./routes/industryRoutes.js";
 import blogRoutes from "./routes/blogRoutes.js";
 import caseStudyRoutes from "./routes/caseStudyRoutes.js";
 
-dotenv.config();  // ✅ Load .env
+dotenv.config();
 
 const app = express();
-
-// ✅ CORS
 app.use(cors({ origin: "*" }));
 app.use(express.json());
 
-// ✅ MongoDB connection
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.log("❌ MongoDB error:", err));
 
-// ✅ Routes
 app.use("/api/features", featureRoutes);
 app.use("/api/industries", industryRoutes);
 app.use("/api/blogs", blogRoutes);
 app.use("/api/casestudies", caseStudyRoutes);
 
-// ✅ Test route
 app.get("/test", (req, res) => {
-  res.send("Server is working on Vercel ✅");
+  res.send("Server is working ✅");
 });
 
-// ✅ Do not use app.listen on Vercel
+// ✅ Local only
+if (process.env.NODE_ENV !== "production") {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
+
 export default app;
