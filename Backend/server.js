@@ -44,7 +44,7 @@
 
 // Database Connection: MongoDB Atlas
 import express from "express";
-import mongoose, { Connection } from "mongoose";
+import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import featureRoutes from "./routes/featureRoutes.js";
