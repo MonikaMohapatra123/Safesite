@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminIndustry.css";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+// ✅ Use your deployed backend on Vercel
+const BACKEND_URL = "https://safesite-backend.vercel.app";
 
 const AdminIndustry = () => {
   const [industries, setIndustries] = useState([]);
@@ -74,6 +75,7 @@ const AdminIndustry = () => {
         await axios.post(`${BACKEND_URL}/api/industries`, formData);
         alert("Industry added successfully!");
       }
+
       setFormData({
         title: "",
         description: "",
@@ -104,6 +106,7 @@ const AdminIndustry = () => {
       fetchIndustries();
     } catch (err) {
       console.error("Error deleting industry:", err);
+      alert("Error deleting industry");
     }
   };
 
