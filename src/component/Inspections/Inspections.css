@@ -33,27 +33,38 @@
   margin-bottom: 30px;
 }
 
+/* Buttons and link styles */
 .features-inspections-buttons {
   display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.features-inspections-btn {
-  border: none;
-  padding: 12px 24px;
-  border-radius: 5px;
-  cursor: pointer;
+  align-items: center;
+  gap: 25px;
 }
 
 .features-inspections-btn-primary {
   background-color: #ff5a5f;
   color: #fff;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.features-inspections-btn-secondary {
-  background: transparent;
-  color: #fff;
+.features-inspections-btn-primary:hover {
+  background-color: #ff7b7f;
+}
+
+.features-inspections-link {
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.features-inspections-link:hover {
+  text-decoration: underline;
+  color: #ff5a5f;
 }
 
 .features-inspections-right {

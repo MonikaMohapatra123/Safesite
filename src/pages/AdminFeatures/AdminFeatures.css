@@ -160,3 +160,24 @@
     grid-template-columns: 1fr;
   }
 }
+.checkpoint-card {
+  background: #f9fafc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.details-group {
+  margin-top: 10px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px dashed #ccc;
+}
+
+.details-group strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+}

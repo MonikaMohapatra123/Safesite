@@ -101,8 +101,8 @@ import TemplatesIncidentReport from './pages/TemplatesIncidentReport/TemplatesIn
 import TemplatesJobHazad from './pages/TemplatesJobHazad/TemplatesJobHazad';
 import TemplatesEmergencyPlan from './pages/TemplatesEmergencyPlan/TemplatesEmergencyPlan';
 import ContactUs from './pages/ContactUs/ContactUs';
-import { IndustriesConstruction } from './pages/IndustriesConstruction/IndustriesConstruction';
-import { IndustriesEnergy } from './pages/IndustriesEnergy/IndustriesEnergy';
+import IndustriesConstruction  from './pages/IndustriesConstruction/IndustriesConstruction';
+import  IndustriesEnergy  from './pages/IndustriesEnergy/IndustriesEnergy';
 import IndustriesManufacturing from './pages/IndustriesManufacturing/IndustriesManufacturing';
 import ResourceBlog from './pages/ResourceBlog/ResourceBlog';
 import ResourceCaseStudies from './pages/ResourceCaseStudies/ResourceCaseStudies';
