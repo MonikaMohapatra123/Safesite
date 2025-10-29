@@ -8,20 +8,21 @@ import InspectionSection from "../../component/InspectionSection/InspectionSecti
 import RelatedFeatures from "../../component/RelatedFeatures/RelatedFeatures";
 import CurvedSection from "../../component/CurvedSection/CurvedSection";
 
-import getstoredata from "../../json/data.json";
+import { getstoredata } from "../../json/fetchData"; // ✅ Use fetchData
 
 // ✅ Your backend API URL
 const BACKEND_URL = "https://safesite-backend.vercel.app/api/features";
 
 const Dashboard = () => {
+  const data = getstoredata(); // ✅ Correctly call the function
   const [backendData, setBackendData] = useState(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   // ✅ Local fallback data from JSON
-  const featureInspectionData = getstoredata["8"]["1"]; // Hero Section
-  const inspectionData = getstoredata["8"]["2"]; // Middle Section
-  const relatedData = getstoredata["8"]["3"]; // Related Features
+  const featureInspectionData = data["8"]["1"]; // Hero Section
+  const inspectionData = data["8"]["2"];        // Middle Section
+  const relatedData = data["8"]["3"];           // Related Features
 
   // ✅ Fetch backend data
   useEffect(() => {
@@ -66,10 +67,8 @@ const Dashboard = () => {
   };
 
   // ✅ Merge backend + local data (Inspection Section)
-  // Ensure only valid .mp4 link is used as video
   const videoUrl =
-    backendData.images?.[1] &&
-    backendData.images[1].includes(".mp4")
+    backendData.images?.[1] && backendData.images[1].includes(".mp4")
       ? backendData.images[1]
       : inspectionData.Video;
 
@@ -83,7 +82,7 @@ const Dashboard = () => {
           photo: cp.photo,
         }))
       : inspectionData.Items,
-    Video: videoUrl, // ✅ Safe video handling
+    Video: videoUrl,
   };
 
   return (

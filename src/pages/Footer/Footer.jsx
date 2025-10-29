@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="footer-col footer-brand">
           <div className="footer-logo">
             <img src="/axiomos-logo.png" alt="Axiomos Logo" />
-            <span>Axiomos</span>
+            <span>Safety Sure </span>
           </div>
           <p className="footer-desc">
             An award-winning safety management solution

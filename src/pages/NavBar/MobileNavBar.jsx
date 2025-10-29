@@ -1,16 +1,25 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes, FaPlus } from 'react-icons/fa';
 import './mobile.css';
-import data from '../../json/data.json';
+import { getstoredata } from '../../json/fetchData'; // ✅ dynamic import
 
 const MobileNavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [getStoreData, setGetStoreData] = useState(null);
   const navRef = useRef();
 
-  const getStoreData = Object.values(data).find(item => item.page === "navbar");
+  // ✅ Fetch data from localStorage (fetched by fetchData.js)
+  useEffect(() => {
+    const data = getstoredata();
+    if (data) {
+      const navData = Object.values(data).find(
+        (item) => item.page === 'navbar'
+      );
+      setGetStoreData(navData);
+    }
+  }, []);
 
   const handleToggleDropdown = (label) => {
     setOpenDropdown((prev) => (prev === label ? null : label));
@@ -29,7 +38,7 @@ const MobileNavBar = () => {
   }, []);
 
   if (!getStoreData) {
-    return <div>Navbar data not found.</div>;
+    return <div>Navbar data not found or loading...</div>;
   }
 
   return (
@@ -48,10 +57,7 @@ const MobileNavBar = () => {
           </div>
         </Link>
 
-        <div
-          className="MobileMenuIcon"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
+        <div className="MobileMenuIcon" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
       </div>
@@ -71,6 +77,7 @@ const MobileNavBar = () => {
                   }`}
                 />
               </div>
+
               <ul
                 className={`MobileSubMenuList ${
                   openDropdown === item.name ? 'show' : ''
@@ -78,7 +85,10 @@ const MobileNavBar = () => {
               >
                 {item.sections.map((section, sectionIndex) =>
                   section.links.map((subItem, subIndex) => (
-                    <li key={`${sectionIndex}-${subIndex}`} className="MobileSubMenuItem">
+                    <li
+                      key={`${sectionIndex}-${subIndex}`}
+                      className="MobileSubMenuItem"
+                    >
                       <Link
                         to={subItem.link}
                         className="MobileSubMenuLink"
@@ -128,6 +138,3 @@ const MobileNavBar = () => {
 };
 
 export default MobileNavBar;
-
-
-

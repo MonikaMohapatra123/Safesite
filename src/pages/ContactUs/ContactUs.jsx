@@ -1,12 +1,13 @@
-import React from 'react';
-import ContactIntro from '../../component/ContactIntro/ContactIntro';
-import contactData from "../../json/data.json";
-import ContactForm from '../../component/ContactForm/ContactForm';
+import React from "react";
+import ContactIntro from "../../component/ContactIntro/ContactIntro";
+import ContactForm from "../../component/ContactForm/ContactForm";
+import { getstoredata } from "../../json/fetchData"; // ✅ use fetchData
 
 const ContactUs = () => {
-  const pageData = contactData["16"]; // key "16" with id inside
+  const data = getstoredata(); // ✅ fetch local data
+  const pageData = data["16"]; // key "16" with id inside
 
-  console.log(pageData.id); // ✅ will print 1
+  console.log(pageData.id); // ✅ optional debug
 
   return (
     <div>
@@ -16,12 +17,12 @@ const ContactUs = () => {
         contactDetails={pageData.ContactDetails}
         btnText={pageData.ButtonText}
       />
-         <ContactForm
+
+      <ContactForm
         heading={pageData.Form.heading}
         fields={pageData.Form.fields}
         submitText={pageData.Form.submitText}
       />
-      
     </div>
   );
 };

@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import getstoredata from "../../json/data.json";
+
+// ✅ Import from fetchData.js instead of data.json
+import { getstoredata } from "../../json/fetchData";
+
 import RelatedFeatures from "../../component/RelatedFeatures/RelatedFeatures";
 import CurvedSection from "../../component/CurvedSection/CurvedSection";
 import Inspections from "../../component/Inspections/Inspections";
@@ -12,12 +15,17 @@ const BACKEND_URL = "https://safesite-backend.vercel.app/api/features";
 const TeamManagement = () => {
   const [backendData, setBackendData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [localData, setLocalData] = useState(null);
   const navigate = useNavigate();
 
-  // ✅ Local fallback data from JSON (index "9")
-  const featureInspectionData = getstoredata["9"]["1"];
-  const inspectionData = getstoredata["9"]["2"];
-  const relatedFeaturesData = getstoredata["9"]["3"];
+  // ✅ Load local JSON data using fetchData.js
+  useEffect(() => {
+    const loadLocalData = async () => {
+      const data = await getstoredata();
+      setLocalData(data["9"]);
+    };
+    loadLocalData();
+  }, []);
 
   // ✅ Fetch backend data
   useEffect(() => {
@@ -37,7 +45,7 @@ const TeamManagement = () => {
     fetchFeature();
   }, []);
 
-  if (loading) return <p style={{ textAlign: "center" }}>Loading...</p>;
+  if (loading || !localData) return <p style={{ textAlign: "center" }}>Loading...</p>;
 
   if (!backendData)
     return (
@@ -45,6 +53,11 @@ const TeamManagement = () => {
         No feature found for “Team Management”. Please add it in Admin Panel.
       </p>
     );
+
+  // ✅ Local sections
+  const featureInspectionData = localData["1"];
+  const inspectionData = localData["2"];
+  const relatedFeaturesData = localData["3"];
 
   // ✅ Merge backend + local (Hero Section)
   const mergedHero = {

@@ -1,31 +1,8 @@
-// import React from 'react'
-
-// import getstoredata from "../../json/data.json";
-// import IndustriesConstructionHero from '../../component/IndustriesConstructionHero/IndustriesConstructionHero';
-
-// import CommonIndustriesSafetyChallenges from '../../component/CommonIndustriesSafetyChallenges/CommonIndustriesSafetyChallenges';
-// import SafetyGoals from '../../component/SafetyGoals/SafetyGoals';
-// import RiskManagementSolutions from '../../component/RiskManagementSolutions/RiskManagementSolutions';
-// export const IndustriesConstruction = () => {
-//       const featureInspectionData = getstoredata["17"]["1"]; 
-//       const commonsafetychecklist =getstoredata["17"]["2"];
-//       const safetyGoalsData = getstoredata["17"]["3"];
-//   return (
-//     <div>
-//        <IndustriesConstructionHero data={featureInspectionData}/> 
-//       <CommonIndustriesSafetyChallenges data={commonsafetychecklist}/>
-//       <RiskManagementSolutions/>
-//       <SafetyGoals data={safetyGoalsData}/>
-
-//     </div>
-//   )
-// }
-
-
+// src/pages/IndustriesConstruction/IndustriesConstruction.jsx
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import getstoredata from "../../json/data.json";
+import { getstoredata } from "../../json/fetchData"; // ✅ use fetchData.js
 
 import IndustriesConstructionHero from "../../component/IndustriesConstructionHero/IndustriesConstructionHero";
 import CommonIndustriesSafetyChallenges from "../../component/CommonIndustriesSafetyChallenges/CommonIndustriesSafetyChallenges";
@@ -37,11 +14,13 @@ const BACKEND_URL = "https://safesite-backend.vercel.app/api/industries";
 const IndustriesConstruction = () => {
   const [backendData, setBackendData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [localData, setLocalData] = useState(null);
 
-  // ✅ Local fallback data from JSON
-  const heroData = getstoredata["17"]["1"];
-  const safetyChallenges = getstoredata["17"]["2"];
-  const safetyGoals = getstoredata["17"]["3"];
+  // ✅ Get local data from fetchData.js (localStorage)
+  useEffect(() => {
+    const data = getstoredata();
+    setLocalData(data);
+  }, []);
 
   // ✅ Fetch backend data for page = "construction"
   useEffect(() => {
@@ -61,7 +40,13 @@ const IndustriesConstruction = () => {
     fetchData();
   }, []);
 
-  if (loading) return <p style={{ textAlign: "center" }}>Loading...</p>;
+  if (loading || !localData)
+    return <p style={{ textAlign: "center" }}>Loading...</p>;
+
+  // ✅ Local fallback data from JSON stored in localStorage
+  const heroData = localData["17"]?.["1"] || {};
+  const safetyChallenges = localData["17"]?.["2"] || {};
+  const safetyGoals = localData["17"]?.["3"] || {};
 
   if (!backendData)
     return (
@@ -70,7 +55,7 @@ const IndustriesConstruction = () => {
       </p>
     );
 
-  // ✅ Merge backend and local fallback data
+  // ✅ Merge backend + local fallback data
   const mergedHero = {
     ...heroData,
     HeroHeading: backendData.title || heroData.HeroHeading,

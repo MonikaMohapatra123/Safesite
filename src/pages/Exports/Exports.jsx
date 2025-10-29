@@ -1,39 +1,8 @@
-
-// import React from "react";
-// import getstoredata from "../../json/data.json";
-// import RelatedFeatures from "../../component/RelatedFeatures/RelatedFeatures";
-// import CurvedSection from "../../component/CurvedSection/CurvedSection";
-// import Inspections from "../../component/Inspections/Inspections";
-// import InspectionSection from "../../component/InspectionSection/InspectionSection";
-
-// const Exports = () => {
-//   // ✅ Use correct data index (based on your JSON)
-//   const featureInspectionData = getstoredata["10"]["1"]; // Hero section for Team Management
-//   const inspectionData = getstoredata["10"]["2"];        // Inspection or detail section
-//   const relatedFeaturesData = getstoredata["10"]["3"];   // Related features
-
-//   return (
-//     <div>
-//       <Inspections data={featureInspectionData} />
-//       <InspectionSection data={inspectionData} />
-//       <RelatedFeatures data={relatedFeaturesData} />
-//       <CurvedSection />
-//     </div>
-//   );
-// };
-
-// export default Exports;
-
-
-
-
-
-
-
+// src/pages/Exports/Exports.jsx
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import getstoredata from "../../json/data.json";
+import { getstoredata } from "../../json/fetchData"; // ✅ Import function
 import RelatedFeatures from "../../component/RelatedFeatures/RelatedFeatures";
 import CurvedSection from "../../component/CurvedSection/CurvedSection";
 import Inspections from "../../component/Inspections/Inspections";
@@ -43,13 +12,15 @@ const BACKEND_URL = "https://safesite-backend.vercel.app/api/features";
 
 const Exports = () => {
   const [backendData, setBackendData] = useState(null);
+  const [localData, setLocalData] = useState(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  // ✅ Local fallback data (index "10" for Exports page)
-  const featureInspectionData = getstoredata["10"]["1"];
-  const inspectionData = getstoredata["10"]["2"];
-  const relatedFeaturesData = getstoredata["10"]["3"];
+  // ✅ Load local stored data once on mount
+  useEffect(() => {
+    const data = getstoredata();
+    if (data) setLocalData(data);
+  }, []);
 
   // ✅ Fetch backend data
   useEffect(() => {
@@ -71,12 +42,24 @@ const Exports = () => {
 
   if (loading) return <p style={{ textAlign: "center" }}>Loading...</p>;
 
+  if (!localData)
+    return (
+      <p style={{ textAlign: "center" }}>
+        Local JSON data not found in localStorage. Please reload the page once.
+      </p>
+    );
+
   if (!backendData)
     return (
       <p style={{ textAlign: "center" }}>
         No feature found for “Exports”. Please add it in Admin Panel.
       </p>
     );
+
+  // ✅ Access safely with optional chaining
+  const featureInspectionData = localData["10"]?.["1"] || {};
+  const inspectionData = localData["10"]?.["2"] || {};
+  const relatedFeaturesData = localData["10"]?.["3"] || {};
 
   // ✅ Merge backend + local (Hero Section)
   const mergedHero = {
@@ -129,4 +112,3 @@ const Exports = () => {
 };
 
 export default Exports;
-

@@ -13,18 +13,21 @@ const IndustriesConstructionHero = ({ data }) => {
         <div className="construction-hero-left">
           <h1
             className="construction-hero-heading"
-            dangerouslySetInnerHTML={{ __html: data.HeroHeading }}
+            dangerouslySetInnerHTML={{ __html: data?.HeroHeading || "" }}
           ></h1>
           <p className="construction-hero-description">
-            {data.HeroDescription}
+            {data?.HeroDescription || ""}
           </p>
         </div>
 
         {/* ✅ Right Image */}
-        <div className="construction-hero-right" onClick={() => setShowModal(true)}>
+        <div
+          className="construction-hero-right"
+          onClick={() => setShowModal(true)}
+        >
           <div className="construction-hero-image-wrapper">
             <img
-              src={data.HeroImage}
+              src={data?.HeroImage || "/banner-placeholder.png"}
               alt="Construction Hero"
               className="construction-hero-image"
             />
@@ -43,7 +46,7 @@ const IndustriesConstructionHero = ({ data }) => {
               &times;
             </span>
             <img
-              src={data.HeroModalImage}
+              src={data?.HeroModalImage || data?.HeroImage}
               alt="Modal Preview"
               className="construction-hero-modal-img"
             />

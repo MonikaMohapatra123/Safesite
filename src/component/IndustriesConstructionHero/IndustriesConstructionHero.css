@@ -1,11 +1,12 @@
 .construction-hero-section {
   position: relative;
   overflow: hidden;
-  background-color: #1b4f82;
   color: #fff;
   padding: 100px 20px;
   clip-path: ellipse(94% 87% at 55% 0%);
   transition: clip-path 0.3s ease;
+   background: #1b4f82 url("../../../public/banner-watermark.svg") no-repeat center/cover;
+
 }
 
 .construction-hero-container {
@@ -20,7 +21,7 @@
 
 .construction-hero-left {
   flex: 1 1 500px;
-  margin-top: -40px;
+  margin-top: -130px;
 }
 
 .construction-hero-heading {

@@ -58,36 +58,7 @@
           }
         ]
       },
-      {
-        "name": "Templates",
-        "sections": [
-          {
-            "title": "All Templates",
-            "links": [
-              {
-                "name": "Safety Checklist",
-                "link": "/templates/safety-checklist",
-                "icon": "/logo.png"
-              },
-              {
-                "name": "Incident Report",
-                "link": "/templates/incident-report",
-                "icon": "/logo.png"
-              },
-              {
-                "name": "Job Hazard Analysis",
-                "link": "/templates/job-hazard-analysis",
-                "icon": "/logo.png"
-              },
-              {
-                "name": "Emergency Plan",
-                "link": "/templates/emergency-plan",
-                "icon": "/logo.png"
-              }
-            ]
-          }
-        ]
-      },
+      
       {
         "name": "Industries",
         "sections": [
@@ -123,10 +94,6 @@
               {
                 "name": "Case Studies",
                 "link": "/resources/case-studies"
-              },
-              {
-                "name": "Pricing",
-                "link": "/resources/pricing"
               }
             ]
           }
@@ -138,10 +105,7 @@
       }
     ],
     "actions": [
-      {
-        "name": "Login",
-        "link": "/login"
-      },
+      
       {
         "name": "Get Started Free",
         "type": "button",
@@ -1200,8 +1164,6 @@
     "backgroundImage": "/banner-watermark.svg"
   }
 }
-
-
 
 
 

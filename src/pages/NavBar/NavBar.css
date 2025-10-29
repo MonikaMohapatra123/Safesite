@@ -45,20 +45,27 @@ body {
   color: white;
 }
 
-
-.NavBar-logo {
+ .NavBar-logo {
   display: flex;
   align-items: center;
 }
 
-.NavBar-logo img {
-  height: 40px; 
-  margin-right: 8px; 
+.NavBar-logo a {
+  display: flex;              /* ✅ Keeps image and text in one line */
+  align-items: center;
 }
+
+.NavBar-logo img {
+  height: 40px;
+  margin-right: 9px;
+}
+
 
 .NavBar-company {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 28px;
+  
+  
 }
 
 .NavBar-lists {

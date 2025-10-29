@@ -1,34 +1,40 @@
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // ✅ For navigation
+import { useNavigate } from "react-router-dom";
+
 import Inspections from "../../component/Inspections/Inspections";
 import InspectionSection from "../../component/InspectionSection/InspectionSection";
 import RelatedFeatures from "../../component/RelatedFeatures/RelatedFeatures";
 import CurvedSection from "../../component/CurvedSection/CurvedSection";
-import getstoredata from "../../json/data.json";
 
+import { getstoredata } from "../../json/fetchData"; // ✅ Import dynamic data handler
+
+// ✅ Backend URL
 const BACKEND_URL = "https://safesite-backend.vercel.app/api/features";
 
 const FeaturesInspections = () => {
   const [backendData, setBackendData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [localData, setLocalData] = useState(null);
   const navigate = useNavigate();
 
-  // ✅ Local fallback data
-  const featureInspectionData = getstoredata["6"]["1"];
-  const inspectionData = getstoredata["6"]["2"];
-  const relatedFeaturesData = getstoredata["6"]["3"];
+  // ✅ Fetch local (from localStorage stored by fetchData.js)
+  useEffect(() => {
+    const stored = getstoredata();
+    if (stored) {
+      setLocalData(stored);
+    }
+  }, []);
 
   // ✅ Fetch from backend
   useEffect(() => {
     const fetchFeature = async () => {
       try {
         const res = await axios.get(BACKEND_URL);
-        const feature = res.data.find(
+        const inspectionFeature = res.data.find(
           (f) => f.page?.toLowerCase() === "inspections"
         );
-        setBackendData(feature);
+        setBackendData(inspectionFeature);
       } catch (error) {
         console.error("Error fetching backend data:", error);
       } finally {
@@ -38,48 +44,56 @@ const FeaturesInspections = () => {
     fetchFeature();
   }, []);
 
-  if (loading) return <p style={{ textAlign: "center" }}>Loading...</p>;
+  if (!localData)
+    return <p style={{ textAlign: "center" }}>Loading local data...</p>;
+
+  // ✅ Extract local fallback data from stored JSON
+  const heroLocal = localData["6"]?.["1"];
+  const inspectionLocal = localData["6"]?.["2"];
+  const relatedFeatures = localData["6"]?.["3"];
+
+  if (loading) return <p style={{ textAlign: "center" }}>Loading backend data...</p>;
 
   if (!backendData)
     return (
       <p style={{ textAlign: "center" }}>
-        No feature found for “inspections”. Please add it in Admin Panel.
+        No inspection feature found. Please add it in Admin Panel.
       </p>
     );
 
   // ✅ Merge backend + local
   const mergedHero = {
-    ...featureInspectionData,
-    HeroHeading: backendData.title || featureInspectionData.HeroHeading,
-    HeroDescription:
-      backendData.description || featureInspectionData.HeroDescription,
+    ...heroLocal,
+    HeroHeading: backendData.title || heroLocal?.HeroHeading,
+    HeroDescription: backendData.description || heroLocal?.HeroDescription,
+    HeroImage: backendData.images?.[0] || heroLocal?.HeroImage,
     HeroButtons: backendData.buttons?.length
       ? backendData.buttons.map((btn, i) => ({
           ...btn,
-          link: backendData.links?.[i] || "/features", // ✅ Use backend link or fallback
+          link: backendData.links?.[i] || "/features",
         }))
-      : featureInspectionData.HeroButtons,
-    HeroImage: backendData.images?.[0] || featureInspectionData.HeroImage,
+      : heroLocal?.HeroButtons,
   };
 
   const mergedInspectionSection = {
-    ...inspectionData,
-    Heading: backendData.page || inspectionData.Heading,
+    ...inspectionLocal,
+    Heading: backendData.page || inspectionLocal?.Heading,
     Items: backendData.checkpoints?.length
       ? backendData.checkpoints.map((cp) => ({
           title: cp.title,
           description: cp.description,
           photo: cp.photo,
         }))
-      : inspectionData.Items,
-    Video: backendData.images?.[1] || inspectionData.Video,
+      : inspectionLocal?.Items,
+    Video: backendData.images?.[1] || inspectionLocal?.Video,
   };
 
+  // ✅ Render components
   return (
     <div>
-      <Inspections data={mergedHero} navigate={navigate} /> {/* ✅ pass navigate */}
+      <Inspections data={mergedHero} navigate={navigate} />
       <InspectionSection data={mergedInspectionSection} />
-      <RelatedFeatures data={relatedFeaturesData} />
+      <RelatedFeatures data={relatedFeatures} />
       <CurvedSection />
     </div>
   );
