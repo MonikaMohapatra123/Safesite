@@ -23,7 +23,6 @@
 
 
 
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import getstoredata from "../../json/data.json";
@@ -39,19 +38,18 @@ const IndustriesConstruction = () => {
   const [backendData, setBackendData] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // ✅ Local fallback data
+  // ✅ Local fallback data from JSON
   const heroData = getstoredata["17"]["1"];
   const safetyChallenges = getstoredata["17"]["2"];
   const safetyGoals = getstoredata["17"]["3"];
 
-  // ✅ Fetch backend industry data
+  // ✅ Fetch backend data for page = "construction"
   useEffect(() => {
     const fetchData = async () => {
       try {
         const res = await axios.get(BACKEND_URL);
-        // You can filter by specific title like “construction”
         const industry = res.data.find(
-          (item) => item.title?.toLowerCase() === "construction"
+          (item) => item.page?.toLowerCase() === "construction"
         );
         setBackendData(industry);
       } catch (error) {
@@ -68,11 +66,11 @@ const IndustriesConstruction = () => {
   if (!backendData)
     return (
       <p style={{ textAlign: "center" }}>
-        No backend data found for “Construction”. Please add it in Admin Panel.
+        No backend data found for page = "construction". Please add it in Admin Panel.
       </p>
     );
 
-  // ✅ Merge backend + local data
+  // ✅ Merge backend and local fallback data
   const mergedHero = {
     ...heroData,
     HeroHeading: backendData.title || heroData.HeroHeading,
@@ -94,9 +92,7 @@ const IndustriesConstruction = () => {
       : safetyChallenges.Items,
   };
 
-  const mergedSafetyGoals = {
-    ...safetyGoals,
-  };
+  const mergedSafetyGoals = { ...safetyGoals };
 
   return (
     <div>
@@ -109,4 +105,3 @@ const IndustriesConstruction = () => {
 };
 
 export default IndustriesConstruction;
-

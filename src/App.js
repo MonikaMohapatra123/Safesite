@@ -120,6 +120,7 @@ import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import Login from './pages/Login/Login';
 import AdminIndustry from './pages/AdminIndustry/AdminIndustry';
 import AdminBlog from './pages/AdminBlog/AdminBlog';
+import AdminCaseStudies from './pages/AdminCaseStudies/AdminCaseStudies';
 
 const App = () => {
   const location = useLocation();
@@ -150,7 +151,7 @@ const App = () => {
                 />
            <Route path="blogs" element={<PrivateRoute><AdminBlog /></PrivateRoute>} />
 
-
+          <Route path="case-studies" element={<PrivateRoute><AdminCaseStudies/></PrivateRoute>} />
        
         </Route>
 

@@ -1,52 +1,56 @@
-// src/pages/Login/Login.jsx
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 const Login = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Simple fake login logic
-    if (username === 'admin' && password === 'admin') {
-      // Store login status in localStorage
-      localStorage.setItem('isLoggedIn', 'true');
-      navigate('/admin'); // redirect to admin panel
+    // ✅ Simple authentication
+    if (username === "admin" && password === "admin") {
+      sessionStorage.setItem("isLoggedIn", "true");
+      navigate("/admin"); // Redirect to Admin Panel
     } else {
-      alert('Invalid credentials! Use username: admin, password: admin');
+      setError("Invalid credentials! Use username: admin, password: admin");
     }
   };
 
+  // ✅ Always clear session when page reloads or user leaves
+  useEffect(() => {
+    const clearSession = () => sessionStorage.removeItem("isLoggedIn");
+    window.addEventListener("beforeunload", clearSession);
+    return () => window.removeEventListener("beforeunload", clearSession);
+  }, []);
+
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', padding: '50px' }}>
-      <form onSubmit={handleLogin} style={{ width: '300px' }}>
-        <h2>Login</h2>
-        <div style={{ marginBottom: '15px' }}>
-          <label>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            style={{ width: '100%', padding: '8px' }}
-            required
-          />
-        </div>
-        <div style={{ marginBottom: '15px' }}>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            style={{ width: '100%', padding: '8px' }}
-            required
-          />
-        </div>
-        <button type="submit" style={{ width: '100%', padding: '10px' }}>
-          Login
-        </button>
+    <div className="login-container">
+      <form className="login-box" onSubmit={handleLogin}>
+        <h2>Admin Login</h2>
+
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+
+        {error && <p className="error-text">{error}</p>}
+
+        <button type="submit">Login</button>
       </form>
     </div>
   );

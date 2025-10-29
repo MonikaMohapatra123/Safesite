@@ -9,6 +9,7 @@ const AdminIndustry = () => {
   const [industries, setIndustries] = useState([]);
   const [editingId, setEditingId] = useState(null);
   const [formData, setFormData] = useState({
+    page: "",
     title: "",
     description: "",
     image: "",
@@ -21,7 +22,7 @@ const AdminIndustry = () => {
     ],
   });
 
-  // ✅ Fetch industries
+  // ✅ Fetch industries from backend
   const fetchIndustries = async () => {
     try {
       const res = await axios.get(`${BACKEND_URL}/api/industries`);
@@ -36,7 +37,7 @@ const AdminIndustry = () => {
     fetchIndustries();
   }, []);
 
-  // ✅ Handle input
+  // ✅ Input change handler
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -64,7 +65,7 @@ const AdminIndustry = () => {
     setFormData({ ...formData, checkpoints: updated });
   };
 
-  // ✅ Submit form
+  // ✅ Submit form (Create or Update)
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -76,7 +77,9 @@ const AdminIndustry = () => {
         alert("Industry added successfully!");
       }
 
+      // ✅ Reset form
       setFormData({
+        page: "",
         title: "",
         description: "",
         image: "",
@@ -112,9 +115,24 @@ const AdminIndustry = () => {
 
   return (
     <div className="admin-industry-container">
-      <h2 className="page-title">{editingId ? "Edit Industry" : "Add New Industry"}</h2>
+      <h2 className="page-title">
+        {editingId ? "Edit Industry" : "Add New Industry"}
+      </h2>
 
       <form className="industry-form card" onSubmit={handleSubmit}>
+        {/* ✅ Page field */}
+        <div className="form-group">
+          <label>Page (Unique Identifier):</label>
+          <input
+            type="text"
+            name="page"
+            placeholder="e.g. construction, manufacturing"
+            value={formData.page}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
         <div className="form-group">
           <label>Title:</label>
           <input
@@ -191,13 +209,18 @@ const AdminIndustry = () => {
       <ul className="features-list">
         {industries.map((ind) => (
           <li key={ind._id} className="feature-item">
-            <strong>{ind.title}</strong>
-            <button className="edit-btn" onClick={() => handleEdit(ind)}>
-              Edit
-            </button>
-            <button className="delete-btn" onClick={() => handleDelete(ind._id)}>
-              Delete
-            </button>
+            <div>
+              <strong>{ind.title}</strong> <br />
+              <small>Page: {ind.page}</small>
+            </div>
+            <div>
+              <button className="edit-btn" onClick={() => handleEdit(ind)}>
+                Edit
+              </button>
+              <button className="delete-btn" onClick={() => handleDelete(ind._id)}>
+                Delete
+              </button>
+            </div>
           </li>
         ))}
       </ul>

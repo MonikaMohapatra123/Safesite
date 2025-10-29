@@ -29,3 +29,15 @@
   color: white;
   transform: scale(1.05);
 }
+
+.logout-btn{
+  margin-left:1200px;
+   background-color: #ff4b4b;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
