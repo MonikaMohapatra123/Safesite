@@ -33,6 +33,7 @@ import Login from './pages/Login/Login';
 import AdminIndustry from './pages/AdminIndustry/AdminIndustry';
 import AdminBlog from './pages/AdminBlog/AdminBlog';
 import AdminCaseStudies from './pages/AdminCaseStudies/AdminCaseStudies';
+import ArticleHeader from './component/ArticleHeader/ArticleHeader';
 
 const App = () => {
   const location = useLocation();
@@ -52,6 +53,7 @@ const App = () => {
           <Route  path="industries" element={<PrivateRoute><AdminIndustry /> </PrivateRoute>} />
           <Route path="blogs" element={<PrivateRoute><AdminBlog /></PrivateRoute>} />
           <Route path="case-studies" element={<PrivateRoute><AdminCaseStudies/></PrivateRoute>} />
+
           </Route>
 
         {/* Login */}
@@ -73,6 +75,10 @@ const App = () => {
         <Route path="/resources/case-studies" element={<ResourceCaseStudies />} />
         <Route path="/why-us" element={<AboutUs />} />
         <Route path="/features" element={<Features />} />
+         <Route path="/indu/const" element={<ArticleHeader/>} />
+        <Route path="/indu/mining" element={<ArticleHeader/>} />
+       
+        
       </Routes>
 
       {/* Only show Footer if not admin or login page */}

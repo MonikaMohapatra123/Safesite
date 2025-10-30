@@ -11,6 +11,7 @@ import SafetyTopicsCards from "../../component/SafetyTopicsCards/SafetyTopicsCar
 import SafetyGoals from "../../component/SafetyGoals/SafetyGoals";
 
 
+
 const Home = () => {
   // ✅ Get the locally stored data (fetched from API)
   const storeData = getstoredata();
@@ -38,6 +39,7 @@ const Home = () => {
       <AllCompanyTestimonials data={testimonialsData} />
 
       <h3> A Smarter Safety Management System</h3>
+    
 
       <AllCompanyManagement
         tagline="Easy-to-Use"
@@ -57,7 +59,7 @@ const Home = () => {
         linkText="See Pricing & Plans"
         linkHref="/pricing"
       />
-
+       
       <AllCompanyManagement
         tagline="Easy-to-Use"
         title="The Most Intuitive Safety App"
