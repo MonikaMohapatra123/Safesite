@@ -47,25 +47,12 @@ const App = () => {
 
       <Routes>
         {/* Admin Nested Routes */}
-        <Route path="/admin" element={
-          <PrivateRoute>
-            <Admin />
-          </PrivateRoute>
-        }>
+        <Route path="/admin" element={<PrivateRoute><Admin/> </PrivateRoute> }>
           <Route path="features" element={<PrivateRoute><AdminFeatures /></PrivateRoute>} />
-         <Route
-                  path="industries"
-                  element={
-                    <PrivateRoute>
-                      <AdminIndustry />
-                    </PrivateRoute>
-                  }
-                />
-           <Route path="blogs" element={<PrivateRoute><AdminBlog /></PrivateRoute>} />
-
+          <Route  path="industries" element={<PrivateRoute><AdminIndustry /> </PrivateRoute>} />
+          <Route path="blogs" element={<PrivateRoute><AdminBlog /></PrivateRoute>} />
           <Route path="case-studies" element={<PrivateRoute><AdminCaseStudies/></PrivateRoute>} />
-       
-        </Route>
+          </Route>
 
         {/* Login */}
         <Route path="/login" element={<Login />} />
