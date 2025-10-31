@@ -1165,11 +1165,154 @@
   }
 }
 
+,
 
+"26": {
+  "page": "Admin",
+  "id": "26",
 
+  "AdminBlog": [
+    { "fields": "page" },
+    {
+      "fields": "featured",
+      "subfields": [
+        { "fields": "image" },
+        { "fields": "tag" },
+        { "fields": "readTime" },
+        { "fields": "title" },
+        { "fields": "description" },
+        { "fields": "author" },
+        { "fields": "date" }
+      ]
+    },
+    {
+      "fields": "posts",
+      "subfields": [
+        { "fields": "image" },
+        { "fields": "category" },
+        { "fields": "readTime" },
+        { "fields": "title" },
+        { "fields": "description" }
+      ]
+    },
+    {
+      "fields": "blogList",
+      "subfields": [
+        { "fields": "id" },
+        { "fields": "category" },
+        { "fields": "readTime" },
+        { "fields": "title" },
+        { "fields": "description" },
+        { "fields": "image" }
+      ]
+    }
+  ],
+
+  "AdminCaseStudies": [
+    { "fields": "page" },
+    {
+      "fields": "featured",
+      "subfields": [
+        { "fields": "image" },
+        { "fields": "tag" },
+        { "fields": "readTime" },
+        { "fields": "title" },
+        { "fields": "description" },
+        { "fields": "author" },
+        { "fields": "date" }
+      ]
+    },
+    {
+      "fields": "topicsSection",
+      "subfields": [
+        { "fields": "id" },
+        { "fields": "sectionTitle" },
+        {
+          "fields": "viewAllLink",
+          "subfields": [
+            { "fields": "text" },
+            { "fields": "url" }
+          ]
+        },
+        {
+          "fields": "topics",
+          "subfields": [
+            { "fields": "id" },
+            { "fields": "image" },
+            { "fields": "category" },
+            { "fields": "readTime" },
+            { "fields": "title" },
+            { "fields": "link" }
+          ]
+        }
+      ]
+    },
+    {
+      "fields": "testimonials",
+      "subfields": [
+        { "fields": "id" },
+        { "fields": "image" },
+        { "fields": "quote" },
+        { "fields": "name" },
+        { "fields": "title" },
+        { "fields": "stats" },
+        { "fields": "description" },
+        { "fields": "hoverImageDefault" },
+        { "fields": "hoverImageColor" }
+      ]
+    }
+  ],
+
+  "AdminFeatures": [
+    { "fields": "page" },
+    { "fields": "title" },
+    { "fields": "description" },
+    {
+      "fields": "buttons",
+      "subfields": [
+        { "fields": "type" },
+        { "fields": "text" }
+      ]
+    },
+    { "fields": "images" },
+    { "fields": "links" },
+    {
+      "fields": "checkpoints",
+      "subfields": [
+        { "fields": "title" },
+        { "fields": "description" },
+        { "fields": "photo" },
+        {
+          "fields": "details",
+          "subfields": [
+            { "fields": "title" },
+            { "fields": "description" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "AdminIndustry": [
+    { "fields": "page" },
+    { "fields": "title" },
+    { "fields": "description" },
+    { "fields": "image" },
+    {
+      "fields": "checkpoints",
+      "subfields": [
+        { "fields": "title" },
+        { "fields": "photo" },
+        {
+          "fields": "details",
+          "subfields": [
+            { "fields": "title" },
+            { "fields": "description" }
+          ]
+        }
+      ]
+    }
+  ]
 }
 
-
-
-
-
+}
