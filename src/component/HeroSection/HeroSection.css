@@ -5,7 +5,7 @@
   overflow: hidden;
   padding: 180px 20px;
   background: url("../../../public/banner-watermark.svg");
-  background-color: #1B4F82;
+  background-color:var(--primary-color);
   min-height: 700px;
  
 
