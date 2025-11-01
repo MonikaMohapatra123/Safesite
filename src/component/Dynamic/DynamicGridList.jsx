@@ -25,8 +25,8 @@ const DynamicGridList = ({ data, onEdit, onDelete }) => {
                 </td>
               ))}
               <td>
-                <button classname="dynamic-btn" onClick={() => onEdit(item._id)}>Edit</button>
-                <button classname="dynamic-btn" onClick={() => onDelete(item._id)}>Delete</button>
+                <button className="dynamic-btn" onClick={() => onEdit(item._id)}>Edit</button>
+                <button className="dynamic-btn" onClick={() => onDelete(item._id)}>Delete</button>
               </td>
             </tr>
           ))}

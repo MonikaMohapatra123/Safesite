@@ -104,13 +104,13 @@ const DynamicForm = ({ schema, formData, onChange, onSubmit }) => {
               {(field.subfields || []).map((sub) =>
                 renderField(sub, `${fieldPath}.${idx}`)
               )}
-              <button classname="dynamic-btn" onClick={() => removeArrayItem(fieldPath, idx)}>
+              <button className="dynamic-btn" onClick={() => removeArrayItem(fieldPath, idx)}>
                 Remove
               </button>
             </div>
           ))}
 
-          <button   classname="dynamic-btn" onClick={() => addArrayItem(fieldPath, {})}>
+          <button className="dynamic-btn" onClick={() => addArrayItem(fieldPath, {})}>
             Add {field.fields}
           </button>
         </div>
