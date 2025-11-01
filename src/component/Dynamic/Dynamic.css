@@ -72,7 +72,7 @@
 
 /* Primary */
 .btn-save,
-button {
+dynamic-btn {
   background: #6366f1;
   color: white;
   padding: 9px 16px;
@@ -85,27 +85,27 @@ button {
 }
 
 .btn-save:hover,
-button:hover {
+dynamic-btn:hover {
   background: #4f46e5;
 }
 
 /* Remove Button */
-button:nth-child(2),
-button.remove {
+dynamic-btn:nth-child(2),
+dynamic-btn.remove {
   background: #ef4444;
 }
 
-button:nth-child(2):hover,
-button.remove:hover {
+dynamic-btn:nth-child(2):hover,
+dynamic-btn.remove:hover {
   background: #dc2626;
 }
 
 /* Add Button */
-button.add {
+dynamic-btn.add {
   background: #10b981;
 }
 
-button.add:hover {
+dynamic-btn.add:hover {
   background: #059669;
 }
 
@@ -145,24 +145,24 @@ button.add:hover {
 }
 
 /* Action Buttons */
-.dynamic-grid td button {
+.dynamic-grid td dynamic-btn {
   margin-right: 6px;
   padding: 6px 10px;
   border-radius: 6px;
 }
 
-.dynamic-grid td button:nth-child(1) {
+.dynamic-grid td dynamic-btn:nth-child(1) {
   background: #f59e0b; /* edit */
 }
 
-.dynamic-grid td button:nth-child(1):hover {
+.dynamic-grid td dynamic-btn:nth-child(1):hover {
   background: #d97706;
 }
 
-.dynamic-grid td button:nth-child(2) {
+.dynamic-grid td dynamic-btn:nth-child(2) {
   background: #ef4444; /* delete */
 }
 
-.dynamic-grid td button:nth-child(2):hover {
+.dynamic-grid td dynamic-btn:nth-child(2):hover {
   background: #dc2626;
 }
