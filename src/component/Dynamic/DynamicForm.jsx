@@ -60,7 +60,6 @@ const DynamicForm = ({ schema, formData, onChange, onSubmit }) => {
     const fieldPath = parent ? `${parent}.${field.fields}` : field.fields;
     let value = getValue(fieldPath);
 
-    // ✅ Initialize missing object or array on edit
     if (value === undefined) {
       if (field.subfields) {
         value = Array.isArray(field.subfields) ? [] : {};
@@ -70,12 +69,64 @@ const DynamicForm = ({ schema, formData, onChange, onSubmit }) => {
       }
     }
 
-    // ✅ Text input
+    // ✅ Image Upload Field
+    if (
+      !field.subfields &&
+      (field.type === "image" || field.fields.toLowerCase().includes("image"))
+    ) {
+      return (
+        <div className="form-group" key={fieldPath}>
+          <label>{field.fields}</label>
+
+          {/* ✅ Show preview on Edit */}
+          {value && typeof value === "string" && value !== "" && (
+            <img
+              src={value}
+              alt="preview"
+              style={{
+                width: "100px",
+                height: "100px",
+                objectFit: "cover",
+                marginBottom: "6px",
+                borderRadius: "6px"
+              }}
+            />
+          )}
+
+          <input
+            type="file"
+            accept="image/*"
+            onChange={(e) => {
+              const file = e.target.files[0];
+              if (file) {
+                const imageURL = URL.createObjectURL(file);
+                setValue(fieldPath, imageURL);
+              }
+            }}
+          />
+
+          {/* ✅ Remove image */}
+          {value && (
+            <button
+              type="button"
+              className="dynamic-btn"
+              onClick={() => setValue(fieldPath, "")}
+              style={{ marginLeft: "10px" }}
+            >
+              Remove
+            </button>
+          )}
+        </div>
+      );
+    }
+
+    // ✅ Normal text input
     if (!field.subfields && typeof value !== "object") {
       return (
         <div className="form-group" key={fieldPath}>
           <label>{field.fields}</label>
           <input
+            type="text"
             value={value}
             onChange={(e) => setValue(fieldPath, e.target.value)}
           />
@@ -83,7 +134,7 @@ const DynamicForm = ({ schema, formData, onChange, onSubmit }) => {
       );
     }
 
-    // ✅ Nested object
+    // ✅ Object Field
     if (typeof value === "object" && !Array.isArray(value)) {
       return (
         <div key={fieldPath} className="nested-group">
@@ -93,7 +144,7 @@ const DynamicForm = ({ schema, formData, onChange, onSubmit }) => {
       );
     }
 
-    // ✅ Array of objects
+    // ✅ Array Field
     if (Array.isArray(value)) {
       return (
         <div key={fieldPath} className="nested-group">
@@ -104,13 +155,22 @@ const DynamicForm = ({ schema, formData, onChange, onSubmit }) => {
               {(field.subfields || []).map((sub) =>
                 renderField(sub, `${fieldPath}.${idx}`)
               )}
-              <button className="dynamic-btn" onClick={() => removeArrayItem(fieldPath, idx)}>
+
+              <button
+                type="button"
+                className="dynamic-btn"
+                onClick={() => removeArrayItem(fieldPath, idx)}
+              >
                 Remove
               </button>
             </div>
           ))}
 
-          <button className="dynamic-btn" onClick={() => addArrayItem(fieldPath, {})}>
+          <button
+            type="button"
+            className="dynamic-btn"
+            onClick={() => addArrayItem(fieldPath, {})}
+          >
             Add {field.fields}
           </button>
         </div>

@@ -1,18 +1,16 @@
-
-
 body {
   margin: 0;
-  /* padding-top: 50px;  */
 }
 
+/* ================= NAVBAR BASE ================= */
 .NavBar {
-  position: fixed; /* Always visible */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
-  background-color:var(--primary-color); /* Default: transparent */
-  transition: background-color 0.3s ease; /* Smooth transition */
+  background-color: var(--primary-color);
+  transition: background-color 0.3s ease;
   display: flex;
   justify-content: space-between;
   align-items: center; 
@@ -21,12 +19,10 @@ body {
 }
 
 .NavBar-scrolled {
-  background-color:white; /* Solid when scrolled */
+  background-color: white;
   color: black;
+ 
 }
-
-
-
 
 .NavBar-scrolled .NavBar-actions a,
 .NavBar-scrolled .NavBar-lists a,
@@ -37,7 +33,8 @@ body {
 .NavBar-scrolled .NavBar-button {
   border: 2px solid white;
   color: white;
-  background-color:var(--primary-color);
+  background-color: var(--primary-color);
+  
 }
 
 .NavBar-scrolled .NavBar-button:hover {
@@ -45,13 +42,14 @@ body {
   color: white;
 }
 
- .NavBar-logo {
+/* ================= LOGO ================= */
+.NavBar-logo {
   display: flex;
   align-items: center;
 }
 
 .NavBar-logo a {
-  display: flex;              /* ✅ Keeps image and text in one line */
+  display: flex;
   align-items: center;
 }
 
@@ -60,61 +58,30 @@ body {
   margin-right: 9px;
 }
 
-
 .NavBar-company {
   font-weight: bold;
   font-size: 28px;
-  
-  
 }
 
+/* ================= MENU ================= */
 .NavBar-lists {
   display: flex;
   gap: 20px; 
+  white-space: inherit;
 }
-
-.NavBar-lists span {
-  cursor: pointer;
-}
-
-.NavBar-actions {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.NavBar-actions a {
-  color: white;
-  text-decoration: none;
-}
-
+ 
 .NavBar-lists a {
   text-decoration: none;
-  color: white;
-}
-
-.NavBar-button {
-  padding: 8px 16px;
-  border: 2px solid white;
-  background-color: transparent;
-  color: white;
-  border-radius: 20px 0px 20px 0px;
-  cursor: pointer;
-}
-
-.NavBar-button:hover {
-  background-color: white;
-  color:var(--primary-color);
-  transition: 0.3s;
+  color: inherit;
 }
 
 .NavBar-item {
   position: relative;
-  color: white; 
+  cursor: pointer;
 }
 
 .NavBar-item:hover {
-  color: #8a8383;
+  color: #777;
 }
 
 .NavBar-item-header {
@@ -123,35 +90,53 @@ body {
   gap: 5px;
 }
 
+/* ================= DROPDOWN ================= */
 .NavBar-dropdown {
   position: absolute;
-  top: 40px;
-  left: 12%;
+  top: 100%;
+  left: 0;  /* ✅ Correct position below item */
   background: white;
-  color: black;  
+  color: black;
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  border-radius: 0; 
-  padding: 30px 0;
+  border-radius: 0;
+  padding: 20px;
   z-index: 1000;
+  margin-top:20px;
+
+  /* ✅ FIX — scroll for long menus */
+  max-height: 70vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 
+/* ✅ Scrollbar design optional */
+.NavBar-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+.NavBar-dropdown::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+/* ================= DROPDOWN CONTENT LAYOUT ================= */
 .NavBar-dropdown-sections {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 40px; 
-  padding: 0 20px;
+  gap: 40px;
+  padding: 0 10px;
+  align-items: flex-start;
+  flex-wrap: nowrap; /* Do not wrap, scroll instead */
 }
 
 .NavBar-dropdown-section {
-  flex: 1;
   min-width: 180px;
+  flex: 1;
 }
 
 .NavBar-dropdown-title {
   font-weight: bold;
   margin-bottom: 10px;
   font-size: 16px;
-  color:var(--primary-color);
+  color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
   padding-bottom: 5px;
 }
@@ -160,7 +145,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  flex-wrap: nowrap;
 }
 
 .NavBar-dropdown-link {
@@ -168,7 +152,7 @@ body {
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  color: black !important;
+  color: black;
   padding: 6px 10px;
   transition: background 0.2s;
 }
@@ -183,3 +167,29 @@ body {
   object-fit: contain;
 }
 
+/* ================= ACTION BUTTONS ================= */
+.NavBar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.NavBar-actions a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.NavBar-button {
+  padding: 8px 16px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 20px 0px 20px 0px;
+  cursor: pointer;
+}
+
+.NavBar-button:hover {
+  background-color: white;
+  color: var(--primary-color);
+  transition: 0.3s;
+}

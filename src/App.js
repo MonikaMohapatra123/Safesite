@@ -34,6 +34,8 @@ import AdminIndustry from './pages/AdminIndustry/AdminIndustry';
 import AdminBlog from './pages/AdminBlog/AdminBlog';
 import AdminCaseStudies from './pages/AdminCaseStudies/AdminCaseStudies';
 import ArticleHeader from './component/ArticleHeader/ArticleHeader';
+import FeaturePage from './pages/FeaturePage/FeaturePage';
+import IndustryPage from './pages/IndustryPage/IndustryPage';
 
 const App = () => {
   const location = useLocation();
@@ -62,6 +64,7 @@ const App = () => {
         {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/features/inspections" element={<FeaturesInspections />} />
+        {/* <Route path="/features/inspections" element={ <FeaturePage pageKey="inspections" jsonId="6" /> } /> */}
         <Route path="/features/checklists" element={<FeaturesChecklists />} />
         <Route path="/features/dashboards" element={<Dashboard />} />
         <Route path="/features/team-management" element={<TeamManagement />} />
@@ -77,9 +80,49 @@ const App = () => {
         <Route path="/features" element={<Features />} />
          <Route path="/indu/const" element={<ArticleHeader/>} />
         <Route path="/indu/mining" element={<ArticleHeader/>} />
-       
+<Route path="/features/good-practices" element={ <FeaturePage pageKey="good practices" />} />
+<Route path="/features/workpermit" element={ <FeaturePage pageKey="workpermit" /> } />
+<Route path="/features/observation" element={ <FeaturePage pageKey="observation uauc" /> } />
+<Route path="/features/violation" element={ <FeaturePage pageKey="violation notice" /> } />
+<Route path="/features/task" element={ <FeaturePage pageKey="task" /> } />
+<Route path="/features/project-safety-report" element={ <FeaturePage pageKey="projectwise safety report" /> } />
+<Route path="/features/location-tracking" element={ <FeaturePage pageKey="photos & videos geo location tracking" /> } />
+<Route path="/features/directory" element={ <FeaturePage pageKey="directory" /> } />
+<Route path="/features/pannel-mobile" element={ <FeaturePage pageKey="pannel access & mobile access" /> } />
+<Route path="/features/QR" element={ <FeaturePage pageKey="qr based attendance" /> } />
+<Route path="/features/auto-summary-bug" element={ <FeaturePage pageKey="auto summary bug" /> } />
+<Route path="/features/contractor-management" element={ <FeaturePage pageKey="contractor management" /> } />
+
+<Route path="/features/incident-reporting" element={<FeaturePage pageKey="incident report" />} />
+<Route path="/features/safety-audit" element={<FeaturePage pageKey="safety audit & inspection" />} />
+<Route path="/features/safety-budget" element={<FeaturePage pageKey="hse safety budget" />} />
+<Route path="/features/safety-reporting" element={<FeaturePage pageKey="safety reporting" />} />
+<Route path="/features/staff-ratings" element={<FeaturePage pageKey="staff ratings" />} />
+<Route path="/features/role-management" element={<FeaturePage pageKey="role management" />} />
+<Route path="/features/safety-campaign" element={<FeaturePage pageKey="safety campaign scheduler" />} />
+<Route path="/features/team-trade" element={<FeaturePage pageKey="team & trade management" />} />
+<Route path="/features/company-record" element={<FeaturePage pageKey="company format recordkeeping" />} />
+<Route path="/features/document" element={<FeaturePage pageKey="document management" />} />
+<Route path="/features/multilingual-app" element={<FeaturePage pageKey="multilingual app" jsonId="6"/>} />
+{/* only for video add jsonid=6 from static page data come */}
+  <Route path="/features/offline-mode" element={<FeaturePage pageKey="Offline Mode" />} />
+    <Route path="/features/leading-indicator" element={<FeaturePage pageKey="Leading Indicator Analytics" />} />
+    <Route path="/features/training-webinars" element={<FeaturePage pageKey="Safety Sure training & webinars" />} />
+    <Route path="/features/tailored-module" element={<FeaturePage pageKey="Tailored Module Edition" />} />
+    <Route path="/features/custom-reporting" element={<FeaturePage pageKey="Custom Safety Reporting" />} />
+    <Route path="/features/corrective-actions" element={<FeaturePage pageKey="Corrective Actions" />} />
+    <Route path="/features/equipment-inspection" element={<FeaturePage pageKey="Equipment Inspection" />} />
+    <Route path="/features/training-certification" element={<FeaturePage pageKey="Training Certification Tracker" />} />
+    <Route path="/features/AI-Integation" element={<FeaturePage pageKey="AI Integation" />} />
+    <Route path="/features/safety-program" element={<FeaturePage pageKey="Safety Program Review" />} />
+    <Route path="/features/support" element={<FeaturePage pageKey="Here for you support" />} />
+
+
+
+    {/* Routes from Industries Pages */}
+    <Route path="/industries/eviation" element={ <IndustryPage pageName="eviation" localId="18" /> } />
         
-      </Routes>
+</Routes>
 
       {/* Only show Footer if not admin or login page */}
       {!hideLayout && <Footer />}
