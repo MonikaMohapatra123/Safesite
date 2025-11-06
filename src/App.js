@@ -121,7 +121,19 @@ const App = () => {
 
     {/* Routes from Industries Pages */}
     <Route path="/industries/eviation" element={ <IndustryPage pageName="eviation" localId="18" /> } />
-        
+      <Route path="/industries/chemical-mechanical" element={<IndustryPage pageName="Chemical & Mechanical" localId="18" />} />
+<Route path="/industries/industrial" element={<IndustryPage pageName="Industrial" localId="18"/>} />
+<Route path="/industries/food-production" element={<IndustryPage pageName="Food Services & Production" localId="18"/>} />
+<Route path="/industries/laboratory" element={<IndustryPage pageName="Laboratory" localId="18"/>} />
+<Route path="/industries/marine" element={<IndustryPage pageName="Marine" localId="18"/>} />
+<Route path="/industries/mining" element={<IndustryPage pageName="Mining" localId="18"/>} />
+<Route path="/industries/ogp" element={<IndustryPage pageName="Oil, Gas & Petroleum" localId="18"/>} />
+<Route path="/industries/transport" element={<IndustryPage pageName="Transportation & Logistics" localId="18"/>} />
+<Route path="/industries/healthcare-medical" element={<IndustryPage pageName="Healthcare & Medical Services" localId="18"/>} />
+<Route path="/industries/data-center" element={<IndustryPage pageName="Data Center" localId="18"/>} />
+<Route path="/industries/government" element={<IndustryPage pageName="Government" localId="18"/>} />
+<Route path="/industries/industrial-residential" element={<IndustryPage pageName="Industrial & Residential" localId="18"/>} />
+  
 </Routes>
 
       {/* Only show Footer if not admin or login page */}
