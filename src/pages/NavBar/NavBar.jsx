@@ -115,9 +115,9 @@ const DesktopNavBar = ({ getStoreData }) => {
       <div className="NavBar-actions">
         {getStoreData.actions.map((action, index) =>
           action.type === 'button' ? (
-            <button key={index} className="NavBar-button">
+          <Link to="/contact-us"> <button key={index} className="NavBar-button">
               {action.name}
-            </button>
+            </button></Link> 
           ) : (
             <Link key={index} to={action.link}>
               {action.name}

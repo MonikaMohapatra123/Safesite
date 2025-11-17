@@ -139,6 +139,7 @@ body {
   color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
   padding-bottom: 5px;
+  
 }
 
 .NavBar-dropdown-links {
@@ -180,7 +181,7 @@ body {
 }
 
 .NavBar-button {
-  padding: 8px 16px;
+  padding: 8px 18px;
   border: 2px solid white;
   background-color: transparent;
   color: white;
