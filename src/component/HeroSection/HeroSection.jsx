@@ -1,6 +1,97 @@
+// import React, { useState } from 'react';
+// import './HeroSection.css';
+// import '@fortawesome/fontawesome-free/css/all.min.css';
+
+// const HeroSection = ({ data }) => {
+//   const [showVideoModal, setShowVideoModal] = useState(false);
+
+//   if (!data) {
+//     return <div>No hero data found.</div>;
+//   }
+
+//   const handleWatchVideo = () => setShowVideoModal(true);
+//   const handleCloseVideo = () => setShowVideoModal(false);
+
+//   return (
+//     <section className="hero-section">
+//       <div className="hero-container">
+//         {/* Left Text */}
+//         <div className="hero-left">
+//           <h1
+//             className="hero-heading"
+//             dangerouslySetInnerHTML={{ __html: data.HeroHeading }}
+//           ></h1>
+//           <p className="hero-description">{data.HeroDescription}</p>
+
+//           <div className="hero-buttons">
+//             {data.HeroButtons.map((btn, index) => (
+//               <button
+//                 key={index}
+//                 className={`hero-btn hero-btn-${btn.type}`}
+//                 onClick={btn.type === 'secondary' ? handleWatchVideo : undefined}
+//               >
+//                 {btn.type === 'secondary' && (
+//                   <i className="fas fa-play hero-btn-icon "></i>
+//                 )}
+//                 {btn.text}
+//               </button>
+//             ))}
+//           </div>
+
+//           <div className="hero-rating">
+//             <span className="hero-stars">
+//               <i className="fas fa-star"></i>
+//               <i className="fas fa-star"></i>
+//               <i className="fas fa-star"></i>
+//               <i className="fas fa-star"></i>
+//               <i className="fas fa-star"></i>
+//             </span>
+//             <small>{data.HeroRatingText}</small>
+//           </div>
+//         </div>
+
+//         {/* Right Video */}
+//         <div className="hero-right">
+//           <div className="hero-video-wrapper">
+//             <video autoPlay muted loop playsInline style={{ width: '100%', borderRadius: '8px' }}>
+//               <source src={data.HeroVideo} type="video/mp4" />
+//               Your browser does not support the video tag.
+//             </video>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Video Modal */}
+//       {showVideoModal && (
+//         <div className="hero-video-modal">
+//           <div className="hero-video-content">
+//             <span className="hero-video-close" onClick={handleCloseVideo}>
+//               &times;
+//             </span>
+//             <video autoPlay muted controls playsInline style={{ width: '100%' }}>
+//               <source src={data.HeroModalVideo} type="video/mp4" />
+//               Your browser does not support the video tag.
+//             </video>
+//           </div>
+//         </div>
+//       )}
+//     </section>
+//   );
+// };
+
+// export default HeroSection;
+
+
+
+
+
+
+
+
 import React, { useState } from 'react';
 import './HeroSection.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import DynamicButton from "../DynamicButton/DynamicButton"; // <-- import your button
 
 const HeroSection = ({ data }) => {
   const [showVideoModal, setShowVideoModal] = useState(false);
@@ -21,23 +112,35 @@ const HeroSection = ({ data }) => {
             className="hero-heading"
             dangerouslySetInnerHTML={{ __html: data.HeroHeading }}
           ></h1>
+
           <p className="hero-description">{data.HeroDescription}</p>
 
+          {/* Buttons */}
           <div className="hero-buttons">
             {data.HeroButtons.map((btn, index) => (
-              <button
-                key={index}
-                className={`hero-btn hero-btn-${btn.type}`}
-                onClick={btn.type === 'secondary' ? handleWatchVideo : undefined}
-              >
-                {btn.type === 'secondary' && (
-                  <i className="fas fa-play hero-btn-icon "></i>
-                )}
-                {btn.text}
-              </button>
+              btn.type === "secondary" ? (
+                // Secondary button: Open video modal
+                <button
+                  key={index}
+                  className="hero-btn hero-btn-secondary"
+                  onClick={handleWatchVideo}
+                >
+                  <i className="fas fa-play hero-btn-icon"></i>
+                  {btn.text}
+                </button>
+              ) : (
+                // Primary button: Use DynamicButton for routing
+                <DynamicButton
+                  key={index}
+                  label={btn.text}
+                  route={btn.route}  // Must come from JSON
+                />
+               
+              )
             ))}
           </div>
 
+          {/* Rating */}
           <div className="hero-rating">
             <span className="hero-stars">
               <i className="fas fa-star"></i>
