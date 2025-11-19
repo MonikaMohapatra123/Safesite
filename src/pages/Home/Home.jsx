@@ -9,6 +9,8 @@ import AllCompanyManagement from "../../component/AllCompanyManagement/AllCompan
 import CompanySafetyHQSection from "../../component/Company SafetyHQSection/Company SafetyHQSection";
 import SafetyTopicsCards from "../../component/SafetyTopicsCards/SafetyTopicsCards";
 import SafetyGoals from "../../component/SafetyGoals/SafetyGoals";
+// import ClickableTable from "../../component/ClickableTable/ClickableTable";
+
 
 
 
@@ -40,7 +42,8 @@ const Home = () => {
 
       <h3> A Smarter Safety Management System</h3>
     
-
+       {/* <ClickableTable/> */}
+       
       <AllCompanyManagement
         tagline="Easy-to-Use"
         title="The Most Intuitive Safety App"
