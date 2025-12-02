@@ -16,7 +16,7 @@ const AllCompanyManagement = ({
     <section className="feature-section">
       <div className="feature-content">
         <p className="feature-tagline">{tagline}</p>
-        <h2 className="feature-title">{title}</h2>
+        <h2 >{title}</h2>
         <p className="feature-description">{description}</p>
 
         {/* ✅ Use reusable Link Button here */}

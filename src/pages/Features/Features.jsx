@@ -35,7 +35,7 @@ const Features = () => {
         imageSrc="safesite-1.png"
         imageAlt="Safety Management App Preview"
       />
-
+  <RelatedFeatures data={relatedFeaturesData} />
       {/* HQ Section */}
       <CompanySafetyHQSection
         image="safesite-2.png"
@@ -45,7 +45,7 @@ const Features = () => {
         linkText="See Pricing & Plans"
         linkHref="/pricing"
       />
-
+  <RelatedFeatures data={relatedFeaturesData} />
       {/* Second Management Section */}
       <AllCompanyManagement
         tagline="Easy-to-Use"

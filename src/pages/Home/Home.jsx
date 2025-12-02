@@ -9,7 +9,7 @@ import AllCompanyManagement from "../../component/AllCompanyManagement/AllCompan
 import CompanySafetyHQSection from "../../component/Company SafetyHQSection/Company SafetyHQSection";
 import SafetyTopicsCards from "../../component/SafetyTopicsCards/SafetyTopicsCards";
 import SafetyGoals from "../../component/SafetyGoals/SafetyGoals";
-// import ClickableTable from "../../component/ClickableTable/ClickableTable";
+// import SafetyAppFeatureSection from "../../component/SafetyServiceCardList/SafetyServiceCardList";
 
 
 
@@ -26,6 +26,7 @@ const Home = () => {
       </p>
     );
   }
+  
 
   // ✅ Use the stored data
   const heroSectionData = storeData["1"];
@@ -42,7 +43,7 @@ const Home = () => {
 
       <h3> A Smarter Safety Management System</h3>
     
-       {/* <ClickableTable/> */}
+  
        
       <AllCompanyManagement
         tagline="Easy-to-Use"
@@ -81,7 +82,8 @@ const Home = () => {
         linkText="See Pricing & Plans"
         linkHref="/pricing"
       />
-
+      {/* <SafetyAppFeatureSection/> */}
+      
       <SafetyTopicsCards data={safetyTopicsCardsData} />
       <SafetyGoals data={safetyGoalsData} />
       {/* <CommonSafetyChecklist /> */}

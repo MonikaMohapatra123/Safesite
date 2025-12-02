@@ -1,3 +1,4 @@
+
 // import React, { useEffect, useState } from "react";
 // import axios from "axios";
 // import { useNavigate } from "react-router-dom";
@@ -8,7 +9,6 @@
 // import CurvedSection from "../../component/CurvedSection/CurvedSection";
 
 // import { getstoredata } from "../../json/fetchData";
-
 // const BACKEND_URL = "https://safesite-backend.vercel.app/api/features";
 
 // const FeaturePage = ({ pageKey, jsonId }) => {
@@ -17,20 +17,23 @@
 //   const [loading, setLoading] = useState(true);
 //   const navigate = useNavigate();
 
-//   // ✅ Load local JSON only when jsonId exists
+//   // normalize incoming pageKey once
+//   const normalizedPageKey = (pageKey || "").toString().trim().toLowerCase();
+
+//   // Load local JSON only when jsonId exists
 //   useEffect(() => {
 //     if (!jsonId) return;
 //     const stored = getstoredata();
 //     if (stored) setLocalData(stored);
 //   }, [jsonId]);
 
-//   // ✅ Fetch backend data
+//   // Fetch backend data
 //   useEffect(() => {
 //     const load = async () => {
 //       try {
 //         const res = await axios.get(BACKEND_URL);
 //         const feature = res.data.find(
-//           (f) => f.page?.toLowerCase() === pageKey
+//           (f) => (f.page || "").toString().trim().toLowerCase() === normalizedPageKey
 //         );
 //         setBackendData(feature);
 //       } catch (err) {
@@ -40,12 +43,11 @@
 //       }
 //     };
 //     load();
-//   }, [pageKey]);
+//   }, [normalizedPageKey]);
 
 //   if (loading) return <p>Loading...</p>;
 //   if (!backendData) return <p>No feature found for "{pageKey}".</p>;
 
-//   // ✅ BACKEND ONLY MODE
 //   if (!jsonId) {
 //     return (
 //       <>
@@ -68,7 +70,7 @@
 //             Heading: backendData.page,
 //             Items:
 //               backendData.checkpoints?.map((cp) => ({
-//                 title: cp.title, // ✅ Fixed here
+//                 title: cp.title,
 //                 description: cp.description,
 //                 image: cp.photo,
 //               })) || [],
@@ -81,7 +83,6 @@
 //     );
 //   }
 
-//   // ✅ MERGE BACKEND + LOCAL JSON
 //   if (!localData) return <p>Loading local data...</p>;
 
 //   const heroLocal = localData[jsonId]["1"];
@@ -106,7 +107,7 @@
 //     Heading: backendData.page || middleLocal.Heading,
 //     Items: backendData.checkpoints?.length
 //       ? backendData.checkpoints.map((cp) => ({
-//           title: cp.title, // ✅ Fixed here too
+//           title: cp.title,
 //           description: cp.description,
 //           image: cp.photo,
 //         }))
@@ -120,12 +121,18 @@
 //       <InspectionSection data={mergedInspectionSection} />
 //       <RelatedFeatures data={relatedLocal} />
 //       <CurvedSection />
+     
 //     </>
 //   );
 // };
 
 // export default FeaturePage;
 
+
+
+
+
+// src/pages/FeaturePage/FeaturePage.jsx
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -134,6 +141,7 @@ import Inspections from "../../component/Inspections/Inspections";
 import InspectionSection from "../../component/InspectionSection/InspectionSection";
 import RelatedFeatures from "../../component/RelatedFeatures/RelatedFeatures";
 import CurvedSection from "../../component/CurvedSection/CurvedSection";
+import SafetyAppFeatureSection from "../../component/SafetyServiceCardList/SafetyServiceCardList";
 
 import { getstoredata } from "../../json/fetchData";
 
@@ -143,42 +151,60 @@ const FeaturePage = ({ pageKey, jsonId }) => {
   const [backendData, setBackendData] = useState(null);
   const [localData, setLocalData] = useState(null);
   const [loading, setLoading] = useState(true);
+
   const navigate = useNavigate();
 
-  // normalize incoming pageKey once
-  const normalizedPageKey = (pageKey || "").toString().trim().toLowerCase();
+  // ✅ normalize pageKey once
+  const normalizedPageKey = (pageKey || "")
+    .toString()
+    .trim()
+    .toLowerCase();
 
-  // Load local JSON only when jsonId exists
+  /* -------------------- Load local JSON -------------------- */
   useEffect(() => {
     if (!jsonId) return;
+
     const stored = getstoredata();
-    if (stored) setLocalData(stored);
+    if (stored) {
+      setLocalData(stored);
+    }
   }, [jsonId]);
 
-  // Fetch backend data
+  /* -------------------- Fetch backend data -------------------- */
   useEffect(() => {
-    const load = async () => {
+    const loadFeature = async () => {
       try {
         const res = await axios.get(BACKEND_URL);
         const feature = res.data.find(
-          (f) => (f.page || "").toString().trim().toLowerCase() === normalizedPageKey
+          (f) =>
+            (f.page || "")
+              .toString()
+              .trim()
+              .toLowerCase() === normalizedPageKey
         );
-        setBackendData(feature);
+
+        setBackendData(feature || null);
       } catch (err) {
-        console.log(err);
+        console.error("Feature fetch error:", err);
       } finally {
         setLoading(false);
       }
     };
-    load();
+
+    loadFeature();
   }, [normalizedPageKey]);
 
+  /* -------------------- Loading & Error -------------------- */
   if (loading) return <p>Loading...</p>;
-  if (!backendData) return <p>No feature found for "{pageKey}".</p>;
+  if (!backendData) return <p>No feature found for "{pageKey}"</p>;
 
+  /* -------------------- NO local JSON case -------------------- */
   if (!jsonId) {
     return (
       <>
+        {/* ✅ ALWAYS visible */}
+       
+
         <Inspections
           data={{
             HeroHeading: backendData.title,
@@ -205,7 +231,7 @@ const FeaturePage = ({ pageKey, jsonId }) => {
             Video: backendData.images?.[1],
           }}
         />
-
+         <SafetyAppFeatureSection />
         <CurvedSection />
       </>
     );
@@ -213,6 +239,7 @@ const FeaturePage = ({ pageKey, jsonId }) => {
 
   if (!localData) return <p>Loading local data...</p>;
 
+  /* -------------------- Merge backend + local -------------------- */
   const heroLocal = localData[jsonId]["1"];
   const middleLocal = localData[jsonId]["2"];
   const relatedLocal = localData[jsonId]["3"];
@@ -245,8 +272,12 @@ const FeaturePage = ({ pageKey, jsonId }) => {
 
   return (
     <>
+      {/* ✅ ALWAYS visible */}
+      <SafetyAppFeatureSection />
+
       <Inspections data={mergedHero} navigate={navigate} />
       <InspectionSection data={mergedInspectionSection} />
+
       <RelatedFeatures data={relatedLocal} />
       <CurvedSection />
     </>
@@ -254,3 +285,4 @@ const FeaturePage = ({ pageKey, jsonId }) => {
 };
 
 export default FeaturePage;
+

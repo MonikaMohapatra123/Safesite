@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { FaBars, FaTimes, FaPlus } from 'react-icons/fa';
 import './mobile.css';
 import { getstoredata } from '../../json/fetchData'; // ✅ dynamic import
-
 const MobileNavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);

@@ -1,7 +1,6 @@
 body {
   margin: 0;
 }
-
 /* ================= NAVBAR BASE ================= */
 .NavBar {
   position: fixed;
@@ -17,79 +16,63 @@ body {
   padding: 10px 20px;
   color: white;
 }
-
 .NavBar-scrolled {
   background-color: white;
   color: black;
- 
 }
-
 .NavBar-scrolled .NavBar-actions a,
 .NavBar-scrolled .NavBar-lists a,
 .NavBar-scrolled .NavBar-item {
   color: black;
 }
-
 .NavBar-scrolled .NavBar-button {
   border: 2px solid white;
   color: white;
   background-color: var(--primary-color);
-  
 }
-
 .NavBar-scrolled .NavBar-button:hover {
   background-color: black;
   color: white;
 }
-
 /* ================= LOGO ================= */
 .NavBar-logo {
   display: flex;
   align-items: center;
 }
-
 .NavBar-logo a {
   display: flex;
   align-items: center;
 }
-
 .NavBar-logo img {
   height: 40px;
   margin-right: 9px;
 }
-
 .NavBar-company {
   font-weight: bold;
   font-size: 28px;
 }
-
 /* ================= MENU ================= */
 .NavBar-lists {
   display: flex;
   gap: 20px; 
   white-space: inherit;
 }
- 
 .NavBar-lists a {
   text-decoration: none;
   color: inherit;
 }
-
 .NavBar-item {
   position: relative;
   cursor: pointer;
 }
-
 .NavBar-item:hover {
   color: #777;
 }
-
 .NavBar-item-header {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-
 /* ================= DROPDOWN ================= */
 .NavBar-dropdown {
   position: absolute;
@@ -102,13 +85,11 @@ body {
   padding: 20px;
   z-index: 1000;
   margin-top:20px;
-
   /* ✅ FIX — scroll for long menus */
   max-height: 70vh;
   overflow-y: auto;
   scrollbar-width: thin;
 }
-
 /* ✅ Scrollbar design optional */
 .NavBar-dropdown::-webkit-scrollbar {
   width: 6px;
@@ -117,7 +98,6 @@ body {
   background: #ccc;
   border-radius: 5px;
 }
-
 /* ================= DROPDOWN CONTENT LAYOUT ================= */
 .NavBar-dropdown-sections {
   display: flex;
@@ -126,12 +106,10 @@ body {
   align-items: flex-start;
   flex-wrap: nowrap; /* Do not wrap, scroll instead */
 }
-
 .NavBar-dropdown-section {
   min-width: 180px;
   flex: 1;
 }
-
 .NavBar-dropdown-title {
   font-weight: bold;
   margin-bottom: 10px;
@@ -139,15 +117,12 @@ body {
   color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
   padding-bottom: 5px;
-  
 }
-
 .NavBar-dropdown-links {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-
 .NavBar-dropdown-link {
   display: flex;
   align-items: center;
@@ -157,29 +132,24 @@ body {
   padding: 6px 10px;
   transition: background 0.2s;
 }
-
 .NavBar-dropdown-link:hover {
   background: #f2f2f2;
 }
-
 .NavBar-dropdown-icon {
   width: 18px;
   height: 18px;
   object-fit: contain;
 }
-
 /* ================= ACTION BUTTONS ================= */
 .NavBar-actions {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-
 .NavBar-actions a {
   text-decoration: none;
   color: inherit;
 }
-
 .NavBar-button {
   padding: 8px 18px;
   border: 2px solid white;
@@ -188,7 +158,6 @@ body {
   border-radius: 20px 0px 20px 0px;
   cursor: pointer;
 }
-
 .NavBar-button:hover {
   background-color: white;
   color: var(--primary-color);

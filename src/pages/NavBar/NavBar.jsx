@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { useMediaQuery } from 'react-responsive';
-
 import './NavBar.css';
 import { getstoredata } from '../../json/fetchData'; // ✅ dynamic import
 import MobileNavBar from './MobileNavBar';
@@ -156,3 +155,5 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+
