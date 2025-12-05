@@ -144,7 +144,7 @@ const App = () => {
         <Route path="/industries/transport" element={<IndustryPage pageName="Transportation & Logistics" localId="18"/>} />
         <Route path="/industries/healthcare-medical" element={<IndustryPage pageName="Healthcare & Medical Services" localId="18"/>} />
         <Route path="/industries/data-center" element={<IndustryPage pageName="Data Center" localId="18"/>} />
-        <Route path="/industries/government" element={<IndustryPage pageName="Government" localId="18"/>} />
+        <Route path="industries/goverment" element={<IndustryPage pageName="Government" localId="18"/>} />
         <Route path="/industries/industrial-residential" element={<IndustryPage pageName="Industrial & Residential" localId="18"/>} />
       </Routes>
 
